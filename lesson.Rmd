@@ -19,7 +19,7 @@ Week Data    Topic 	                                                            
  
 2    23/08   [Lesson 2: The Evil is in The Data](outline/lesson02_outline.html) 	
 
-3    30/08   Lesson 3: Modelling Urban World 	
+3    30/08   [Lesson 3: Modelling Urban World](outline/lesson03_outline.html) 	
 
 4    06/08   Lesson 4: Thematic Mapping and GeoVisualisation                                     Take-home Exercise 1 due	
 
