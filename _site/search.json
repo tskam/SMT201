@@ -6,7 +6,7 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-07-19T14:06:33+08:00"
+      "last_modified": "2021-07-19T15:52:17+08:00"
     },
     {
       "path": "index.html",
@@ -14,7 +14,7 @@
       "description": "Welcome to the home page for **SMT201 Geographic Information Systems for Urban Planning**. All course materials will be posted on this site.\n",
       "author": [],
       "contents": "\r\nInstructor: Dr. Kam Tin Seong\r\nDay: Monday Time: 1530 to 1845 Venue: SCIS Seminar Rm 2.4\r\nSyllabus: click here\r\nUpcoming lectures: click here\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-07-19T14:06:35+08:00"
+      "last_modified": "2021-07-19T15:52:21+08:00"
     },
     {
       "path": "lesson.html",
@@ -23,7 +23,7 @@
       "author": [],
       "date": "`r Sys.Date()`",
       "contents": "\r\nWeekly Lesson Plan\r\nWeek\r\nData\r\nTopic\r\nRemarks\r\n1\r\n16/08\r\nLesson 1: Introduction to GIS for Urban Planning\r\n\r\n2\r\n23/08\r\nLesson 2: The Evil is in The Data\r\n\r\n3\r\n30/08\r\nLesson 3: Modelling Urban World\r\n\r\n4\r\n06/08\r\nLesson 4: Thematic Mapping and GeoVisualisation\r\nTake-home Exercise 1 due\r\n5\r\n13/09\r\nLesson 5: Vector-based GeoProcessing and GIS Analysis\r\n\r\n6\r\n20/09\r\nLesson 6: Urban Applications of Vector-based GIS Analysis\r\n\r\n7\r\n27/09\r\nLesson 7: The Science of Mapthematics\r\nTake-home Exercise 2 due\r\n8\r\n04/10\r\nMid-term\r\n\r\n9\r\n11/10\r\nLesson 8: Urban Applications of Raster-based GIS Analysis\r\n\r\n10\r\n18/10\r\nLesson 9: GIS Modelling for Urban Planning Support I\r\nTake-home Exercise 3 due\r\n11\r\n25/10\r\nLesson 10: GIS Modelling for Urban Planning Support II\r\n\r\n12\r\n01/11\r\nLesson 11: Network Analysis with GIS\r\n\r\n13\r\n08/11\r\nLesson 12: Epilogue\r\n\r\n14\r\n15/11\r\nPoster Presentation\r\nGIS Project due\r\n15\r\n22/11\r\nExam week\r\n\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-07-19T14:06:43+08:00"
+      "last_modified": "2021-07-19T15:52:22+08:00"
     },
     {
       "path": "syllabus.html",
@@ -31,7 +31,7 @@
       "description": "",
       "author": [],
       "contents": "\r\n\r\nContents\r\nSynopsis\r\nObjectives\r\nCourse structure\r\nBasic Modules\r\n\r\nPre-requisites\r\nGrading Summary\r\n\r\nSynopsis\r\nEffective planning and management of smart cities require urban planners to integrate and share data from multiple sources to the urban users so that they can be active participants in the smart city planning process. GIS with its capability to capture, manage, display, and analyse information spatially is emerging as one of the important enabling tool in smart city planning.\r\nThis course provides students with an introduction to practical applications of GIS in smart city management and planning. Emphasis will be placed on:\r\nlocating, acquiring and integrating multi-sources of data into GIS,\r\nunderstand the principles and methodologies of geocoding and geo referencing ,\r\nbecome familiar with geovisualisation and GIS analysis techniques, and\r\nexplore the technologies and possibilities of GIS-enabled Planning Support Systems for smart city management.\r\nObjectives\r\nUpon completion of the course, students will be able to:\r\nUnderstand the basic concepts and theories of GIScience and trends of GIS technologies.\r\nCreate, integrate, manage geospatial data and build enterprise level geospatial database management systems.\r\nUse appropriate GIS analysis functions to visualise and analyse urban sector data.\r\nModel smart city processes using GIS’ advanced analytical methods.\r\nDesign and implement cutting-edge GIS-based Planning Support Systems for smart city management.\r\nCourse structure\r\nBasic Modules\r\nThis course comprises ten integrated components as shown below:\r\n\r\n\r\n\r\nPre-requisites\r\nThere are no pre-requisites for the class and the class is open to all SMT students as well as non-SMT students. However, a basic understanding of the principles of urban management and planning in the context of smart city is required. Students who are new to the discipline of urban management /planning and smart cities are encouraged to do self-learning and research prior to the commencement of the course.\r\nGrading Summary\r\nThe grading distribution of this course are as follows:\r\nComponent\r\nWeights\r\nClass Participation\r\n5%\r\nIn-class Exercises\r\n20%\r\nTake Home Exercises\r\n45%\r\nGIS Project\r\n30%\r\nThere will be no mid-term test or final examination for this course.\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-07-19T14:06:50+08:00"
+      "last_modified": "2021-07-19T15:52:23+08:00"
     }
   ],
   "collections": []

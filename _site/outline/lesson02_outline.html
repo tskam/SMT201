@@ -86,7 +86,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Lesson 1: Introduction to GIS for Urban Planning</title>
+  <title>Lesson 2: The Evil is in The Data</title>
 
   <meta property="description" itemprop="description" content="A new article created using the Distill format." />
 
@@ -96,21 +96,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta property="article:created" itemprop="dateCreated" content="2021-07-19" />
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Lesson 1: Introduction to GIS for Urban Planning" />
+  <meta property="og:title" content="Lesson 2: The Evil is in The Data" />
   <meta property="og:type" content="article" />
   <meta property="og:description" content="A new article created using the Distill format." />
   <meta property="og:locale" content="en_US" />
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary" />
-  <meta property="twitter:title" content="Lesson 1: Introduction to GIS for Urban Planning" />
+  <meta property="twitter:title" content="Lesson 2: The Evil is in The Data" />
   <meta property="twitter:description" content="A new article created using the Distill format." />
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output","date"]}},"value":[{"type":"character","attributes":{},"value":["Lesson 1: Introduction to GIS for Urban Planning"]},{"type":"character","attributes":{},"value":["A new article created using the Distill format.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]},{"type":"character","attributes":{},"value":["07-19-2021"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Lesson 2: The Evil is in The Data"]},{"type":"character","attributes":{},"value":["A new article created using the Distill format.\n"]},{"type":"character","attributes":{},"value":["2021-07-19"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1454,7 +1454,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Lesson 1: Introduction to GIS for Urban Planning","description":"A new article created using the Distill format.","authors":[],"publishedDate":"2021-07-19T00:00:00.000+08:00"}
+{"title":"Lesson 2: The Evil is in The Data","description":"A new article created using the Distill format.","authors":[],"publishedDate":"2021-07-19T00:00:00.000+08:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1464,7 +1464,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Lesson 1: Introduction to GIS for Urban Planning</h1>
+<h1>Lesson 2: The Evil is in The Data</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>A new article created using the Distill format.</p></p>
@@ -1476,65 +1476,67 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#lesson-outline">Lesson Outline</a>
-<ul>
-<li><a href="#course-overview">Course Overview</a></li>
-</ul></li>
+<li><a href="#content">Content</a></li>
 <li><a href="#lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</a></li>
 <li><a href="#readings">Readings</a>
 <ul>
 <li><a href="#core-readings">Core Readings</a></li>
-<li><a href="#addition-readings">Addition Readings</a></li>
+<li><a href="#additional-readings">Additional Readings</a></li>
 </ul></li>
 <li><a href="#all-about-qgis">All About QGIS</a></li>
 </ul>
 </nav>
 </div>
-<h2 id="lesson-outline">Lesson Outline</h2>
-<h3 id="course-overview">Course Overview</h3>
+<h2 id="content">Content</h2>
 <ul>
-<li>An Overview of Urban Planning
+<li>Representing Real World Geography
 <ul>
-<li>Theory and philosophy of planning</li>
-<li>Practice of urban planning</li>
-<li>Urban planning and management in Singapore</li>
+<li>Digital representation</li>
+<li>The fundamental problem</li>
+<li>The spatial data models</li>
+<li>Topology data models</li>
 </ul></li>
-<li>Introduction to GIS
+<li>Georeferencing
 <ul>
-<li>Basic concept of a GIS</li>
-<li>System view of a GIS</li>
-<li>GIS in the context of Smart Nation</li>
+<li>Basic concepts of projections and coordinates</li>
+<li>Georeferencing</li>
+<li>Geocoding</li>
+</ul></li>
+<li>Geospatial data modelling
+<ul>
+<li>Geospatial database design</li>
+<li>Spatial Metadata</li>
+<li>Spatial indexing</li>
+<li>Multi-user editing and versioning</li>
+</ul></li>
+<li>Geospatial Data Repositories
+<ul>
+<li>File-based</li>
+<li>Geospatial RDBMS</li>
+<li>Cloud based geospatial database</li>
 </ul></li>
 </ul>
 <h2 id="lesson-slides-and-hands-on-notes">Lesson Slides and Hands-on Notes</h2>
 <ul>
 <li>Lesson slide in <a href="lesson/lesson01/lesson01.html">html</a> and <a href="lesson/lesson01/lesson01.pdf">pdf</a> formats</li>
-<li>In-class Exercise in <a href>html</a> format.</li>
+<li>Hands-on Exercise in <a href>html</a> format.</li>
 </ul>
 <h2 id="readings">Readings</h2>
 <h3 id="core-readings">Core Readings</h3>
 <ul>
-<li><a href="https://www.britannica.com/topic/urban-planning">Urban Planning</a></li>
-<li>Chapter 2: Re-Examining Singapore’s Urban Planning and Governance Framework in <a href="https://www-taylorfrancis-com.libproxy.smu.edu.sg/books/edit/10.4324/9781351058230/planning-singapore-stephen-hamnett-belinda-yuen">Planning Singapore: The Experimental City</a>. This book is available in digital form in smu library.</li>
-<li><a href="https://link-springer-com.libproxy.smu.edu.sg/content/pdf/10.1007%2F978-3-540-72680-7_6.pdf">Chapter 6: Geographic Information Systems</a> of Springer Handbook of Geographic Information</li>
-<li><a href="https://link-springer-com.libproxy.smu.edu.sg/content/pdf/10.1007%2F978-3-540-72680-7_20.pdf">Chapter 20: Planning</a> of Springer Handbook of Geographic Information</li>
-<li><a href="https://www.youtube.com/watch?v=OuzlMPbx78k">How GIS technology helps in Smart City growth?</a></li>
-<li><a href="https://www.esri.com/videos/watch?&amp;channelid=UCJ203R9PsZn6wF_zYfsp1SA&amp;videoid=pg7ByVZo_sg&amp;playlistid=PLaPDDLTCmy4bC2dGacC3ZH8YnCl4x7kuB&amp;See%20What%20Others%20Can%27t">GIS: The Intelligent Nervous System</a></li>
+<li><a href="https://mgimond.github.io/Spatial/chp02-0.html">Chapter 2 Feature Representation</a> of Intro to GIS and Spatial Analysis</li>
+<li><a href="https://mgimond.github.io/Spatial/gis-data-management.html">Chapter 3 GIS Data Management</a> of Intro to GIS and Spatial Analysis</li>
+<li><a href="https://mgimond.github.io/Spatial/chp09-0.html">Chapter 9 Coordinate Systems</a> of Intro to GIS and Spatial Analysis</li>
+<li><a href="http://downloads2.esri.com/support/documentation/ao_/Modeling_our_World.pdf">Modeling Our World: The ESRI Guide to Geodatabase Design</a></li>
 </ul>
-<h3 id="addition-readings">Addition Readings</h3>
+<h3 id="additional-readings">Additional Readings</h3>
 <ul>
-<li><a href="https://www.esri.com/videos/watch?videoid=LHDCRjAxpI0&amp;title=what-is-gis-">What Is GIS?</a></li>
-<li><a href="https://www.youtube.com/watch?v=G9xNKb4T8ZM">Geographic Information Systems and Urban Planning</a></li>
-<li><a href="https://www.esri.com/videos/watch?&amp;channelid=UCJ203R9PsZn6wF_zYfsp1SA&amp;videoid=pg7ByVZo_sg&amp;playlistid=PLaPDDLTCmy4bC2dGacC3ZH8YnCl4x7kuB&amp;See%20What%20Others%20Can%27t">See What Others Can’t</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Urban_planning">Urban Planning</a></li>
-<li><a href="https://gisgeography.com/what-gis-geographic-information-systems/">What is Geographic Information Systems (GIS)?</a></li>
-<li>Shatkin, G (2014) <a href="https://onlinelibrary-wiley-com.libproxy.smu.edu.sg/doi/full/10.1111/1468-2427.12095">“Reinterpreting the Meaning of the ‘Singapore’ Model: State Capitalism and Urban Planning”</a>, International Journal of Urban and Regional Research, Vol. 38, Issue 1, pp. 116-137.</li>
+<li>Map Projection</li>
+<li>Geocoding</li>
 </ul>
 <h2 id="all-about-qgis">All About QGIS</h2>
 <ul>
-<li><a href="https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/introducing_gis.html">2. Introducing GIS</a> of <strong>A Gentle Introduction to GIS</strong>.</li>
-<li><a href="https://docs.qgis.org/3.16/en/docs/user_manual/index.html"><strong>QGIS User Guide</strong></a>. Chapter 3-9.</li>
-<li><a href="https://docs.qgis.org/3.16/en/docs/training_manual/basic_map/index.html">2. Module: Creating and Exploring a Basic MapQGIS Training Manual</a> of <strong>QGIS Training Manual</strong></li>
+<li><a href="https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/index.html">A Gentle Introduction to GIS</a>. Chapter 3-9.</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

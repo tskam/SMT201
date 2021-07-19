@@ -25,6 +25,12 @@ knitr::opts_chunk$set(echo = FALSE)
     - System view of a GIS
     - GIS in the context of Smart Nation
 
+## Lesson Slides and Hands-on Notes 
+
+- Lesson slide in [html](lesson/lesson01/lesson01.html) and [pdf](lesson/lesson01/lesson01.pdf) formats
+- Hands-on Exercise in [html]() format.
+
+
 ## Readings
 ### Core Readings
 
