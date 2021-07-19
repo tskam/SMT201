@@ -1,0 +1,50 @@
+---
+title: "Lesson Plan"
+description: ""
+date: "`r Sys.Date()`"
+output: distill::distill_article
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Weekly Lesson Plan
+
+---------------------------------------------------------------------------------------------------
+Week Data    Topic 	                                                      Remarks
+---- ------- ------------------------------------------------------------ -------------------------
+1    16/08   Lesson 1: Introduction to GIS for Urban Planning
+ 
+2    23/08   Lesson 2: The Evil is in The Data 	
+
+3    30/08   Lesson 3: Modelling Urban World 	
+
+4    06/08   Lesson 4: Thematic Mapping and GeoVisualisation              Take-home Exercise 1 due	
+
+5    13/09   Lesson 5: Vector-based GeoProcessing and GIS Analysis 	
+
+6    20/09   Lesson 6: Urban Applications of Vector-based GIS Analysis 	
+
+7    27/09   Lesson 7: The Science of Mapthematics                        Take-home Exercise 2 due
+
+8    04/10   Mid-term 	
+
+9    11/10   Lesson 8: Urban Applications of Raster-based GIS Analysis 	
+
+10   18/10   Lesson 9: GIS Modelling for Urban Planning Support I 	      Take-home Exercise 3 due
+
+11   25/10   Lesson 10: GIS Modelling for Urban Planning Support II
+
+12   01/11   Lesson 11: Network Analysis with GIS 	
+
+13   08/11   Lesson 12: Epilogue 	
+
+14   15/11	 Poster Presentation                                          GIS Project due
+
+15   22/11   Exam week 	
+-----------------------------------------------------------------------------------------------------
+
+
+
