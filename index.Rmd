@@ -1,0 +1,18 @@
+---
+title: "SMT201"
+description: |
+  Welcome to the home page for **SMT201 Geographic Information Systems for Urban Planning**. All course materials will be posted on this site.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Instructor: [Dr. Kam Tin Seong](https://www.smu.edu.sg/faculty/profile/9618/KAM-Tin-Seong)  
+Day: Monday 
+Time: 1530 to 1845
+Venue: SCIS Seminar Rm 2.4  
+Syllabus: [click here](syllabus.html)  
+Upcoming lectures: [click here](lesson.html)
+

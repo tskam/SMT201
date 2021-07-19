@@ -1,0 +1,22 @@
+name: "SMT201"
+title: "SMT201"
+description: |
+  SMT201
+output_dir: "_site"
+navbar:
+  left:
+    - text: "Syllabus"
+      href: syllabus.html
+    - text: "Lesson Plan"
+      href: lesson.html
+    - text: "Take-home Exercise"
+      href: th_ex.html
+    - text: "GIS Project"
+      href: GISproject.html
+  right:
+    - text: "Resources"
+      href: resources.html
+    - text: "Home"
+      href: index.html
+    
+output: distill::distill_article
