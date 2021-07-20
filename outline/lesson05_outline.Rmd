@@ -1,0 +1,51 @@
+---
+title: "Lesson 5: Vector-based GIS Analysis Methods"
+description: |
+  A new article created using the Distill format.
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Content
+
+- Spatial SQL
+- Spatial relationship
+- Geoprocessing Techniques
+    - CLIP
+    - DISSOLVE
+    - APPEND
+    - SPLIT
+    - ERASE
+- Proximity Analysis
+    - Buffering
+    - Thiessen Polygon
+- Vector Overlaying
+
+## Readings
+### Core readings
+
+- [Searches and Queries](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s10-02-searches-and-queries.html)
+- [Geospatial Analysis I: Vector Operations](https://saylordotorg.github.io/text_essentials-of-geographic-information-systems/s11-geospatial-analysis-i-vector-o.html)
+- [Vector Spatial Analysis (Buffers)](https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/vector_spatial_analysis_buffers.html)
+
+## QGIS Methods
+
+- [Vector Creation](https://docs.qgis.org/testing/en/docs/user_manual/processing_algs/qgis/vectorcreation.html)
+- [24.1.12. Vector analysis](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectoranalysis.html)
+- [24.1.13. Vector creation](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/qgis/vectorcreation.html)
+- [24.1.14. Vector general](https://docs.qgis.org/testing/en/docs/user_manual/processing_algs/qgis/vectorgeneral.html)
+- [24.1.15. Vector geometry](https://docs.qgis.org/testing/en/docs/user_manual/processing_algs/qgis/vectorgeometry.html)
+- [24.1.16. Vector overlay](https://docs.qgis.org/testing/en/docs/user_manual/processing_algs/qgis/vectoroverlay.html)
+- [24.1.17. Vector selection](https://docs.qgis.org/testing/en/docs/user_manual/processing_algs/qgis/vectorselection.html)
+- [24.1.18. Vector table](https://docs.qgis.org/testing/en/docs/user_manual/processing_algs/qgis/vectortable.html)
+
+
+
+
