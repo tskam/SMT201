@@ -21,7 +21,7 @@ Week Data    Topic 	                                                            
 
 3    30/08   [Lesson 3: Modelling Urban World](outline/lesson03_outline.html) 	
 
-4    06/08   Lesson 4: Thematic Mapping and GeoVisualisation                                     Take-home Exercise 1 due	
+4    06/08   [Lesson 4: Thematic Mapping and GeoVisualisation](outline/lesson04_outline.html)                                     Take-home Exercise 1 due	
 
 5    13/09   Lesson 5: Vector-based GeoProcessing and GIS Analysis 	
 
