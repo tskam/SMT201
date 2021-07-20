@@ -52,17 +52,20 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## QGIS methods
 
-- [The Vector Properties Dialog: Symbology Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#symbology-properties)
-- [The Vector Properties Dialog: Labels Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties)
-- [The Vector Properties Dialog: Diagrams Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#diagrams-properties)
-- [14.1.6. Masks Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#masks-properties)
-- [14.1.7. 3D View Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#d-view-properties)
-- [14.1.10. Joins Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#joins-properties)
-- [14.1.13. Display Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#display-properties)
-- [14.1.14. Rendering Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#rendering-properties)
-- [14.1.15. Variables Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#variables-properties)
-- [14.1.18. Legend Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#legend-properties)
-- [18. Laying out the maps](https://docs.qgis.org/3.16/en/docs/user_manual/print_composer/index.html)
+- [4. Module: Laying out the Maps](https://docs.qgis.org/3.16/en/docs/training_manual/map_composer/index.html) of **QGIS Training Manual**.
+- [9. Map Production](https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/map_production.html) of **A Gentle Introduction to GIS**.
+- The following sub-sections of **QGIS User Guide**:
+   - [The Vector Properties Dialog: Symbology Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#symbology-properties)
+   - [The Vector Properties Dialog: Labels Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties)
+   - [The Vector Properties Dialog: Diagrams Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#diagrams-properties)
+   - [14.1.6. Masks Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#masks-properties)
+   - [14.1.7. 3D View Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#d-view-properties)
+   - [14.1.10. Joins Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#joins-properties)
+   - [14.1.13. Display Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#display-properties)
+   - [14.1.14. Rendering Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#rendering-properties)
+   - [14.1.15. Variables Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#variables-properties)
+   - [14.1.18. Legend Properties](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html#legend-properties)
+   - [18. Laying out the maps](https://docs.qgis.org/3.16/en/docs/user_manual/print_composer/index.html)
 
 
 
