@@ -27,7 +27,7 @@ Week Data    Topic 	                                                            
 
 6    20/09   [Lesson 6: Urban Applications of Vector-based GIS Analysis](outline/lesson06_outline.html) 	
 
-7    27/09   Lesson 7: [The Science of Mapthematics](outline/lesson07_outline.html)                                                      Take-home Exercise 2 due
+7    27/09   [Lesson 7: The Science of Mapthematics](outline/lesson07_outline.html)                                                      Take-home Exercise 2 due
 
 8    04/10   Mid-term 	
 
