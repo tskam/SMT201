@@ -45,4 +45,5 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - [Working with Raster Data](https://docs.qgis.org/3.4/en/docs/user_manual/working_with_raster/index.html)
 - [8.3. Lesson: Terrain Analysis](https://docs.qgis.org/3.4/en/docs/training_manual/rasters/terrain_analysis.html)
-
+- [6. Raster Data](https://docs.qgis.org/3.16/en/docs/gentle_gis_introduction/raster_data.html) of **A Gentle Introduction to GIS**.
+- [7. Module: Rasters](https://docs.qgis.org/3.16/en/docs/training_manual/rasters/index.html) of  **QGIS Training Manual**.
