@@ -13,8 +13,8 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Weekly Lesson Plan
 
 -------------------------------------------------------------------------------------------------------------------------
-Week Data    Topic 	                                                                                Remarks
----- ------- -------------------------------------------------------------------------------------- -------------------------
+Week Data    Topic 	                                                                                   Remarks
+---- ------- ----------------------------------------------------------------------------------------- -------------------------
 1    16/08   [Lesson 1: Introduction to GIS for Urban Planning](outline/lesson01_outline.html)
  
 2    23/08   [Lesson 2: The Evil is in The Data](outline/lesson02_outline.html) 	
@@ -25,15 +25,15 @@ Week Data    Topic 	                                                            
 
 5    13/09   [Lesson 5: Vector-based GeoProcessing and GIS Analysis](outline/lesson05_outline.html) 	
 
-6    20/09   Lesson 6: Urban Applications of Vector-based GIS Analysis 	
+6    20/09   [Lesson 6: Urban Applications of Vector-based GIS Analysis](outline/lesson06_outline.html) 	
 
-7    27/09   Lesson 7: The Science of Mapthematics                                                   Take-home Exercise 2 due
+7    27/09   Lesson 7: The Science of Mapthematics                                                      Take-home Exercise 2 due
 
 8    04/10   Mid-term 	
 
 9    11/10   Lesson 8: Urban Applications of Raster-based GIS Analysis 	
 
-10   18/10   Lesson 9: GIS Modelling for Urban Planning Support I 	                                Take-home Exercise 3 due
+10   18/10   Lesson 9: GIS Modelling for Urban Planning Support I 	                                   Take-home Exercise 3 due
 
 11   25/10   Lesson 10: GIS Modelling for Urban Planning Support II
 
@@ -41,7 +41,7 @@ Week Data    Topic 	                                                            
 
 13   08/11   Lesson 12: Epilogue 	
 
-14   15/11	 Poster Presentation                                                                    GIS Project due
+14   15/11	 Poster Presentation                                                                       GIS Project due
 
 15   22/11   Exam week 	
 ------------------------------------------------------------------------------------------------------------------------
