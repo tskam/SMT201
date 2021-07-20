@@ -41,9 +41,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### GIS-based Urban Analysis
 
-- GIS-based analysis of urban land-use changes
-- Floodplain Management in Urban Developing Areas. Part II. GIS-Based Flood Analysis and Urban Growth Modelling
-- Urban analysis with GIS
+- [GIS-based analysis of urban land-use changes](https://link-springer-com.libproxy.smu.edu.sg/content/pdf/10.1007%2Fs11769-002-0039-3.pdf)
+- [Floodplain Management in Urban Developing Areas. Part II. GIS-Based Flood Analysis and Urban Growth Modelling](https://link-springer-com.libproxy.smu.edu.sg/article/10.1023/A%3A1008045419517)
+- [Urban analysis with GIS](https://link-springer-com.libproxy.smu.edu.sg/content/pdf/10.1023%2FA%3A1014262530372.pdf)
 
 
 
