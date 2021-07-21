@@ -1,0 +1,151 @@
+---
+title: "GIS Project"
+description: |
+  A new article created using the Distill format.
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview
+
+The purpose of the GIS project is to provide students first hand experience on building a GIS-Enabled Urban Planning Support System by integrating open government data and other open source data sets. You will also learn how to collecting, processing and analysing spatially related issues using real world data. Students are encouraged to focus on research topics that are relevant to their field of study.
+
+The project is to be done in a team. You are required to form a project team of **2-3 members** by the second week of the academic term. Each project team must start thinking about their project ideas after the first lesson. You are expected to discuss your project topic and scope of works with the instructor between week 2 to week 7 of the academic term. A project website must be prepared and uploaded to the course wiki page by the end of week 8.
+
+## Topics
+
+To Be Announced (TBA)
+
+## Scope of Work
+
+The project will comprises of, but not limited to the followings steps:
+
+- Selection of project area, ideally a planning area such as Ang Mo Kio
+- Data collection
+- Designing and building GIS model and database
+- Performing GIS analysis
+- Preparing report of survey
+- Preparing poster and materials for townhall presentation
+
+Please feel free to approach me for more details.
+
+## Project Milestone
+
+- Formulation of project team: by week 2 before lesson
+- Selecting project area: by week 3 before lesson
+- Brainstorming project objectives and scope of work: between week 4-7
+- Create project website : by week 8
+- Update project webpage and interim project discussion with instructor: week 10
+- Submission of project poster: by the end of Week 13.
+- Final project poster presentation: TBA
+- Submission of project artifacts and update project wiki: 15th November 2021 at 11.59pm (mid-night)
+
+## Grading
+
+The GIS project will count for 30% of your final grade in the course. The distribution of marks for each stage of the project are as follows:
+
+- Project website 15%
+- Project poster 15%
+- Project report 30%
+- Project artifact 40%
+
+The course instructor will consider strongly the novelty of the idea (If it has never been done before, you will get lots of credit!), how it addresses the problem at hand, the methodology you employ in doing the research, and your technical skill in implementing the idea.
+
+In small group projects, each person will be graded individually. A good group project is a system consisting of a collection of well defined subsystems. Each subsystem should be the responsibility of one person and be clearly identified as their project. A good criteria for whether you should work in a group is whether the system as a whole is greater than the sum of its parts!
+
+## Townhall Poster Presentation
+
+- Date: TBC
+- Venue: TBC
+- Time: 11:00am - 4.00pm
+
+We will organise a public presentation of the final projects. The presentation will be in the form of a poster session and live demo. You are required to bring a laptop with a working demo of your system. You should set up the laptop near your poster and use it to explain your project. During the presentation session, visitors and course instructor will view the various posters that are put up and pose questions to find out more details of the project. Be prepared to give a short 5-10 minute oral explanation and demo of what you did.
+
+## Deliverables
+### Project Website
+#### Project Github
+
+At the beginning of the project, project teams are required to create a project Github.  The project Github should include all the materials used to develop the project and the written materials such as proposal, poster and project report.  It must be used to maintain a complete project versioning including the application and project documents.  The Github link must be included in the project webpage.  By the end of the project, the project team must pack the final version of the Github repository and upload onto eLearn for final submission.  The Github link also must be provided on eLearn.  
+
+#### Project Website
+Each project team are required to create the project website by using either [blogdown](https://pkgs.rstudio.com/blogdown/) or [distill for RMarkdown](https://rstudio.github.io/distill/). It will be disseminated by using webserver such as [Netfity](https://www.netlify.com/).
+
+- The title of your project,
+- A short description of not more than 350 word summarising the motivation, objectives, main features of the application your team are going to build, and
+- The project proposal.
+   - Motivation of the project
+   - Project objective
+   - Data
+   - Scope of work
+   - Project schedule including a Gannt chart
+
+### Poster
+
+The poster should provide an overview of your project. It should include, but not limited to the following information:
+
+- Issues and problems - A clear statement of the issues or/and problems your project addresses.
+- Motivation - An explanation of why the issues and/or problems are interesting and what make them difficult to solve.
+- Approach - A description of the techniques or algorithms you used to solve the problem.
+- Results - Screenshots and a working demo of the system you built.
+- Future Work - An explanation of how the work could be extended.
+
+The dimensions for the poster must conform to the International Standards Organization (ISO) poster size format (A1). 
+
+- Size = ISO A1 (594 × 841mm or 23.39 × 33.11inci)
+- Resolution = 300dpi or above
+- File format = jpeg or pdf
+
+Please ensure that the poster is in high resolution. 
+
+Project teams are encouraged to use [posterdown](https://github.com/brentthorne/posterdown/wiki) to design your poster.
+
+The poster will be considered a final deliverable, so don't forget to apply good visual design principles to your poster as well as your project.
+
+Note: The course instructor will be responsible for printing your poster. You are required to upload your posters to the wiki page of your project one week and your project Dropbox before the poster presentation.
+
+Below are sample posters for your reference:
+
+- [Hut of North](https://wiki.smu.edu.sg/1920t1smt201/G1-Group12_Poster)
+- [What's Best for Jurong West](https://wiki.smu.edu.sg/1920t1smt201/G2-Group07_Poster)
+
+### Final Deliverable
+
+The final deliverable will include:
+
+- Fully updated project webpage
+- Project Poster on project webpage
+- Project Report on project webpage
+- Project artifact, the complete GIS project folder including but not limited to raw data, process data, QGIS project file, and output maps.
+
+#### Project Report
+
+The project report should focus on but not limited to the followings:
+
+- A detail discussion of the GIS analysis process and functions used.
+- A comprehensive discussion of the analysis results.
+- A collection of analytical maps (can be statics or interactive web maps)
+
+#### Submission instruction
+
+The project artefact is due (submitted to LMS Dropbox) by the end of the day on 15th November 2021 at 11.59pm (mid-night).
+
+
+## Sample Projects
+
+Note that the following examples are for references purposes. You are urged to use your own creativity and innovation to design the application.
+
+- [AY2019-2020 Term 1 Project](https://wiki.smu.edu.sg/1920t1smt201/Project_Groups)
+
+## Q&A
+
+Link to Q&A/Project Discussion 
+
+
+
