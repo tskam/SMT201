@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 The purpose of the GIS project is to provide students first hand experience on building a GIS-Enabled Urban Planning Support System by integrating open government data and other open source data sets. You will also learn how to collecting, processing and analysing spatially related issues using real world data. Students are encouraged to focus on research topics that are relevant to their field of study.
 
-The project is to be done in a team. You are required to form a project team of **2-3 members** by the second week of the academic term. Each project team must start thinking about their project ideas after the first lesson. You are expected to discuss your project topic and scope of works with the instructor between week 2 to week 7 of the academic term. A project website must be prepared and uploaded to the course wiki page by the end of week 8.
+The project is to be done in a team. You are required to form a project team of **2-3 members** by the second week of the academic term. Each project team must start thinking about their project ideas after the first lesson. You are expected to discuss your project topic and scope of works with the instructor between week 2 to week 7 of the academic term. A project website must be prepared and will be link to this page by the end of week 8.
 
 ## Topics
 
@@ -45,7 +45,7 @@ Please feel free to approach me for more details.
 - Update project webpage and interim project discussion with instructor: week 10
 - Submission of project poster: by the end of Week 13.
 - Final project poster presentation: TBA
-- Submission of project artifacts and update project wiki: 15th November 2021 at 11.59pm (mid-night)
+- Submission of project artifacts and update project webpage: 15th November 2021 at 11.59pm (mid-night)
 
 ## Grading
 
@@ -108,7 +108,7 @@ Project teams are encouraged to use [posterdown](https://github.com/brentthorne/
 
 The poster will be considered a final deliverable, so don't forget to apply good visual design principles to your poster as well as your project.
 
-Note: The course instructor will be responsible for printing your poster. You are required to upload your posters to the wiki page of your project one week and your project Dropbox before the poster presentation.
+Note: The course instructor will be responsible for printing your poster. You are required to upload your posters to the project webpage of your project one week and your project Dropbox before the poster presentation.
 
 Below are sample posters for your reference:
 
