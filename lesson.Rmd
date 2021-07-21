@@ -2,8 +2,10 @@
 title: "Lesson Plan"
 description: ""
 date: "`r Sys.Date()`"
-output: distill::distill_article
-
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE}
@@ -31,7 +33,7 @@ Week Data    Topic 	                                                            
 
 8    04/10   Mid-term 	
 
-9    11/10   Lesson 8: Urban Applications of Raster-based GIS Analysis 	
+9    11/10   [Lesson 8: Urban Applications of Raster-based GIS Analysis](outline/lesson08_outline.html) 	
 
 10   18/10   Lesson 9: GIS Modelling for Urban Planning Support I 	                                   Take-home Exercise 3 due
 
