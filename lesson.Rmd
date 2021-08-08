@@ -23,7 +23,7 @@ Week Data    Topic 	                                                            
 
 3    30/08   [Lesson 3: Modelling Urban World](outline/lesson03_outline.html) 	
 
-4    06/08   [Lesson 4: Thematic Mapping and GeoVisualisation](outline/lesson04_outline.html)                                     Take-home Exercise 1 due	
+4    06/08   [Lesson 4: Mapping and Visualising Urban World with GIS](outline/lesson04_outline.html)                                     Take-home Exercise 1 due	
 
 5    13/09   [Lesson 5: Vector-based GeoProcessing and GIS Analysis](outline/lesson05_outline.html) 	
 
@@ -35,11 +35,11 @@ Week Data    Topic 	                                                            
 
 9    11/10   [Lesson 8: Urban Applications of Raster-based GIS Analysis](outline/lesson08_outline.html) 	
 
-10   18/10   Lesson 9: GIS Modelling for Urban Planning Support I 	                                   Take-home Exercise 3 due
+10   18/10   Lesson 9: GIS Modelling for Urban Planning Support 	                                   Take-home Exercise 3 due
 
-11   25/10   Lesson 10: GIS Modelling for Urban Planning Support II
+11   25/10   Lesson 10: GIS and 3D City Models 
 
-12   01/11   Lesson 11: Network Analysis with GIS 	
+12   01/11   Lesson 11: Urban Network Analysis with GIS 	
 
 13   08/11   Lesson 12: Epilogue 	
 
