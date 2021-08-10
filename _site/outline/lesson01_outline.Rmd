@@ -41,14 +41,19 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Addition Readings
 
+#### Urban Planning
 
+- [Urban Planning](https://en.wikipedia.org/wiki/Urban_planning)
 - Chapter 2: Re-Examining Singapore's Urban Planning and Governance Framework in [Planning Singapore: The Experimental City](https://www-taylorfrancis-com.libproxy.smu.edu.sg/books/edit/10.4324/9781351058230/planning-singapore-stephen-hamnett-belinda-yuen). This book is available in digital form in smu library.
+- Shatkin, G (2014) ["Reinterpreting the Meaning of the 'Singapore' Model: State Capitalism and Urban Planning"](https://onlinelibrary-wiley-com.libproxy.smu.edu.sg/doi/full/10.1111/1468-2427.12095), International Journal of Urban and Regional Research, Vol. 38, Issue 1, pp. 116-137.
+
+#### GIS
+
 - [Chapter 6: Geographic Information Systems](https://link-springer-com.libproxy.smu.edu.sg/content/pdf/10.1007%2F978-3-540-72680-7_6.pdf) of Springer Handbook of Geographic Information
 - [Chapter 20: Planning](https://link-springer-com.libproxy.smu.edu.sg/content/pdf/10.1007%2F978-3-540-72680-7_20.pdf) of Springer Handbook of Geographic Information
 - [See What Others Can't](https://www.esri.com/videos/watch?&channelid=UCJ203R9PsZn6wF_zYfsp1SA&videoid=pg7ByVZo_sg&playlistid=PLaPDDLTCmy4bC2dGacC3ZH8YnCl4x7kuB&See%20What%20Others%20Can%27t)
-- [Urban Planning](https://en.wikipedia.org/wiki/Urban_planning)
+
 - [What is Geographic Information Systems (GIS)?](https://gisgeography.com/what-gis-geographic-information-systems/)
-- Shatkin, G (2014) ["Reinterpreting the Meaning of the 'Singapore' Model: State Capitalism and Urban Planning"](https://onlinelibrary-wiley-com.libproxy.smu.edu.sg/doi/full/10.1111/1468-2427.12095), International Journal of Urban and Regional Research, Vol. 38, Issue 1, pp. 116-137.
 - [GIS: The Intelligent Nervous System](https://www.esri.com/videos/watch?&channelid=UCJ203R9PsZn6wF_zYfsp1SA&videoid=pg7ByVZo_sg&playlistid=PLaPDDLTCmy4bC2dGacC3ZH8YnCl4x7kuB&See%20What%20Others%20Can%27t)
 
 ## All About QGIS
