@@ -85,28 +85,32 @@ Congratulations! You have installed QGIS successfully!
 
 Now, you are ready to launch QGIS.
 
-- At your window, double-click on   icon.
+- At your window, double-click on **QGIS Desktop3.20** icon.
 
 After a few seconds, QGIS window appears.
 
-- On the QGIS Tips! Dialog window, click on the OK button.
+- On the *QGIS Tips! Dialog* window, click on the **OK** button.
 
 Your screen should look similar to the figure below.
+
+![](img/image1-5.jpg)
 
 ### Getting to know a GIS project file
 
 A GIS project file provides a link between the GIS software and the geospatial datasets instead of stored data.  It also contains GIS operation configurations such as symbolisation used, data classification, map projection, the paths of each data and map design.  In this section, you will explore an existing QGIS’s project file called Hands-on01.qgs.    
 
 - Start Window Explorer.
-- Navigate to \SMT201\Hands-on_Ex01\ sub-folder.
+- Navigate to ```\SMT201\Hands-on_Ex01\``` sub-folder.
 
-You will find a file called Hands-On01 in the sub-folder. 
+You will find a file called ```Hands-On01.qgs``` in the sub-folder. 
 
-- Right-click on Hands-On01.
-- Select Open with from the context menu.
-- Use the Notepad to open the file.
+- Right-click on ```Hands-On01.qgs```.
+- Select **Open** with from the context menu.
+- Use the **Notepad** to open the file.
 
 The Notedpad window should look similar to the figure below. 
+
+![](img/image1-6.jpg)
 
 Notice that the QGIS project file is actually in XML format.  
 
@@ -116,12 +120,12 @@ Notice that the QGIS project file is actually in XML format.
 
 In this section, you will learn how to open an existing QGIS project file. 
 
-- From QGIS main menu, click on Project -> Open.
+- From QGIS main menu, click on **Project** -> **Open**.
 
-The Choose a QGIS project file to open dialog window appears.
+The ```Choose a QGIS project file to open``` dialog window appears.
 
-- Navigate to \SMT201\Hands-on_Ex01\ sub-folder.
-- Double-click on Hans-On01 file.
+- Navigate to ```\SMT201\Hands-on_Ex01\``` sub-folder.
+- Double-click on ```Hans-On01.qgs``` file.
 
 Your screen should look similar to the figure below.
 
