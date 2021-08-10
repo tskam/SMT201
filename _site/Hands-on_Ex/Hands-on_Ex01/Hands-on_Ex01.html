@@ -86,638 +86,38 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>SMT201</title>
+  <title>Hands-on Exercise 1: Your First Date with QGIS</title>
 
-  <meta property="description" itemprop="description" content="Welcome to the home page for **SMT201 Geographic Information Systems for Urban Planning**. All course materials will be posted on this site."/>
+  <meta property="description" itemprop="description" content="This hands-on exercise introduces you to QGIS (formally known as Quantum GIS), a full-features open source GIS software.  It consists of two sections.  First, it shows you how to download and install QGIS in your working computer.  The second section of this exercise shares with you the basic operations of a GIS software in general and the graphic user interfaces (GUIs) of QGIS specifically."/>
 
 
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-08-10"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-08-10"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="SMT201"/>
+  <meta property="og:title" content="Hands-on Exercise 1: Your First Date with QGIS"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Welcome to the home page for **SMT201 Geographic Information Systems for Urban Planning**. All course materials will be posted on this site."/>
+  <meta property="og:description" content="This hands-on exercise introduces you to QGIS (formally known as Quantum GIS), a full-features open source GIS software.  It consists of two sections.  First, it shows you how to download and install QGIS in your working computer.  The second section of this exercise shares with you the basic operations of a GIS software in general and the graphic user interfaces (GUIs) of QGIS specifically."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="SMT201"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="SMT201"/>
-  <meta property="twitter:description" content="Welcome to the home page for **SMT201 Geographic Information Systems for Urban Planning**. All course materials will be posted on this site."/>
+  <meta property="twitter:title" content="Hands-on Exercise 1: Your First Date with QGIS"/>
+  <meta property="twitter:description" content="This hands-on exercise introduces you to QGIS (formally known as Quantum GIS), a full-features open source GIS software.  It consists of two sections.  First, it shows you how to download and install QGIS in your working computer.  The second section of this exercise shares with you the basic operations of a GIS software in general and the graphic user interfaces (GUIs) of QGIS specifically."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["SMT201"]},{"type":"character","attributes":{},"value":["Welcome to the home page for **SMT201 Geographic Information Systems for Urban Planning**. All course materials will be posted on this site.\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output","date"]}},"value":[{"type":"character","attributes":{},"value":["Hands-on Exercise 1: Your First Date with QGIS"]},{"type":"character","attributes":{},"value":["This hands-on exercise introduces you to QGIS (formally known as Quantum GIS), a full-features open source GIS software.  It consists of two sections.  First, it shows you how to download and install QGIS in your working computer.  The second section of this exercise shares with you the basic operations of a GIS software in general and the graphic user interfaces (GUIs) of QGIS specifically.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["code_folding","toc","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[4]},{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["08-10-2021"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["Hands-on_Ex01.pdf","Hands-on_Ex01_files/anchor-4.2.2/anchor.min.js","Hands-on_Ex01_files/bowser-1.9.3/bowser.min.js","Hands-on_Ex01_files/distill-2.2.21/template.v2.js","Hands-on_Ex01_files/header-attrs-2.9/header-attrs.js","Hands-on_Ex01_files/jquery-1.11.3/jquery.min.js","Hands-on_Ex01_files/popper-2.6.0/popper.min.js","Hands-on_Ex01_files/tippy-6.2.7/tippy-bundle.umd.min.js","Hands-on_Ex01_files/tippy-6.2.7/tippy-light-border.css","Hands-on_Ex01_files/tippy-6.2.7/tippy.css","Hands-on_Ex01_files/tippy-6.2.7/tippy.umd.min.js","Hands-on_Ex01_files/webcomponents-2.0.0/webcomponents.js","img/image1-1.jpg","img/image1-2.jpg","img/image1-3.jpg","img/image1-4.jpg"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2033,15 +1433,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="Hands-on_Ex01_files/header-attrs-2.9/header-attrs.js"></script>
+  <script src="Hands-on_Ex01_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="Hands-on_Ex01_files/popper-2.6.0/popper.min.js"></script>
+  <link href="Hands-on_Ex01_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="Hands-on_Ex01_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="Hands-on_Ex01_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="Hands-on_Ex01_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="Hands-on_Ex01_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="Hands-on_Ex01_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="Hands-on_Ex01_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -2053,44 +1454,253 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"SMT201","description":"Welcome to the home page for **SMT201 Geographic Information Systems for Urban Planning**. All course materials will be posted on this site.","authors":[]}
+{"title":"Hands-on Exercise 1: Your First Date with QGIS","description":"This hands-on exercise introduces you to QGIS (formally known as Quantum GIS), a full-features open source GIS software.  It consists of two sections.  First, it shows you how to download and install QGIS in your working computer.  The second section of this exercise shares with you the basic operations of a GIS software in general and the graphic user interfaces (GUIs) of QGIS specifically.","authors":[],"publishedDate":"2021-08-10T00:00:00.000+08:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">SMT201</a>
-<a href="syllabus.html">Syllabus</a>
-<a href="lesson.html">Lesson Plan</a>
-<a href="th_ex.html">Take-home Exercise</a>
-<a href="GISproject.html">GIS Project</a>
-</div>
-<div class="nav-right">
-<a href="resources.html">Resources</a>
-<a href="index.html">Home</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>SMT201</h1>
+<h1>Hands-on Exercise 1: Your First Date with QGIS</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Welcome to the home page for <strong>SMT201 Geographic Information Systems for Urban Planning</strong>. All course materials will be posted on this site.</p></p>
+<p><p>This hands-on exercise introduces you to QGIS (formally known as Quantum GIS), a full-features open source GIS software. It consists of two sections. First, it shows you how to download and install QGIS in your working computer. The second section of this exercise shares with you the basic operations of a GIS software in general and the graphic user interfaces (GUIs) of QGIS specifically.</p></p>
 </div>
 
 
 <div class="d-article">
-<p>Instructor: <a href="https://www.smu.edu.sg/faculty/profile/9618/KAM-Tin-Seong">Dr. Kam Tin Seong</a><br />
-Day: Monday Time: 1530 to 1845 Venue: SCIS Seminar Rm 2.4<br />
-Syllabus: <a href="syllabus.html">click here</a><br />
-Upcoming lectures: <a href="lesson.html">click here</a></p>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#download-and-install-qgis">Download and Install QGIS</a>
+<ul>
+<li><a href="#download-qgis-installer">Download QGIS installer</a></li>
+<li><a href="#install-qgis">Install QGIS</a></li>
+</ul></li>
+<li><a href="#hello-qgis">Hello QGIS</a>
+<ul>
+<li><a href="#getting-to-know-a-gis-project-file">Getting to know a GIS project file</a></li>
+<li><a href="#open-an-existing-project-file">Open an existing project file</a></li>
+</ul></li>
+<li><a href="#exploring-qgis-interfaces">Exploring QGIS interfaces</a></li>
+<li><a href="#navigating-the-map-view">Navigating the Map View</a>
+<ul>
+<li><a href="#navigating-around-a-gis-view">Navigating around a GIS view</a></li>
+<li><a href="#map-navigation-using-changing-the-map-scale">Map Navigation using changing the map scale</a></li>
+</ul></li>
+<li><a href="#exploring-gis-data">Exploring GIS data</a>
+<ul>
+<li><a href="#exploring-gis-layer">Exploring GIS Layer</a></li>
+<li><a href="#working-with-identify-features-tool">Working with Identify Features tool</a></li>
+<li><a href="#query-attribute-table">Query Attribute Table</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h2 id="download-and-install-qgis">Download and Install QGIS</h2>
+<p>This section provides you with step-by-step guide on how to download and install QGIS in your window-based computer (i.e. desktop or laptop).</p>
+<h3 id="download-qgis-installer">Download QGIS installer</h3>
+<ul>
+<li><p>Launch the web browser.</p></li>
+<li><p>In the address bar at the top of the window, enter <a href="http://qgis.org/" class="uri">http://qgis.org/</a> and press <strong>Enter</strong>.</p></li>
+</ul>
+<p>The website should look something like this:</p>
+<p><img src="img/image1-1.jpg" /></p>
+<ul>
+<li>Click on <strong>Download Now</strong> button.</li>
+</ul>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image1-2.jpg" /></p>
+<ul>
+<li>Click on <strong>QGIS Standalone Installer Version 3.20</strong>.</li>
+</ul>
+<p><img src="img/image1-3.jpg" style="width:75.0%" /></p>
+<p>After a few seconds (depend on your network speed), a pop-up window appears.</p>
+<p><img src="img/image1-4.jpg" style="width:65.0%" /></p>
+<ul>
+<li>Click on the <strong>Save File</strong> button.</li>
+</ul>
+<p>When the file is downloaded, you are going to install QGIS into your computer.</p>
+<h3 id="install-qgis">Install QGIS</h3>
+<p>In this section, you will learn how to install QGIS into your computer.</p>
+<ul>
+<li><p>Find the QGIS installer on your computer, right-click and select <strong>Run as administrator</strong> from the context menu to launch the setup.</p></li>
+<li><p>Click on the <strong>Yes</strong> button when Windows prompt you with the dialog “Do you want to allow this app to make change to your device?”</p></li>
+</ul>
+<p>After a few second, the Setup Wizard dialog window appears.</p>
+<ul>
+<li>Click on the <strong>Next</strong> button.</li>
+</ul>
+<p>The next setup dialog window appears.</p>
+<ul>
+<li>Click on the <strong>I Agree</strong> button.</li>
+</ul>
+<p>The Setup dialog window appears.</p>
+<ul>
+<li>Ensure that the Destination Folder is at <strong>C:Files</strong>.</li>
+<li>Click on the <strong>Next</strong> button.</li>
+</ul>
+<p>The Setup dialog window should look similar to the figure below.</p>
+<ul>
+<li>Click on the check box in front of the extra datasets that you would like to install.</li>
+<li>Click on the <strong>Install</strong> button.</li>
+</ul>
+<p>QGIS will begin to install. It may take a few minutes to install so be patient.</p>
+<p>When the QGIS Setup Winzard appears</p>
+<ul>
+<li>Click on <strong>Finish</strong> button.</li>
+</ul>
+<p>Congratulations! You have installed QGIS successfully!</p>
+<h2 id="hello-qgis">Hello QGIS</h2>
+<p>Now, you are ready to launch QGIS.</p>
+<ul>
+<li>At your window, double-click on icon.</li>
+</ul>
+<p>After a few seconds, QGIS window appears.</p>
+<ul>
+<li>On the QGIS Tips! Dialog window, click on the OK button.</li>
+</ul>
+<p>Your screen should look similar to the figure below.</p>
+<h3 id="getting-to-know-a-gis-project-file">Getting to know a GIS project file</h3>
+<p>A GIS project file provides a link between the GIS software and the geospatial datasets instead of stored data. It also contains GIS operation configurations such as symbolisation used, data classification, map projection, the paths of each data and map design. In this section, you will explore an existing QGIS’s project file called Hands-on01.qgs.</p>
+<ul>
+<li>Start Window Explorer.</li>
+<li>Navigate to -on_Ex01 sub-folder.</li>
+</ul>
+<p>You will find a file called Hands-On01 in the sub-folder.</p>
+<ul>
+<li>Right-click on Hands-On01.</li>
+<li>Select Open with from the context menu.</li>
+<li>Use the Notepad to open the file.</li>
+</ul>
+<p>The Notedpad window should look similar to the figure below.</p>
+<p>Notice that the QGIS project file is actually in XML format.</p>
+<ul>
+<li>Close Notepad.</li>
+</ul>
+<h3 id="open-an-existing-project-file">Open an existing project file</h3>
+<p>In this section, you will learn how to open an existing QGIS project file.</p>
+<ul>
+<li>From QGIS main menu, click on Project -&gt; Open.</li>
+</ul>
+<p>The Choose a QGIS project file to open dialog window appears.</p>
+<ul>
+<li>Navigate to -on_Ex01 sub-folder.</li>
+<li>Double-click on Hans-On01 file.</li>
+</ul>
+<p>Your screen should look similar to the figure below.</p>
+<h2 id="exploring-qgis-interfaces">Exploring QGIS interfaces</h2>
+<p>The QGIS interface comprises six major components. They are: menu bar, toolbar, map legend, browser, status bar and map view. The Menu Bar provides access to various features and functions of QGIS using hierarchical menu. The location of the menu and menu items is fixed, although if you activate certain plugins, they may add an additional menu to the bar.</p>
+<p>The Toolbar replicates many of the features and functions in the Menu Bar, providing access to common features in a single click. The location of the toolbar is not fixed; if you hover over the edge of the toolbar and hold down the left mouse button you can drag the toolbar wherever you like.</p>
+<p>The Map Legend lists data layers that are linked with the current project.</p>
+<p>You can turn each of the data layer on and off by clicking on the checkbox in front of each data layer.</p>
+<ul>
+<li>From the Map Legend, click on the checkbox in front of CoastalOutline.</li>
+</ul>
+<p>Notice that the Singapore boundary map on the Map View window disappears.</p>
+<ul>
+<li>Click on the checkbox in front of CoastalOutline again.</li>
+</ul>
+<p>Notice that the Singapore boundary map on the Map View window re-appears.</p>
+<p>The browser, a new feature in QGIS 2.0, allows users to see their file system and all of the GIS data files and databases. It also allows users to drag files from the file system into QGIS project.</p>
+<p>The Status Bar shows the current scale of the map view, the coordinates of the current position of the cursor and the coordinate system used by the project. When a computation operation such as buffering is used, the progress meters will appear here to show the progress of the operations.</p>
+<p>Last but not least, the Map View window displays all the active layers in the project.</p>
+<h2 id="navigating-the-map-view">Navigating the Map View</h2>
+<h3 id="navigating-around-a-gis-view">Navigating around a GIS view</h3>
+<p>In this section, you will learn how to navigate around the Map View. First, you will work with the navigation tools.</p>
+<ul>
+<li>From the Toolbar, click on the Zoom In tool.</li>
+<li>Hover the mouse to the centre of Singapore, click once.</li>
+</ul>
+<p>Your screen should look similar to the figure below.</p>
+<p>Notice that the map layer zooms into a new extent.</p>
+<p>Now, you want to return to the previous extent.</p>
+<ul>
+<li>From the Zoom tools bar, click on the Zoom Last tool.</li>
+</ul>
+<p>Notice that the map view returns to the initial extant now.</p>
+<p>Next, you will learn how to zoom into a specific location using the Zoom In tool. For example, we would like to zoom into the mark area as shown in the figure below.</p>
+<ul>
+<li><p>From the Zoom Tools bar, click on the Zoom In tool.</p></li>
+<li><p>Hover the mouse over the marked location as shown in the figure above.</p></li>
+<li><p>Press on the left button of the mouse, drag to form a rectangle around the marked location.</p></li>
+<li><p>Release the left button.</p></li>
+</ul>
+<p>Your screen should look similar to the figure below. Notice that the URA_PlanningArea layer appears now.</p>
+<p>Next, you will return to the previous extent using alternative zooming tool.</p>
+<ul>
+<li>From the Zoom Tools bar, click on the Zoom to Layer tool.</li>
+</ul>
+<p>Notice that the map view returns to the previous state and the URA_PlanningArea layers are turned off again.</p>
+<p>DIY Try out the remaining navigation tools in the Zoom Tools bar.</p>
+<h3 id="map-navigation-using-changing-the-map-scale">Map Navigation using changing the map scale</h3>
+<p>In this section, you will learn how to change the map view by changing the map scale.</p>
+<ul>
+<li>From the Status bar (located below Map View), click on the drop-down list of Scale.</li>
+<li>Select 1:25,000.</li>
+<li>Use the Pan tool to move the map area so that it looks similar to the figure below.</li>
+<li>From the Scale of at the Status bar, click on the drop-down list again.</li>
+<li>Select 1:10000.</li>
+</ul>
+<p>Your screen should look similar to the figure below. Notice that more detail appears when the map scale increases.</p>
+<h2 id="exploring-gis-data">Exploring GIS data</h2>
+<p>In this section, you will learn how to interact with the features that appear in the Map View and retrieve their corresponding attribute information.</p>
+<h3 id="exploring-gis-layer">Exploring GIS Layer</h3>
+<p>In this sub-section, you will learn how to explore the information of individual GIS layer.</p>
+<ul>
+<li>From the Map Legend window, right-click on Building layer.</li>
+<li>Select Properties from the context menu.</li>
+</ul>
+<p>The Layer Properties of Building layer appears. It provides the full metadata of Building layer, it symbolization configuration and the data fields.</p>
+<p>By default, QGIS will display the general information of the selected layer. You can retrieve other information or configurations of the layer by clicking on the appropriate tab.</p>
+<p>The key information available are as follows:</p>
+<ul>
+<li>Source shows the path of Building layer.</li>
+<li>Storage reveals the file type, i.e. ESRI Shapefile format.</li>
+<li>Geometry indicate the spatial object used to represent the real world feature.<br />
+</li>
+<li>CRS shows the georeferencing information of the active layer (i.e. SVY21/Singapore TM).</li>
+<li>Unit is the unit measurement of the active layer.</li>
+</ul>
+<p>Let us examine other tab.</p>
+<p>• Click on Rendering tab.</p>
+<p>You screen should look similar to the figure below.</p>
+<p>Note that and the minimum map scale is 25000. That explains why the building layer only appears when the map scale of Map View is less than or equal to 1:25000.</p>
+<p>Next, you will explore the data fields of Building layer.</p>
+<ul>
+<li>Click on the Field tab.</li>
+</ul>
+<p>Your screen should look similar to the figure below.</p>
+<p>Notice that there are 12 fields in the corresponding attribute table of Building layer. The Layer Properties window also shows the data type, length and precision of each field.</p>
+<p>You will explore the other tabs in the next hands-on.</p>
+<ul>
+<li>At the Layer Properties window, click on the cross button located at the upper right hand corner to close the window.</li>
+</ul>
+<h3 id="working-with-identify-features-tool">Working with Identify Features tool</h3>
+<p>Using the Identify Features tool to interact with a geographical feature and retrieve its corresponding attribute information is a two steps process. First, you need to make the layer of the feature active. Then, you will use the Identify Features tool to query the information.</p>
+<p>In this section, you will learn how to query information of a selected Shopping feature (marks by a circle in the figure above).</p>
+<p>• At the Map Legend window, click on the Shopping layer to make it active.</p>
+<p>• Click on the Identify Features tool .</p>
+<p>• At the Map View window, hovers the mouse over the shopping feature you are interested to query (the one marked in the figure above).</p>
+<p>• Click on the shopping feature.</p>
+<p>Your screen should look similar to the figure below.</p>
+<p>Notice that the selected shopping feature was highlighted (i.e. in red) and the Identify Results window appears.</p>
+<p>DIY Using the steps you had learned from this section, query a building feature, a road network feature and a URA planning area feature.</p>
+<h3 id="query-attribute-table">Query Attribute Table</h3>
+<p>The ability to interactively select a geographic feature and query its associated attribute information is a very powerful feature of a GIS. However, there are times that you would like to see the attributes of all the features in a GIS layer. In this section, you will learn how to use QGIS’s Open Attribute Table function to display the attribute table of a GIS layer.</p>
+<p>• At the Map Legend window, right-click on Building layer.</p>
+<p>• Select Open Attribute Table from the context menu.</p>
+<p>The Attribute table window appears.</p>
+<p>The table provide detail information of each geographical feature (i.e. building) such as building name, postal code, road name, block number, just to name a few of them.</p>
+<p>DIY Using the steps you had learned from this section, review the attribute table of Shopping and URA_PlanningArea layers.</p>
+<p>Whew! That was a lot to take in! Take a deep breath and relax. By now you should have a good understanding of the basic operations of QGIS. You can start playing with it and practice the techniques that you have learned.</p>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
