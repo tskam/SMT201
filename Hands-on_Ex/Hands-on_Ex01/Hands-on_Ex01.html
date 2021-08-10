@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["Hands-on_Ex01.pdf","Hands-on_Ex01_files/anchor-4.2.2/anchor.min.js","Hands-on_Ex01_files/bowser-1.9.3/bowser.min.js","Hands-on_Ex01_files/distill-2.2.21/template.v2.js","Hands-on_Ex01_files/header-attrs-2.9/header-attrs.js","Hands-on_Ex01_files/jquery-1.11.3/jquery.min.js","Hands-on_Ex01_files/popper-2.6.0/popper.min.js","Hands-on_Ex01_files/tippy-6.2.7/tippy-bundle.umd.min.js","Hands-on_Ex01_files/tippy-6.2.7/tippy-light-border.css","Hands-on_Ex01_files/tippy-6.2.7/tippy.css","Hands-on_Ex01_files/tippy-6.2.7/tippy.umd.min.js","Hands-on_Ex01_files/webcomponents-2.0.0/webcomponents.js","img/image1-1.jpg","img/image1-2.jpg","img/image1-3.jpg","img/image1-4.jpg","img/image1-5.jpg","img/image1-6.jpg"]}
+  {"type":"character","attributes":{},"value":["Hands-on_Ex01.pdf","Hands-on_Ex01_files/anchor-4.2.2/anchor.min.js","Hands-on_Ex01_files/bowser-1.9.3/bowser.min.js","Hands-on_Ex01_files/distill-2.2.21/template.v2.js","Hands-on_Ex01_files/header-attrs-2.9/header-attrs.js","Hands-on_Ex01_files/jquery-1.11.3/jquery.min.js","Hands-on_Ex01_files/popper-2.6.0/popper.min.js","Hands-on_Ex01_files/tippy-6.2.7/tippy-bundle.umd.min.js","Hands-on_Ex01_files/tippy-6.2.7/tippy-light-border.css","Hands-on_Ex01_files/tippy-6.2.7/tippy.css","Hands-on_Ex01_files/tippy-6.2.7/tippy.umd.min.js","Hands-on_Ex01_files/webcomponents-2.0.0/webcomponents.js","img/image1-1.jpg","img/image1-10.jpg","img/image1-11.jpg","img/image1-12.jpg","img/image1-13.jpg","img/image1-14.jpg","img/image1-15.jpg","img/image1-16.jpg","img/image1-17.jpg","img/image1-18.jpg","img/image1-19.jpg","img/image1-2.jpg","img/image1-20.jpg","img/image1-21.jpg","img/image1-22.jpg","img/image1-3.jpg","img/image1-4.jpg","img/image1-5.jpg","img/image1-6.jpg","img/image1-7.jpg","img/image1-8.jpg","img/image1-9.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1490,7 +1490,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#navigating-the-map-view">Navigating the Map View</a>
 <ul>
 <li><a href="#navigating-around-a-gis-view">Navigating around a GIS view</a></li>
-<li><a href="#map-navigation-using-changing-the-map-scale">Map Navigation using changing the map scale</a></li>
+<li><a href="#map-navigation-by-changing-the-map-scale">Map Navigation by changing the map scale</a></li>
 </ul></li>
 <li><a href="#exploring-gis-data">Exploring GIS data</a>
 <ul>
@@ -1595,10 +1595,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>Double-click on <code>Hans-On01.qgs</code> file.</li>
 </ul>
 <p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image1-7.jpg" /></p>
 <h2 id="exploring-qgis-interfaces">Exploring QGIS interfaces</h2>
-<p>The QGIS interface comprises six major components. They are: menu bar, toolbar, map legend, browser, status bar and map view. The Menu Bar provides access to various features and functions of QGIS using hierarchical menu. The location of the menu and menu items is fixed, although if you activate certain plugins, they may add an additional menu to the bar.</p>
-<p>The Toolbar replicates many of the features and functions in the Menu Bar, providing access to common features in a single click. The location of the toolbar is not fixed; if you hover over the edge of the toolbar and hold down the left mouse button you can drag the toolbar wherever you like.</p>
-<p>The Map Legend lists data layers that are linked with the current project.</p>
+<p>The QGIS interface comprises six major components. They are: menu bar, toolbar, map legend, browser, status bar and map view. The <strong>Menu Bar</strong> provides access to various features and functions of QGIS using hierarchical menu. The location of the menu and menu items is fixed, although if you activate certain plugins, they may add an additional menu to the bar.</p>
+<p><img src="img/image1-8.jpg" /></p>
+<p>The <strong>Toolbar</strong> replicates many of the features and functions in the Menu Bar, providing access to common features in a single click. The location of the toolbar is not fixed; if you hover over the edge of the toolbar and hold down the left mouse button you can drag the toolbar wherever you like.</p>
+<p><img src="img/image1-9.jpg" /></p>
+<p>The <strong>Map Legend</strong> lists data layers that are linked with the current project.</p>
+<p><img src="img/image1-10.jpg" style="width:30.0%" /></p>
 <p>You can turn each of the data layer on and off by clicking on the checkbox in front of each data layer.</p>
 <ul>
 <li>From the Map Legend, click on the checkbox in front of CoastalOutline.</li>
@@ -1608,56 +1612,68 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>Click on the checkbox in front of CoastalOutline again.</li>
 </ul>
 <p>Notice that the Singapore boundary map on the Map View window re-appears.</p>
-<p>The browser, a new feature in QGIS 2.0, allows users to see their file system and all of the GIS data files and databases. It also allows users to drag files from the file system into QGIS project.</p>
-<p>The Status Bar shows the current scale of the map view, the coordinates of the current position of the cursor and the coordinate system used by the project. When a computation operation such as buffering is used, the progress meters will appear here to show the progress of the operations.</p>
-<p>Last but not least, the Map View window displays all the active layers in the project.</p>
+<p>The <strong>Browser</strong>, a new feature in QGIS 2.0, allows users to see their file system and all of the GIS data files and databases. It also allows users to drag files from the file system into QGIS project.</p>
+<p><img src="img/image1-11.jpg" style="width:30.0%" /></p>
+<p>The <strong>Status Bar</strong> shows the current scale of the map view, the coordinates of the current position of the cursor and the coordinate system used by the project. When a computation operation such as buffering is used, the progress meters will appear here to show the progress of the operations.</p>
+<p><img src="img/image1-12.jpg" /></p>
+<p>Last but not least, the <strong>Map View</strong> window displays all the active layers in the project.</p>
 <h2 id="navigating-the-map-view">Navigating the Map View</h2>
 <h3 id="navigating-around-a-gis-view">Navigating around a GIS view</h3>
 <p>In this section, you will learn how to navigate around the Map View. First, you will work with the navigation tools.</p>
+<p><img src="img/image1-13.jpg" style="width:30.0%" /></p>
 <ul>
-<li>From the Toolbar, click on the Zoom In tool.</li>
+<li>From the <strong>Toolbar</strong>, click on the <strong>Zoom In</strong> tool.</li>
 <li>Hover the mouse to the centre of Singapore, click once.</li>
 </ul>
 <p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image1-14.jpg" /></p>
 <p>Notice that the map layer zooms into a new extent.</p>
 <p>Now, you want to return to the previous extent.</p>
 <ul>
-<li>From the Zoom tools bar, click on the Zoom Last tool.</li>
+<li>From <strong>Map Navigation Toolbar</strong>, click on the <strong>Zoom Last</strong> tool.</li>
 </ul>
 <p>Notice that the map view returns to the initial extant now.</p>
 <p>Next, you will learn how to zoom into a specific location using the Zoom In tool. For example, we would like to zoom into the mark area as shown in the figure below.</p>
 <ul>
-<li><p>From the Zoom Tools bar, click on the Zoom In tool.</p></li>
-<li><p>Hover the mouse over the marked location as shown in the figure above.</p></li>
-<li><p>Press on the left button of the mouse, drag to form a rectangle around the marked location.</p></li>
-<li><p>Release the left button.</p></li>
+<li>From <strong>Map Navigation Toolbar</strong>, click on the <strong>Zoom In</strong> tool.</li>
+<li>Hover the mouse over Punggol Planning Area.</li>
+<li>Press on the left button of the mouse, drag to form a rectangle around Puggol Planning Area.</li>
+<li>Release the left button.</li>
 </ul>
-<p>Your screen should look similar to the figure below. Notice that the URA_PlanningArea layer appears now.</p>
+<p>Your screen should look similar to the figure below. Notice that the URA MP2014 Landuse Plan layer appears now.</p>
+<p><img src="img/image1-15.jpg" /></p>
 <p>Next, you will return to the previous extent using alternative zooming tool.</p>
 <ul>
-<li>From the Zoom Tools bar, click on the Zoom to Layer tool.</li>
+<li>From <strong>Map Navigation Toolbar</strong>, click on the <strong>Zoom to Layer</strong> tool.</li>
 </ul>
-<p>Notice that the map view returns to the previous state and the URA_PlanningArea layers are turned off again.</p>
-<p>DIY Try out the remaining navigation tools in the Zoom Tools bar.</p>
-<h3 id="map-navigation-using-changing-the-map-scale">Map Navigation using changing the map scale</h3>
+<p>Notice that the map view returns to the previous state and <em>URA MP2014 Landuse Plan</em> layers are turned off again.</p>
+<blockquote>
+<p>DIY: Try out the remaining navigation tools in <strong>Map Navigation Toolbar</strong>.</p>
+</blockquote>
+<h3 id="map-navigation-by-changing-the-map-scale">Map Navigation by changing the map scale</h3>
 <p>In this section, you will learn how to change the map view by changing the map scale.</p>
 <ul>
-<li>From the Status bar (located below Map View), click on the drop-down list of Scale.</li>
-<li>Select 1:25,000.</li>
-<li>Use the Pan tool to move the map area so that it looks similar to the figure below.</li>
-<li>From the Scale of at the Status bar, click on the drop-down list again.</li>
-<li>Select 1:10000.</li>
+<li>From the <strong>Status bar</strong> (located below Map View), click on the drop-down list of <strong>Scale</strong>.</li>
+<li>Select <strong>1:25,000</strong>.</li>
+<li>Use the <strong>Pan tool</strong> to move the map area so that it looks similar to the figure below.</li>
+</ul>
+<p><img src="img/image1-16.jpg" /></p>
+<ul>
+<li>From the <strong>Scale</strong> of at the <strong>Status bar</strong>, click on the drop-down list again.</li>
+<li>Select <strong>1:4500</strong>.</li>
 </ul>
 <p>Your screen should look similar to the figure below. Notice that more detail appears when the map scale increases.</p>
+<p><img src="img/image1-17.jpg" /></p>
 <h2 id="exploring-gis-data">Exploring GIS data</h2>
 <p>In this section, you will learn how to interact with the features that appear in the Map View and retrieve their corresponding attribute information.</p>
 <h3 id="exploring-gis-layer">Exploring GIS Layer</h3>
 <p>In this sub-section, you will learn how to explore the information of individual GIS layer.</p>
 <ul>
-<li>From the Map Legend window, right-click on Building layer.</li>
-<li>Select Properties from the context menu.</li>
+<li>From the <strong>Map Legend</strong> window, right-click on <code>Building</code> layer.</li>
+<li>Select <strong>Properties</strong> from the context menu.</li>
 </ul>
 <p>The Layer Properties of Building layer appears. It provides the full metadata of Building layer, it symbolization configuration and the data fields.</p>
+<p><img src="img/image1-18.jpg" /></p>
 <p>By default, QGIS will display the general information of the selected layer. You can retrieve other information or configurations of the layer by clicking on the appropriate tab.</p>
 <p>The key information available are as follows:</p>
 <ul>
@@ -1669,36 +1685,44 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>Unit is the unit measurement of the active layer.</li>
 </ul>
 <p>Let us examine other tab.</p>
-<p>• Click on Rendering tab.</p>
+<p>• Click on <strong>Rendering</strong> tab.</p>
 <p>You screen should look similar to the figure below.</p>
-<p>Note that and the minimum map scale is 25000. That explains why the building layer only appears when the map scale of Map View is less than or equal to 1:25000.</p>
+<p><img src="img/image1-19.jpg" /></p>
+<p>Note that and the minimum map scale is 5000. That explains why the building layer only appears when the map scale of Map View is less than or equal to 1:5000.</p>
 <p>Next, you will explore the data fields of Building layer.</p>
 <ul>
-<li>Click on the Field tab.</li>
+<li>Click on the <strong>Field</strong> tab.</li>
 </ul>
 <p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image1-20.jpg" /></p>
 <p>Notice that there are 12 fields in the corresponding attribute table of Building layer. The Layer Properties window also shows the data type, length and precision of each field.</p>
 <p>You will explore the other tabs in the next hands-on.</p>
 <ul>
-<li>At the Layer Properties window, click on the cross button located at the upper right hand corner to close the window.</li>
+<li>At the <strong>Layer Properties</strong> window, click on the cross button located at the upper right hand corner to close the window.</li>
 </ul>
 <h3 id="working-with-identify-features-tool">Working with Identify Features tool</h3>
-<p>Using the Identify Features tool to interact with a geographical feature and retrieve its corresponding attribute information is a two steps process. First, you need to make the layer of the feature active. Then, you will use the Identify Features tool to query the information.</p>
+<p>Using <strong>Identify Features</strong> tool to interact with a geographical feature and retrieve its corresponding attribute information is a two steps process. First, you need to make the layer of the feature active. Then, you will use the Identify Features tool to query the information.</p>
 <p>In this section, you will learn how to query information of a selected Shopping feature (marks by a circle in the figure above).</p>
-<p>• At the Map Legend window, click on the Shopping layer to make it active.</p>
-<p>• Click on the Identify Features tool .</p>
-<p>• At the Map View window, hovers the mouse over the shopping feature you are interested to query (the one marked in the figure above).</p>
-<p>• Click on the shopping feature.</p>
+<p>• At the <strong>Map Legend</strong> window, click on <code>Shopping</code> layer to make it active.</p>
+<p>• Click on the <strong>Identify Features</strong> tool.</p>
+<p>• At the <strong>Map View</strong> window, hovers the mouse over the shopping feature you are interested to query (the one marked in the figure above).</p>
+<p>• Click on an shopping feature.</p>
 <p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image1-21.jpg" /></p>
 <p>Notice that the selected shopping feature was highlighted (i.e. in red) and the Identify Results window appears.</p>
-<p>DIY Using the steps you had learned from this section, query a building feature, a road network feature and a URA planning area feature.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned from this section, query a building feature, a road network feature and a URA planning area feature.</p>
+</blockquote>
 <h3 id="query-attribute-table">Query Attribute Table</h3>
 <p>The ability to interactively select a geographic feature and query its associated attribute information is a very powerful feature of a GIS. However, there are times that you would like to see the attributes of all the features in a GIS layer. In this section, you will learn how to use QGIS’s Open Attribute Table function to display the attribute table of a GIS layer.</p>
-<p>• At the Map Legend window, right-click on Building layer.</p>
-<p>• Select Open Attribute Table from the context menu.</p>
-<p>The Attribute table window appears.</p>
+<p>• At the <strong>Map Legend</strong> window, right-click on <code>Building</code> layer.</p>
+<p>• Select <strong>Open Attribute Table</strong> from the context menu.</p>
+<p>The <strong>Attribute table</strong> window appears.</p>
+<p><img src="img/image1-22.jpg" /></p>
 <p>The table provide detail information of each geographical feature (i.e. building) such as building name, postal code, road name, block number, just to name a few of them.</p>
-<p>DIY Using the steps you had learned from this section, review the attribute table of Shopping and URA_PlanningArea layers.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned from this section, review the attribute table of <code>Shopping</code> and <code>URA MP2014 Planning Area</code> layers.</p>
+</blockquote>
 <p>Whew! That was a lot to take in! Take a deep breath and relax. By now you should have a good understanding of the basic operations of QGIS. You can start playing with it and practice the techniques that you have learned.</p>
 <div class="layout-chunk" data-layout="l-body">
 

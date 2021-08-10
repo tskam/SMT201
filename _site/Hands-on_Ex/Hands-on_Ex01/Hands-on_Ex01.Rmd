@@ -129,14 +129,22 @@ The ```Choose a QGIS project file to open``` dialog window appears.
 
 Your screen should look similar to the figure below.
 
+![](img/image1-7.jpg)
+
 ## Exploring QGIS interfaces
 
 The QGIS interface comprises six major components. They are: menu bar, toolbar, map legend, browser, status bar and map view. 
-The Menu Bar provides access to various features and functions of QGIS using hierarchical menu.  The location of the menu and menu items is fixed, although if you activate certain plugins, they may add an additional menu to the bar.
+The **Menu Bar** provides access to various features and functions of QGIS using hierarchical menu.  The location of the menu and menu items is fixed, although if you activate certain plugins, they may add an additional menu to the bar.
 
-The Toolbar replicates many of the features and functions in the Menu Bar, providing access to common features in a single click.  The location of the toolbar is not fixed; if you hover over the edge of the toolbar and hold down the left mouse button you can drag the toolbar wherever you like.
+![](img/image1-8.jpg)
 
-The Map Legend lists data layers that are linked with the current project.  
+The **Toolbar** replicates many of the features and functions in the Menu Bar, providing access to common features in a single click.  The location of the toolbar is not fixed; if you hover over the edge of the toolbar and hold down the left mouse button you can drag the toolbar wherever you like.
+
+![](img/image1-9.jpg)
+
+The **Map Legend** lists data layers that are linked with the current project.  
+
+![](img/image1-10.jpg){width=30%}
 
 You can turn each of the data layer on and off by clicking on the checkbox in front of each data layer.
 
@@ -148,61 +156,75 @@ Notice that the Singapore boundary map on the Map View window disappears.
 
 Notice that the Singapore boundary map on the Map View window re-appears.
 
-The browser, a new feature in QGIS 2.0, allows users to see their file system and all of the GIS data files and databases.  It also allows users to drag files from the file system into QGIS project.  
+The **Browser**, a new feature in QGIS 2.0, allows users to see their file system and all of the GIS data files and databases.  It also allows users to drag files from the file system into QGIS project.
 
-The Status Bar shows the current scale of the map view, the coordinates of the current position of the cursor and the coordinate system used by the project.  When a computation operation such as buffering is used, the progress meters will appear here to show the progress of the operations. 
+![](img/image1-11.jpg){width=30%}
 
-Last but not least, the Map View window displays all the active layers in the project.
+The **Status Bar** shows the current scale of the map view, the coordinates of the current position of the cursor and the coordinate system used by the project.  When a computation operation such as buffering is used, the progress meters will appear here to show the progress of the operations. 
+
+![](img/image1-12.jpg)
+
+Last but not least, the **Map View** window displays all the active layers in the project.
 
 ## Navigating the Map View
 ### Navigating around a GIS view 
 
 In this section, you will learn how to navigate around the Map View.  First, you will work with the navigation tools.
 
-- From the Toolbar, click on the Zoom In   tool.
+![](img/image1-13.jpg){width=30%}
+
+- From the **Toolbar**, click on the **Zoom In** tool.
 - Hover the mouse to the centre of Singapore, click once.
 
 Your screen should look similar to the figure below.
+
+![](img/image1-14.jpg)
 
 Notice that the map layer zooms into a new extent.
 
 Now, you want to return to the previous extent.
 
-- From the Zoom tools bar, click on the Zoom Last    tool.
+- From **Map Navigation Toolbar**, click on the **Zoom Last** tool.
 
 Notice that the map view returns to the initial extant now.
 
 Next, you will learn how to zoom into a specific location using the Zoom In tool.  For example, we would like to zoom into the mark area as shown in the figure below.  
 
-- From the Zoom Tools bar, click on the Zoom In tool.
-- Hover the mouse over the marked location as shown in the figure above.
-- Press on the left button of the mouse, drag to form a rectangle around the marked location.
-
+- From **Map Navigation Toolbar**, click on the **Zoom In** tool.
+- Hover the mouse over Punggol Planning Area.
+- Press on the left button of the mouse, drag to form a rectangle around Puggol Planning Area.
 - Release the left button.
 
-Your screen should look similar to the figure below.  Notice that the URA_PlanningArea layer appears now.
+Your screen should look similar to the figure below.  Notice that the URA MP2014 Landuse Plan layer appears now.
+
+![](img/image1-15.jpg)
+
 
 Next, you will return to the previous extent using alternative zooming tool.
 
-- From the Zoom Tools bar, click on the Zoom to Layer   tool.
+- From **Map Navigation Toolbar**, click on the **Zoom to Layer**   tool.
 
-Notice that the map view returns to the previous state and the URA_PlanningArea layers are turned off again.
+Notice that the map view returns to the previous state and *URA MP2014 Landuse Plan* layers are turned off again.
 
-DIY
-Try out the remaining navigation tools in the Zoom Tools bar.
+>DIY:
+Try out the remaining navigation tools in **Map Navigation Toolbar**.
 
-### Map Navigation using changing the map scale
+### Map Navigation by changing the map scale
 
 In this section, you will learn how to change the map view by changing the map scale.  
 
-- From the Status bar (located below Map View), click on the drop-down list of Scale.
-- Select 1:25,000.
-- Use the Pan tool to move the map area so that it looks similar to the figure below.
-- From the Scale of at the Status bar, click on the drop-down list again.
-- Select 1:10000.
+- From the **Status bar** (located below Map View), click on the drop-down list of **Scale**.
+- Select **1:25,000**.
+- Use the **Pan tool** to move the map area so that it looks similar to the figure below.
+
+![](img/image1-16.jpg)
+
+- From the **Scale** of at the **Status bar**, click on the drop-down list again.
+- Select **1:4500**.
 
 Your screen should look similar to the figure below.  Notice that more detail appears when the map scale increases.
- 
+
+![](img/image1-17.jpg)
 
 ## Exploring GIS data
 
@@ -212,10 +234,12 @@ In this section, you will learn how to interact with the features that appear in
 
 In this sub-section, you will learn how to explore the information of individual GIS layer.
 
-- From the Map Legend window, right-click on Building layer.
-- Select Properties from the context menu.
+- From the **Map Legend** window, right-click on ```Building``` layer.
+- Select **Properties** from the context menu.
 
-The Layer Properties of Building layer appears.  It provides the full metadata of Building layer, it symbolization configuration and the data fields.  
+The Layer Properties of Building layer appears.  It provides the full metadata of Building layer, it symbolization configuration and the data fields.
+
+![](img/image1-18.jpg)
 
 By default, QGIS will display the general information of the selected layer.  You can retrieve other information or configurations of the layer by clicking on the appropriate tab.
 
@@ -227,62 +251,67 @@ The key information available are as follows:
 - CRS shows the georeferencing information of the active layer (i.e. SVY21/Singapore TM).
 - Unit is the unit measurement of the active layer.
 
-
 Let us examine other tab.
 
-•	Click on Rendering tab.
+•	Click on **Rendering** tab.
 
 You screen should look similar to the figure below.
 
-Note that and the minimum map scale is 25000.  That explains why the building layer only appears when the map scale of Map View is less than or equal to 1:25000.
+![](img/image1-19.jpg)
+
+Note that and the minimum map scale is 5000.  That explains why the building layer only appears when the map scale of Map View is less than or equal to 1:5000.
 
 Next, you will explore the data fields of Building layer.
 
-- Click on the Field tab.
+- Click on the **Field** tab.
 
 Your screen should look similar to the figure below.
+
+![](img/image1-20.jpg)
 
 Notice that there are 12 fields in the corresponding attribute table of Building layer.  The Layer Properties window also shows the data type, length and precision of each field.     
 
 You will explore the other tabs in the next hands-on.
 
-- At the Layer Properties window, click on the cross button located at the upper right hand corner to close the window. 
+- At the **Layer Properties** window, click on the cross button located at the upper right hand corner to close the window. 
 
 ### Working with Identify Features tool   
-Using the Identify Features   tool to interact with a geographical feature and retrieve its corresponding attribute information is a two steps process.  First, you need to make the layer of the feature active.  Then, you will use the Identify Features tool to query the information.
+
+Using **Identify Features** tool to interact with a geographical feature and retrieve its corresponding attribute information is a two steps process.  First, you need to make the layer of the feature active.  Then, you will use the Identify Features tool to query the information.
 
 In this section, you will learn how to query information of a selected Shopping feature (marks by a circle in the figure above).  
 
-•	At the Map Legend window, click on the Shopping layer to make it active.  
+•	At the **Map Legend** window, click on ```Shopping``` layer to make it active.  
 
+•	Click on the **Identify Features** tool.
 
-•	Click on the Identify Features tool  .
+•	At the **Map View** window, hovers the mouse over the shopping feature you are interested to query (the one marked in the figure above).
 
-•	At the Map View window, hovers the mouse over the shopping feature you are interested to query (the one marked in the figure above).
-
-•	Click on the shopping feature.
+•	Click on an shopping feature.
 
 Your screen should look similar to the figure below.
 
+![](img/image1-21.jpg)
+
 Notice that the selected shopping feature was highlighted (i.e. in red) and the Identify Results window appears.
 
-DIY
-Using the steps you had learned from this section, query a building feature, a road network feature and a URA planning area feature.
+>DIY: Using the steps you had learned from this section, query a building feature, a road network feature and a URA planning area feature.
 
 ### Query Attribute Table
 
 The ability to interactively select a geographic feature and query its associated attribute information is a very powerful feature of a GIS.  However, there are times that you would like to see the attributes of all the features in a GIS layer.  In this section, you will learn how to use QGIS’s Open Attribute Table function to display the attribute table of a GIS layer.   
 
-•	At the Map Legend window, right-click on Building layer.
+•	At the **Map Legend** window, right-click on ```Building``` layer.
 
-•	Select Open Attribute Table from the context menu.
+•	Select **Open Attribute Table** from the context menu.
 
-The Attribute table window appears.
+The **Attribute table** window appears.
+
+![](img/image1-22.jpg)
 
 The table provide detail information of each geographical feature (i.e. building) such as building name, postal code, road name, block number, just to name a few of them.
 
-DIY
-Using the steps you had learned from this section, review the attribute table of Shopping and URA_PlanningArea layers. 
+>DIY: Using the steps you had learned from this section, review the attribute table of ```Shopping``` and ```URA MP2014 Planning Area``` layers. 
 
 Whew! That was a lot to take in!  Take a deep breath and relax.  By now you should have a good understanding of the basic operations of QGIS. You can start playing with it and practice the techniques that you have learned.
 
