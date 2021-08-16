@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lesson 2: The Devil is in the Data: Collection, representation, and modelling</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Kam Tin Seong Assoc. Professor of Information Systems" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/text.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Lesson 2: The Devil is in the Data: Collection, representation, and modelling
+### Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems
+### School of Computing and Information Systems,<br/>Singapore Management Uniiversity
+### 2019-01-01 (updated: 2021-08-15)
+
+---
+
+
+
+
+# What will you learn from this course?
+
+.vlarge[
+- Understand how GIS represent real world geography
+- Understand the characteristics, advantages, and disadvantages of vector and rater data models
+- Understand the basic concepts of georeferencing  and geocoding
+]
+
+---
+## Getting to Know Geospatial Data Models
+
+.vlarge[
+- Basic concept of geographical data
+- Basic geospatial data models
+- Vector data models
+    - Spaghetti data models
+    - Topological data models
+- Raster data models
+]
+
+---
+## Discrete Objects and Continuous Fields
+
+.vlarge[
+- Two ways of conceptualizing geographic variation
+    - The most fundamental distinction in geographic representation
+- Discrete objects
+    - The world as a table-top
+    - Objects with well-defined boundaries
+]
+
+---
+## Discrete Objects
+
+.pull-left[
+.large[
+- Countable, persistent through time, perhaps mobile
+- Human-made objects
+    - Office buildings, houses, bus stops, etc
+- Biological organisms
+    - Animals, trees
+]]
+
+.pull-right[    
+![](img/image2-1.jpg)
+]
+
+---
+## Continuous Fields
+.pull-left[
+.large[
+- Properties that vary continuously over space
+    - Value is a function of location
+    - Property can be of any attribute type, including direction
+- Elevation as the archetype
+    - A single value at every point on the Earth’s surface
+    - The source of metaphor and language
+    - Any field can have slope, gradient, peaks, pits
+]]
+
+.pull-right[
+
+![](img/image2-2.jpg)
+]
+
+---
+## Basic Spatial Data Models
+
+.vlarge[
+- Vector, implementation of discrete object conceptual model
+    - Point, line and polygon representations
+    - Widely used in cartography, and network analysis
+- Raster, implementation of field conceptual model
+    - Array of cells used to represent objects
+    - Useful as background maps and for spatial analysis
+]
+
+---
+## Vector Data Models
+
+.pull-left[
+.large[
+- Used to represent points, lines, and areas
+- All are represented using coordinates
+    - One per point
+- Lines as polylines
+    - Straight lines between points
+- Areas as polygons
+    - Straight lines between points, connecting back to the start
+    - Point locations recorded as coordinates
+]]
+
+.pull-right[
+![](img/image2-3.jpg)
+]
+
+---
+## Vector Database
+
+.pull-left[
+.large[
+Building footprints are represented by polygon features, road reserves represented by polyline features, and convenient stores are represented by point features
+]]
+
+.pull-right[
+![](img/image2-4.jpg)
+
+]
+
+---
+## Georelational Vector Data Model
+
+.pull-left[
+.large[
+Stores spatial and attribute data separately in a split system: spatial data (”geo”) in graphic fields and attribute data (“relational”) in a relational database
+]]
+
+.pull-right[
+![](img/image2-5.jpg)
+]
+
+---
+## Attribute Table
+
+.center[
+![:scale 45%](img/image2-6.jpg)
+]
+
+---
+## Types of Attributes: Numerical
+
+.center[
+![:scale 70%](img/image2-7.jpg)
+
+]
+
+---
+## Other Types of Attributes
+
+.center[
+![:scale 55%](img/image2-8.jpg)
+]
+
+---
+## Vector Data File Format: shapefile
+
+.large[
+.pull-left[
+- A shapefile is a simple, nontopological format for storing the geometric location and attribute information of geographic features.
+
+- Geographic features in a shapefile can be represented by points, lines, or polygons (areas). 
+
+- To find out more about shapefile, visit this [link](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf).
+
+]]
+
+.pull-right[
+![](img/image2-9.jpg)
+]
+
+---
+### Limitation of shapefile
+
+.vlarge[
+- It is proprietary (closed and controlled by ESRI).
+- It’s a multifile format (.shp,.dbf.,.shx,.prj, encoding, other indexes, etc.) (everybody knows the problem with GIS newbies sending you solely the .shp… 😉).
+- Attribute names are limited to 10 characters and only 255 attributes are allowed in .dbf.
+- Limited data types. Data types are limited to float, integer, date and text with a maximum 254 characters. 
+- Unknown character set. There is no way to specify the character set used in the database.
+- It's limited to 2GB of file size. Although some tools are able to surpass this limit, they can never exceed 4GB of data.
+]
+
+---
+### Limitation of shapefile
+
+.vlarge[
+- Uses ESRI’s [WKT](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry). Can result in inconsistencies.
+- Single geometry type per file. There is no way to save mixed geometry features.
+- More complicated data structures are impossible to save. It's a "flat table" format.
+- There is no way to store 3D data with textures or appearances such as material definitions. There is also no way to store solids or parametric objects.
+- Projections definition. They are incompatible or missing.
+- Line and polygon geometry type, single or multipart, cannot be reliably determined at the layer level, it must be determined at the individual feature level. 
+]
+
+---
+### Other Vector GIS File Formats
+
+.vlarge[
+- MapInfo [TAB](https://en.wikipedia.org/wiki/MapInfo_TAB_format) format - MapInfo's vector data format using TAB, DAT, ID and MAP files.
+- [Personal Geodatabase](https://desktop.arcgis.com/en/arcmap/latest/manage-data/administer-file-gdbs/personal-geodatabases.htm) - Esri's closed, integrated vector data storage strategy using Microsoft's Access MDB format
+- [Keyhole Markup Language (KML)](https://en.wikipedia.org/wiki/Keyhole_Markup_Language) - XML based open standard (by OpenGIS) for GIS data exchange.
+- [Geography Markup Language (GML)](http://en.wikipedia.org/wiki/Geography_Markup_Language) - XML based open standard (by OpenGIS) for GIS data exchange.
+- [GeoJSON](https://en.wikipedia.org/wiki/GeoJSON) - a lightweight format based on JSON, used by many open source GIS packages.
+- [TopoJSON](https://github.com/topojson/topojson), an extension of GeoJSON that encodes topology.
+]
+
+---
+## Raster Data Model
+
+.pull-left[
+.large[
+- Divide the world into square cells
+- Register the corners to the Earth
+- Represent discrete objects as collections of one or more cells
+- Represent fields by assigning attribute values to cells
+- More commonly used to represent fields than discrete objects
+]]
+
+.pull-right[
+![](img/image2-10.jpg)
+
+]
+
+---
+### Raster Database
+
+.large[
+- All raster formats are basically the same 
+- Cells organized in a matrix of rows and columns
+- Content is more important than format: data or picture?
+]
+
+.center[
+![:scale 75%](img/image2-11.jpg)
+]
+
+---
+### Characteristics of raster data model
+
+.large[
+- Pixel size
+    - The size of the cell or picture element, defining the level of spatial detail.
+    - All variation within pixels is lost.
+- Assignment scheme
+    - The value of a cell may be an average over the cell, or a total within the cell, or the commonest value in the cell.
+    - It may also be the value found at the cell’s central point.
+]
+
+---
+### Features as raster
+
+.vlarge[
+- Features lose uniqueness with raster representation a line becomes a collection of cells, not one feature)]
+
+.center[
+![:scale 75%](img/image2-12.jpg)
+]
+
+---
+### Raster Resolution
+
+.vlarge[
+- Rasters always generalize spatial data
+    - A function of cell size (smaller cells = higher resolution).
+    - Impacts accuracy, processing speed, storage space.
+]
+
+.center[
+![:scale 75%](img/image2-13.jpg)
+]
+
+---
+### Raster Resolution and Spatial Details
+
+.center[
+![:scale 75%](img/image2-14.jpg)
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="js/macros.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
