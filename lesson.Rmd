@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Weekly Lesson Plan
 
 -------------------------------------------------------------------------------------------------------------------------
-Week Data    Topic 	                                                                                   Remarks
+Week Date    Topic 	                                                                                   Remarks
 ---- ------- ----------------------------------------------------------------------------------------- -------------------------
 1    16/08   [Lesson 1: Introduction to GIS for Urban Planning](outline/lesson01_outline.html)
  
