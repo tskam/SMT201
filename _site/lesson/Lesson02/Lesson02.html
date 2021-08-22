@@ -14,8 +14,8 @@ class: center, middle, inverse, title-slide
 
 # Lesson 2: The Devil is in the Data: Collection, representation, and modelling
 ### Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems
-### School of Computing and Information Systems,<br/>Singapore Management Uniiversity
-### 2019-01-01 (updated: 2021-08-15)
+### School of Computing and Information Systems,<br/>Singapore Management University
+### 2019-01-01 (updated: 2021-08-22)
 
 ---
 
@@ -228,11 +228,11 @@ Stores spatial and attribute data separately in a split system: spatial data (�
 - Represent discrete objects as collections of one or more cells
 - Represent fields by assigning attribute values to cells
 - More commonly used to represent fields than discrete objects
+- [What is raster data?](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/what-is-raster-data.htm), ESRI. A good read to learn the basic of raster data: 
 ]]
 
 .pull-right[
 ![](img/image2-10.jpg)
-
 ]
 
 ---
@@ -290,21 +290,311 @@ Stores spatial and attribute data separately in a split system: spatial data (�
 ![:scale 75%](img/image2-14.jpg)
 ]
 
+---
+### Raster Resolution and Spatial Extent
+
+.pull-left[
+.large[Small-scale satellite image]
+
+![](img/image2-15a.jpg)
+]
+
+--
+.pull-right[
+.large[Large-scale satellite image]
+
+![](img/image2-15b.jpg)
+]
+
+---
+### Multi-band Raster Data
+
+.center[
+![:scale 85%](img/image2-16.jpg)
+]
+
+???
+A raster can contain one or more bands. One type of multi-band raster dataset that is familiar to many of us is a color image. A basic color image consists of three bands: red, green, and blue. Each band represents light reflected from the red, green or blue portions of the electromagnetic spectrum. The pixel brightness for each band, when composited creates the colors that we see in an image.
+
+---
+### Raster Data Format
+
+.large[
+- [GeoTIFF](https://en.wikipedia.org/wiki/GeoTIFF): TIFF variant enriched with GIS relevant metadata.
+- [JPEG2000](http://en.wikipedia.org/wiki/JPEG2000): Open-source raster format. A compressed format, allows both lossy and lossless compression.
+- [BIL, BIP, and BSQ raster files](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/bil-bip-and-bsq-raster-files.htm): image format linked with satellite derived imagery, namely: BIL (Band Interleaved by Line),BIP (Band Interleaved by Pixel) and BSQ (Band Sequential) .  To learn more about these three data types, read [Fundamental of raster data](https://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/cell-size-of-raster-data.htm), ESRI.
+- [ADRG](http://en.wikipedia.org/w/index.php?title=ADRG&amp;action=edit&amp;redlink=1): National Geospatial-Intelligence Agency (NGA)'s ARC Digitized Raster Graphics. 
+- [Digital raster graphic (DRG)](http://en.wikipedia.org/wiki/Digital_raster_graphic): digital scan of a paper USGS topographic map.
+- [ESRI grid](http://en.wikipedia.org/wiki/Esri_grid): proprietary binary and metadataless ASCII raster formats used by Esri. 
+- [IMG](http://en.wikipedia.org/wiki/ERDAS_IMAGINE): ERDAS IMAGINE image file format.
+- [ECW](http://en.wikipedia.org/wiki/ECW_(file_format)): Enhanced Compressed Wavelet (from ERDAS). A compressed wavelet format, often lossy. 
+- [MrSID](https://en.wikipedia.org/wiki/MrSID): Multi-Resolution Seamless Image Database (by Lizardtech). A compressed wavelet format, allows both lossy and lossless compression.
+]
+
+---
+## Unique Properties of GIS Data
+
+.vlarge[
+- Geographical reference
+
+- Cartographic generalisation
+
+- GIS data accuracy and uncertainty
+]
+
+---
+## Coordinate Systems and Map Projections
+### What is a coordinate system?
+
+.center[
+![:scale 55%](img/image2-17.jpg)
+]
+
+???
+A coordinate system is an important property of an geospatial data.  It provides a location reference to the geospatial data.  
+
+- A coordinate system is a reference system used to represent the locations of geographic features, imagery, and observations such as GPS locations within a common geographic framework.
+
+- Each coordinate system is defined by:
+    - Its measurement framework which is either geographic (in which spherical coordinates are measured from the earth's center) or planimetric (in which the earth's coordinates are projected onto a two-dimensional planar surface).
+    - Unit of measurement (typically feet or meters for projected coordinate systems or decimal degrees for latitude–longitude).
+    - The definition of the map projection for projected coordinate systems.
+    - Other measurement system properties such as a spheroid of reference, a datum, and projection parameters like one or more standard parallels, a central meridian, and possible shifts in the x- and y-directions.
+    
+- There are two common types of coordinate systems used in mapping, namely: **geographic coordinate systems** and **projected coordinate system**.
+
+---
+### Geographical Coordinate Systems
+
+.center[
+![](img/image2-18.jpg)]
+
+.small[Reference: http://en.wikipedia.org/wiki/Map_projection]
+
+???
+GCS define locations on the earth using a three-dimensional spherical surface. For example, WGS84
+
+They provides accuracy position information. Unit of measurement will be in either decimal degree or degree-minute-second format.
+
+GCS, however, are not appropriate for distance and area measurements.  In this figure, it is clear that 1 degree distance at the north pole is relatively shorter than 1 degree at the equator.
 
 
+---
+### Projected Coordinate Systems
 
+.large[
+- Based on a map projection such as transverse Mercator, Albers equal area, or Robinson.
+]
 
+.center[
+![:scale 85%](img/image2-19.jpg)]
 
+???
+A **projected coordinate system** based on a map projection such as transverse Mercator, Albers equal area, or Robinson, all of which (along with numerous other map projection models) provide various mechanisms to project maps of the earth's spherical surface onto a two-dimensional Cartesian coordinate plane. 
 
+Projected coordinate systems are sometimes referred to as **map projections**. For example, SVY21, the national projected coordinate system of Singapore.
 
+PCS provides consistent length and area measurement across space.  Hence, it is important to transform a geospatial data from GCS to PCS before performing geospatial analysis.
 
+---
+### Singapore Projected Coordinate System
 
+.center[
+![:scale 60%](img/image2-20.jpg)]
 
+.large[
+- [epsg.io](https://epsg.io/) provides a comprehensive list of country coordinate systems such as [svy21](https://epsg.io/3414).
+]
 
+???
+Each country will have her own projected coordinate system.  Some country have more than one type of Project Coordinate Systems.
 
+There are at least three coordinate systems commonly used in Singapore.  They are svy21, Kertau Cassini 1968, and Rectified Skewed Orthomorphic (RSO).  RSO is used in military and topographical mapping and svy21 is used for land and engineering surveying, cadastre, landuse and infrastructure mapping.
 
+---
+### EPSG Reference System 
 
+.large[
+Link to [epsg.io](https://epsg.io/)
+]
 
+.center[
+![](img/image2-21.jpg)
+]
+
+???
+The EPSG Geodetic Parameter Dataset is a structured dataset of Coordinate Reference Systems and Coordinate Transformations. In 2005, OGP absorbed the European Petroleum Survey Group or EPSG, (1986–2005) into its structure. 
+
+EPSG was a scientific organization with ties to the European petroleum industry consisting of specialists working in applied geodesy, surveying, and cartography related to oil exploration. EPSG compiled and disseminated the EPSG Geodetic Parameter Set, a widely used database of Earth ellipsoids, geodetic datums, geographic and projected coordinate systems, units of measurement, etc.  
+
+---
+### What is geocoding 
+
+- Reference data: features with address attributes
+Points, lines, polygons.
+
+.center[
+![:scale 85%](img/image2-22.jpg)
+
+.small[Source: http://en.wikipedia.org/wiki/Geocoding 
+]]
+
+???
+Geocoding styles
+When geocoding an address, a geocoding service searches through the features in the reference data feature class to find the feature with address attributes that most closely match the address. The geometry of the matching feature is then used to create geometry for the address. Geocoding services can further use other types of reference data, such as alternate street name tables and place name alias tables. Some of the styles available are:
+ Single field geocoding service style
+ US One Address geocoding service style
+ US One Range geocoding service style
+ US Streets geocoding service style
+ ZIP geocoding service style
+ ZIP+4 geocoding service style
+ ZIP+4 Range geocoding service style
+ US Alphanumeric Ranges geocoding service style
+ US Hyphenated Ranges geocoding service style
+ US Cities with State geocoding service style
+ World Cities with Country geocoding service style
+
+---
+### GeoHash
+
+.pull-left[
+.large[
+- [GeoHash](https://en.wikipedia.org/wiki/Geohash) is a public domain geocode system invented in 2008 by Gustavo Niemeyer.
+
+- For more information, visit this [link](https://www.pubnub.com/learn/glossary/what-is-geohashing/) and  
+]]
+
+.pull-right[
+.large[GeoHash of Singapore]
+
+![](img/image2-23.jpg)
+
+.small[
+Source: https://www.movable-type.co.uk/scripts/geohash.html
+]]
+
+???
+It encodes a geographic location into a short string of letters and digits. 
+It is a hierarchical spatial data structure which subdivides space into buckets of grid shape, which is one of the many applications of what is known as a Z-order curve, and generally space-filling curves. (http://geohash.gofreerange.com/) 
+
+---
+### Geocoding in Singapore: SLA's Address-Point Data
+
+.center[
+![:scale 70%](img/image2-24.jpg)
+]
+
+---
+### Structure of SLA’s Address-Point data
+
+.center[
+![:scale 75%](img/image2-25.jpg)
+]
+
+???
+It is important to note that the 6-digit postal code used in Address-point data is in character data type and not numerical data type.  This is because at downtown area such as Outram Plannign subzone, the postal codes start with 0, as a result, if numeric data type is used.  These postal codes will truncated into five digits.
+
+---
+### [SLA Onemap Geocoding API](https://www.onemap.gov.sg/docs/#onemap-rest-apis)
+
+.center[
+![:scale 70%](img/image2-26.jpg)
+]
+
+---
+### Geocoding options for QGIS users
+
+- Geocode Tools of [MMQGIS](https://michaelminn.com/linux/mmqgis/) plugin.
+
+.center[
+![:scale 60%](img/image2-27.jpg)
+]
+
+---
+## Sources of GIS data
+
+.vlarge[
+- Field surveying
+    - Conventional land surveying
+    - GPS surveying
+- Digitising
+- Remote sensing
+    - Airborn
+    - Satellite
+- Digital data
+    - Internet map services
+    - Open Data.gov
+]
+
+---
+### Field surveying
+
+.center[
+![:scale 65%](img/image2-28.jpg)
+]
+
+---
+### Digitising
+
+.center[
+![](img/image2-29.jpg)
+]
+
+---
+### Remotely Sensed Data
+
+.center[
+![:scale 85%](img/image2-30.jpg)
+]
+
+---
+### Geospatial Digital Data from SLA
+
+.center[
+![:scale 75%](img/image2-31.jpg)
+]
+
+.small[Reference: http://www.asiageospatialforum.org/2011/proceeding/pps/leekim.pdf] 
+
+---
+### Geospatial Digital Data from Open Gov 
+
+.pull-left[
+[data.gov.sg](https://data.gov.sg/)
+
+![](img/image2-32a.jpg)
+]
+
+.pull-right[
+[LTA DataMall](https://datamall.lta.gov.sg/content/datamall/en.html)
+
+![](img/image2-32b.jpg)
+
+]
+
+---
+### OpenStreetMap (OSM)
+
+.center[
+![:scale 80%](img/image2-33.jpg)
+]
+
+- To learn more about OSM Singapore, visit this [link](http://wiki.openstreetmap.org/wiki/WikiProject_Singapore).
+- To obtain the latest OSM extract for Singapore, visit this [link](http://download.bbbike.org/osm/bbbike/Singapore/)  
+
+---
+### Open Global Digital Data 
+
+.pull-left[
+[Natural Earth](http://www.naturalearthdata.com/)
+
+![:scale 85%](img/image2-34a.jpg)
+]
+
+.pull-right[
+[GDAM: Global Administration Boundary Maps](https://gadm.org/)
+
+![](img/image2-34b.jpg)]
 
 
 
