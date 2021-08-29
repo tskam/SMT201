@@ -25,6 +25,12 @@ knitr::opts_chunk$set(echo = FALSE)
     - Geospatial RDBMS
     - Cloud based geospatial database
 
+## Lesson Slides and Hands-on Notes 
+
+- Lesson slide in [html](../lesson/Lesson03/Lesson03.html) and [pdf](../lesson/Lesson03/Lesson03.pdf) formats
+- Hands-on Exercise in [html]() format.
+
+
 ## Readings
 ### Core Readings
 
