@@ -1,0 +1,78 @@
+---
+title: "Take-home Exercise 1: Modelling the Urban World"
+description: |
+  This handout provides the context, the task, the expectation and the grading criteria of Take-home Exercise 1.  Students must review and understand them before getting started with the take-home exercise. 
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## The Task
+
+### Mini Case 1
+
+School safety is one of the important function in school management and planning.  Different from many other countries worldwide, school safety in Singapore is mainly related to traffic accidents occurred within the vicinity of the school rather than crime occurred in school.  Recently, there are increasing sign of traffic accidents incidents reported within the vicinity of schools.  As the GIS analyst of the planning department, you are tasked to:
+
++ assemble GIS data need to understand the location of public education institutions (i.e. Junior college, secondary school, and primary school) and traffic control zoning of schools,
++ prepare a large-scale GIS map (i.e. 1:5000) of your choice showing the location of schools and traffic control zoning of schools in the area, and
++ write a report of not more than 100 words commenting on the adequacy of traffic control zoning provision in the study area.
++ Critic the issue revealed by the map and suggest appropriate alternative planning approach for school zoning (not more than 200 words). 
+
+### Mini Case 2
+
+Since its inception in 2008, Airbnb has expanded into more than 34,000 cities across 191 countries. Uncommonly for a sharing economy company, Airbnb transitioned into profitability in 2016, demonstrating proof-of-concept for the validity of sharing economy within the global market (Stone & Zaleski, 2017).
+
+Interestingly, Singapore is one of the global city that has yet to legalise short-term rentals offered by platforms such as Airbnb (Read more at [here](https://www.todayonline.com/singapore/short-term-home-sharing-remains-illegal-singapore-airbnb-disappointed)). However, a visit to [Inside Airbnb](http://insideairbnb.com/about.html), an independent, non-commercial set of tools and data that allows anyone to explore how Airbnb is really being used in cities around the world, it appears that there are data sets for Singapore.
+
+As the GIS analyst of the planning department, you are tasked to:
+
++ assemble GIS data need to understand the distribution of Airbnb listings at the planning subzone level,
++ prepare thematic map(s) showing the distribution of Airbnb at the planning subzone level,
++ write a report describing the geospatial patterns reveal by the map(s).  Please limit your discussion to a maximum of not more than 100 words per map.  
++ Explain why your cartographic technique makes sense, your choice of classification and visual variable. Please limit your discussion to a maximum of not more than 150 words per map. 
+
+## Take-home Exercise Artefact
+
+### GIS data repository
+
+The GIS repository includes but not limited to geospatial data compiled and derived, QGIS project file and data dictionary. It must be in a single zipped file (i.e. .zip).  The geospatial data must be stored in a GeoPackage database format.  The data dictionary can be in either MS Word document or edited into the GIS data.The project artefact must be uploaded onto eLearn.
+
+### Take-home Exercise Report
+
+You are required to edit your take-home exercise report in MS Word format.  The take-home exercise report, beside others, should include all the thematic and choropleth maps prepared and their respective discussion. The title of the report should be in the form of: SMT201_AY2021-22T1_Ex1.
+
+>Note: This is an individual exercise. You are required to work on the take home exercise and prepare submission individually.
+
+## Grading
+
+Mini Case 1:
+
++ Quality of GIS map prepared: 15 marks
++ Quality of GIS report: 15 marks
+
+Mini Case 2:
+
++ Quality of GIS maps prepared: 25 marks
++ Quality of GIS report: 25 marks
+
+Quality of GIS Data Repository: 20 marks
+
+## Submission Date
+
+The take-home exercise artefact must be uploaded on eLearn by the submission deadline stated below. 
+
+Due Date: 12th September 2021, 11:59pm (mid-night). 
+
+
+```{r echo=FALSE, eval=FALSE}
+library(pagedown)
+pagedown::chrome_print("Take-home_Ex01.html")
+```
+
+
