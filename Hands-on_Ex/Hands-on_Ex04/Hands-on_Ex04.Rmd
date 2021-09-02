@@ -1,0 +1,966 @@
+---
+title: "Hands-on Exercise 4: GIS Mapping and Geovisualisation"
+description: |
+  In this exercise, you will learn how to prepare qualitative and quantitative thematic maps.  You will also learn how to create a join table using the concept of georelational data model of GIS.
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    code_folding: false
+    toc: true
+    toc_depth: 4
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+3.0	Introduction
+   
+In this exercise, you will learn how to prepare qualitative and quantitative thematic maps.  You will also learn how to create a join table using the concept of georelational data model of GIS.  
+ 
+3.1	Adding data into the QGIS project
+
+First, you will open a new QGIS project.
+
+•	Launch QGIS.
+
+DIY
+•	Using the steps you had learned from previous session, add the Coastal outline and Education layer into QGIS project.
+•	Convert the Education layer into a geospatial data file (i.e. ESRI shapefile format).
+•	Record down the steps used and comments if necessary.
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+3.2	Adding an Internet Map Service Layer to QGIS 
+
+Next, you will consume an OSM internet map service layer as a back ground reference layer.  
+
+DIY
+Use the steps you had learned in previous lesson, add the OSM layer into the QGIS project.
+ 
+Your screen should look similar to the figure below.
+
+ 
+
+
+In this particular example, the OpenStreetMap is used as the reference map.
+
+•	Save the project and give it a name (i.e. Hands-on03).
+
+
+
+
+
+
+
+3.3	Creating a pin map using information in an attribute field
+
+You can now use the POI_TYPE field of Education layer to prepare a point symbol map showing the education institution in Singapore by tenure types.
+
+•	At the Layers Legend window, click on Education layer to make it active.
+
+•	Right-click on Education and select Properties from the context menu.
+
+The Layer Properties dialog window appears.
+
+ 
+
+
+Next, you are going to symbolise the point features using information contain in the POI_Type filed of Education layer.
+
+•	Click on the Symbology tab.
+
+
+
+
+
+
+
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+•	Select Categorized from the Symbol drop-down list.
+
+ 
+
+
+
+
+
+
+
+
+•	For Column, select POI_CHAR from the drop-down list.
+
+  
+
+
+•	Click on the Classify button.
+
+ 
+
+
+Figure below shows that the Education layer has categorized into four categories, they are Junior College/Centralised Institute, Mixed Level, Primary School and Secondary School.
+
+ 
+
+
+Next, you will learn how to symbolise them using the svg vector symbol set.
+
+•	Double-click on the marker in front of Junior College/Centralised Institute.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Symbol selector dialog window appears.
+
+ 
+
+
+•	From the Symbol layers, click on Simple marker.
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+
+
+•	For Symbol layer type, select SVG maker from the drop-down list.
+ 
+ 
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+•	From the SVG Image, scroll-down and click on  .
+
+DIY
+Change the size value and fill colour and observe the differences.
+
+
+•	Click on the OK button.
+
+•	At the Symbol selector dialog window, click on the OK button.
+
+Your symbol categorisation pane should look similar to the figure below.
+
+ 
+
+DIY
+Using the step you had learned, change the symbols of the remaining three categories in the POI_CHAR filed.  
+
+When you are done.
+
+•	Click on the OK button.
+
+Your screen should look similar to the figure below.
+
+ 
+
+This map is popularly known as pin map among the GIS and cartography communities.  Prior to GIS era, this kind of map took more than a month to prepare.  With GIS, it only needs less than five minutes to prepare.  The advantage of GIS-based pin map is that the map can be changed easily with very little effort.  GIS-based pin map is also highly interactive.  You can navigate around the digital map and zooming in to view the distribution in greater details.
+
+•	From the Map Navigation toolbar, select Zoom In tool.
+
+•	Hover the mouse over Chua Chu Kang planning area as in the figure below.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+Challenge: 
+Comment on the spatial distribution of education facilities within Chua Chu Kang planning area.  
+
+
+
+
+
+
+
+
+
+
+DIY
+Use the steps you had learned from previous section, download Master Plan 2014 Planning Area Boundary (No Sea) from data.gov.sg and symbolize the URA_PlanningArea layer.
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+Challenge
+Label the URA Planning Area using the PLN_AREA_N field.
+
+
+
+
+
+
+
+
+
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.4	Creating Proportional Symbol Map
+
+Proportional symbol maps (also known as graduate symbol maps) are a class of maps that use the visual variable of size to represent differences in the magnitude of a discrete, abruptly changing phenomenon, e.g. counts of people.  Like choropleth maps, you can create classed or unclassed versions of these maps. The classed ones are known as range-graded or graduated symbols, and the unclassed are called proportional symbols, where the area of the symbols are proportional to the values of the attribute being mapped.  In this section, you will learn how to create a proportional symbol map showing the numbers of win by Singapore Pools’ outlets.  
+
+Two geospatial data will be used to create the proportional symbol map.  Table below provides details information of these datasets.
+
+Theme	File name	Location
+Singapore outline	CoastalOutline	\Hands-on_Ex03\SLAData
+Singapore Pools outlets	SingaporePools	\Hands-on_Ex03\SHPFiles
+
+
+DIY
+Using the steps you had learned in the previous lesson, add these two geospatial data into QGIS.
+
+Your screen should look similar to the figure below.
+ 
+
+Before you start to prepare the proportional symbol map, you will take a look at the attribute table of SingaporePools layer.
+
+•	At the Layers pane, right-click on SingaporePools layer.
+
+•	Select Open Attribute Table from the context menu.
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+You are going to use the values in the last filed (e.g Gp1Gp2Winn) to create a proportional symbol map.
+
+Next, you are going to change the size of the point symbol by mapping the values in Gp1Gp2Winn field.
+
+•	At the Layers pane, right-click on SingaporePools layer.
+
+Now you are going to size the Singapore Pools outlets by using the values of Gp1Gp2Winn field. 
+
+•	At the Layers pane, right-click on SingaporePools layer.
+
+•	Select Properties from the context menu.
+
+The Layer Properties dialog window appears.
+
+•	Click on the Style icon.
+
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+Next, you want to let QGIS use the values in the column Gp1Gp2Winn as radius for the symbols.
+ 
+•	Click on the icon behind Size. 
+
+  
+
+
+•	Select Size Assistant from the context menu.
+
+
+The Size Assistant dialog window appears.
+
+ 
+
+ 
+For Field:, select Gp1Gp2Winn from the dropdown list.
+
+The dialog window should look similar to the figure below.
+
+ 
+
+
+For proportional symbol map, we must always size symbols by area, and not radius.
+
+•	For Scale Method:, select Flannery from the drop-down list.
+
+ 
+
+•	Click on the OK button.
+
+•	From the Layer Properties dialog window, click on the Apply button.
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+Notice that there are many proportional symbols were overlapping.  Now, you will learn how to use the layer transparent feature of QGIS to improve the visualisation.
+
+•	At the Layer rendering pane of the Layer Properties dialog window, set the transparency to 20%.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+•	For Layer blending mode, select Difference from the drop-down list.
+
+ 
+
+•	Click on the Apply button.
+
+Your screen should look similar to the figure below. 
+
+ 
+
+
+•	Feel free to explore other configurations.  When you are done, click on the OK button.  
+
+
+
+
+
+3.5	Choropleth map using GIS
+
+Choropleth mapping involves the symbolization of enumeration units, such as countries, provinces, states, counties or census units, using area patterns or graduated colors.  For example, a social scientist may need to use a choropleth map to portray the spatial distribution of aged population of Singapore by Master Plan 2014 Subzone Boundary.
+
+The major concerns of choropleth mapping are the method of data classification, areal symbolization, and the overall map design.    General rules for choropleth mapping are as follows:
+
+•	Use data that are assumed to be uniform throughout an enumeration unit.
+•	Because enumeration units vary in size, do not map totals.  Use derived values, such as ratios, rates, proportions, or percentages.  
+•	The best classing method depends on the data, the map reader and the purpose of the map. 
+•	When classifying data, the full range of data must be included and class values should not overlap.  No more than six classes are recommended.
+•	Class symbols (i.e. colors or patterns) must be easily distinguishable.
+
+In this section of the hands-on exercise, you will learn how to use QGIS to prepare a choropleth map showing the distribution of population with age 65 and above in Singapore by URA’s Master Plan 2014 subzone.  You will also gain hands-on experience on the various data classification methods, symbolisation and map layout design techniques offered by QGIS.
+  
+DIY
+Use the steps you had learned from previous section, download Master Plan 2014 Subzone Area Boundary (No Sea) from data.gov.sg and add the layer into QGIS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+3.5.1	Adding an attribute table in QGIS project 
+
+Now, you will add the AgeGroup2017.csv table into the QGIS project.  It is stored in \Hands-on_EX03\AttributeTables folder and is in csv format.
+
+•	From the Layers toolbar, click Add Vector Layer -> Add Delimited Text Layer …..
+
+ 
+
+
+The Create a Leyer from a Delimited Text File dialog window appears.
+
+ 
+
+
+•	Click on Browse.
+
+•	Navigate to \IS415\Hands-on_Ex03\AttributeTables sub folder.
+
+•	Click on AgeGroup2017.  It is in csv fomat.
+
+•	Click on the Open button.
+
+You will return to the Create a Layer from a Delimited Text File dialog window.
+
+ 
+
+Notice that the dialog window is completed with many information and a preview table.
+•	For Geometry definition, click on the radio button in front of No geometry (attribute only table).
+
+ 
+
+
+•	Click on the OK button.
+
+Notice that a new data layer called AgeGroup2017 has been added in the Layers Legend pane of the QGIS project.
+
+ 
+
+
+Next, you will examine the structure of the data.
+
+•	Right-click on AgeGroup2017, select Open Attribute table.
+
+
+
+
+
+
+
+
+
+
+The Attribute table dialog window appears.  
+
+ 
+
+
+
+3.5.2	Working with relational join
+
+Now you are ready to perform relational join between the MP14_SubZone GIS layer and the AgeGroup2017 attribute layer.  
+
+In order to join the attribute table of a geospatial data and an aspatial attribute table, we need to identify the common key or popularly known as unique identifier between these two datasets.    
+
+DIY:
+Using the steps you had learned, open the attribute table of MP14_SubZone and AgeGroup2017.
+
+
+  
+
+
+With reference to the tables above, both the SUBZONE_N and SUBZONE_C fields can be used as the unique identifier filed. 
+
+You are ready to join both tables now.
+
+•	From the Layers Legend pane, double-click on MP14_SubZone vector layer.
+
+
+The Layer Properties dialog window appears.
+
+  
+
+
+•	From the Tab menu, click on the Joins tab.
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+
+•	Click on the   icon.
+
+
+The Add vector join dialog window appears.
+
+ 
+
+
+•	For Join Layer, select AgeGroup2017 from the drop-down list.
+
+•	For Join field, select SUB_ZONE_C from the drop-down list.
+
+•	For the Target field, select SUBZONE_C from the drop-down list.
+
+ 
+
+•	Click on the OK button.
+
+
+
+
+You will return to the Layer Properties dialog window.
+ 
+ 
+
+Notice that a relational joined between AgreGroup2017 attribute table and the attribute table of MP14_SubZone has been created.
+
+•	At the Layer Properties dialog window, click on the OK button.
+
+Strange, it seems that nothing had happen!
+
+•	At the Layers Legend pane, right click on MP14_SubZone vector layer and select Open Attribute Table from the context menu.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+You will notice that the table now contains additional fields from AgeGroup2017 attribute layer.
+
+ 
+
+
+Remember that this join is temporary.  It is not part of the attribute table of MP14_SubZone vector layer, but is just linked dynamically to the AgeGroup2017 attribute layer.  If you want to permanently join the attributes, you must save it as a new layer.
+
+3.5.3	Creating a choropleth map
+
+In this section, you will learn how to create a choropleth map showing the distribution of population age 65 and above by URA’s Master Plan 2014 subzone area.  
+
+First, you will create a new field called Age65+ and compute its value by using the calculator function of QGIS.
+
+•	From Layer Panel, right-click on MP14_SubZone, select Open Attribute Table from the context menu.
+
+The MP14_SubZone attribute table appears.
+
+•	Click on Open Field Calculator icon.
+
+
+ 
+
+
+The Field calculator dialog window appears.
+
+ 
+
+•	Keep Create a new field box check.
+
+•	For Output filed name, type Age65+.
+
+•	For Output field type, keep the default.
+
+•	For Output filed length, keep the default.
+
+•	At the Expression pane, build a formula as shown below.
+
+"AgeGroup2017_AGE65-69"  +  "AgeGroup2017_AGE70-74"  +  "AgeGroup2017_AGE75-79"  +  "AgeGroup2017_AGE80-84"  +  "AgeGroup2017_AGE85"
+
+
+
+
+
+
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+•	Click on the OK button.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Notice that a new field called Age65+ has been added into the attribute table of MP14_SubZone table.
+
+  
+
+
+Before you end this session, you need to save the results into the attribute table permanently.
+
+•	From the icon bar, click on the Toggle editing mode icon.
+
+
+ 
+
+
+The Stop Editing dialog appears.
+
+ 
+
+
+•	Click on the Save button.
+
+•	Close the attribute table of MP14_SubZone layer.
+
+You are ready to prepare the choropleth now.
+
+•	From the Layers Legend pane, double-click on MP14_SubZone vector layer.
+
+
+
+The Layer Properties dialog window appears.
+•	Click on the Style tab.
+
+•	At Symbol selection drop-down list,  select Graduated from the drop-down list.
+ 
+•	For Column, select AgeGroup65+ from the drop-down list.
+
+ 
+
+
+•	For Classes, keep it as 5.
+
+ 
+
+
+•	For Color ramp, choose Blue or any colour of your choice from the drop-down list.
+
+•	For Mode, choose Natural Breaks (Jenks) from the drop-down list.
+
+
+ 
+
+•	Click on Classify button.
+ 
+
+Your screen should look similar to the figure below.
+ 
+
+
+
+
+
+
+
+You can review the statistical distribution of the classification in histogram.
+
+•	From the Layer Properties dialog window, click on the Histogram tab.
+
+ 
+
+Your screen should look similar to the figure below.
+ 
+
+This feature is very useful for casual data analyst because the histogram helps us to understand the differences of each classification method.
+
+•	Click back the Classes tab.
+
+•	Click on the Apply button.
+
+
+
+
+
+
+
+
+
+Your screen should look similar to the screen below.
+ 
+
+•	Click on the OK button.
+
+
+
+
+
+
+
+
+Your screen should look similar to the figure below.
+ 
+
+Quiz
+Study the distribution reveals by the choropleth map.  Can you identify planning subzones with high concentration of population with age 65 and above?  Are these subzone tend to clusters together or randomly distributed?
+
+DIY
+Use the steps you had learned from previous sections, create three choropleth maps of percentage of population age 65 and above.  
+
+
+Quiz
+Compare the two choropleth maps prepared, what conclusion can you draw from the maps?
+
+
+
+
+
+
+
+3.6	Creating GeoWeb for Geospatial Data Sharing 
+
+In this section, you will learn how to use qgis2web plugin to create a simple interactive web map using GIS data layers in a QGIS project.    
+
+3.6.1	Installing qgis2web plugin
+
+First, you will install the plugin using the Plugins Manager of QGIS. 
+
+•	From QGIS manu bar, select Plugins -> Manage and Install Plugins.
+
+ 
+
+
+The Plugins dialog window appears.
+
+ 
+
+By default the All tab is selected.  In this case, all the available plugins will be listed as shown in the figure above.  
+
+First, we narrow down our search of the plugins.
+
+•	For Search, type qgis2.
+
+ 
+
+
+Notice that the list reduces to two plugins.
+
+We are interested to install qgis2web.
+
+•	Click on qgis2web.
+
+•	Click on Install Plugin button.
+
+Be patient, QGIS takes a few seconds to install the plugin.
+
+When the installation of the plugin is completed, notice that a check-box appears in front of qgis2web plgin.
+
+ 
+
+
+You can close the plugin dialog now.
+
+•	Click on the Close button.
+
+
+Note:  For more information on qgis2web plugin, please visit its homepage at https://github.com/tomchadwin/qgis2web/wiki.
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.6.2	Creating geoweb application using qgis2web plugin
+
+Now, you are ready to create the geoweb application.  
+
+•	From the menu bar, select Web -> qgis2leaf -> Export a QGIS Project to a working leaflet webmap.
+
+
+ 
+
+
+The Coordinate Reference System Selector dialog window appears.
+
+ 
+
+
+•	Scroll until SVY21/ Singapore TM and select.
+
+•	Click on OK button.
+
+
+
+
+
+
+Your screen should look similar to the figure below.
+
+ 
+
+
+•	Double-click on SVY21 /Singapore TM.
+
+The Export to web map dialog window appears.
+
+We are going to export the maps into OpenLayers 3 web map.
+
+•	From the bottom of the dialog window, click on the radio button in front of Leaflet.
+
+1.	 
+
+
+The Coordinate reference System Selector dialog window re-appears.
+
+•	Click on SVY21 / Singapore TM again.
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+Since we are only interested to display the distribution of education institution, we will exclude CoastalOutline layer from the Layers and Groups.
+
+•	For Layers and Groups, uncheck the check-box in front of CoastalOutline.
+
+
+In this exercise, we are going to use the Age 65 and above and Education layers.
+
+•	Click on the check-box in front Age 65 and above and Education layers.
+
+
+  
+
+
+Next, we are going to select the labels of the fields. 
+
+•	Click on the cross marker in front of Education.
+
+
+
+
+Your screen should look similar to the screenshot below.
+
+ 
+
+
+
+•	For POI_NAME, select Under Data export, for Export folder, navigate to the project data folder.
+
+ 
+ 
+
+
+DIY: 
+Using the steps you had learned, change the label settings of Age 65 and above layer.
+
+
+
+
+The setting should look similar to the screenshot below.
+
+ 
+
+
+•	For Export folder, select an appropriate sub-directory such as \IS415\Hands-on_Ex03\geoweb.
+
+•	For Appearance, check check-box of Add layers list option. 
+
+ 
+
+
+
+
+
+We will use OpenStreetMap as the background map.
+
+•	At the background map, click on OSM. 
+
+ 
+
+
+You can use the preview function to check if the web map has been configurated correctly.
+
+•	Click on the Update preview button.
+
+The Coordinate Reference System Selector dialog window re-appears again.
+
+•	Click on SVY21 / Singapore TM.
+
+You screen should look similar to the figure below.
+
+ 
+
+You are ready to create the web map for sharing now.
+
+•	Click on the Export button.
+
+The Coordinate Reference System Selector dialog window re-appears again.
+
+•	Double-click on SVY21 / Singapore TM.
+
+After a few second, your default will launch automatically.
+
+Your browser should look similar to the figure below.
+
+ 
+
+
+Congratulation! You just created a simple geoweb mapping application usually takes a few man-months to create.
+
+
+```{r echo=FALSE, eval=FALSE}
+library(pagedown)
+pagedown::chrome_print("Hands-on_Ex02.html")
+```
+
+
