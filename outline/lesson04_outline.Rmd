@@ -14,15 +14,19 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Content
-- Thematic Mapping and Geovisualization
-- Qualitative maps: visual variables and cartographic symbols
-- Quantitative maps: data scaling, data classification, and principles of colour
-- Mapping movement, change, and process
-- Map composition and map symbolization
-    - Map design
-- Map Analysis Techniques
-    - Map reading techniques
-    - Visualising statistical data
++ Maps and Urban Environments
++ Typology of Maps
+  + Reference maps
+  + Thematic maps
++ Qualitative thematic mapping
++ Quantitative thematic mapping
+  + Number of classes
+  + Data classification
+  + Colour scheme
+
+## Lesson Slides and Hands-on Notes 
+- Lesson slide in [html](../lesson/Lesson04/Lesson04.html) and [pdf](../lesson/Lesson04/Lesson04.pdf) formats
+- Hands-on Exercise in [html]() format.
 
 ## Readings
 ### Core Reading (Highly recommended)
