@@ -17,16 +17,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## 1.0 Introduction
    
-In this exercise, you will learn how to prepare qualitative and quantitative thematic maps using QGIS.  You will also learn how to create a join table using the concept of georelational data model of GIS.
+In this exercise, you will learn how to prepare qualitative and quantitative thematic maps using QGIS.  You will also learn how to create a joint table by using the concept of georelational data model of GIS.
 
 ### 1.1 Learning Outcome
 
 By the end of this session, you will be able to:
 
-- prepare qualitative maps 
-- create propoertional symbol map
-- prepare choropleth map
-- using 
+- prepare qualitative maps, 
+- create proportional symbol map,
+- perform georelational join,
+- Compute new field from existing fields, and 
+- prepare choropleth map.
 
 ## 2.0 Data
 
@@ -34,7 +35,7 @@ For the purpose of this hands-on exercise, three data sets are provided.  They a
 
 - `education` provides general information of public primary schools, secondary schools and junior colleges.  This data set was downloaded from Data.gov.sg and geocoded by using SLA OneMap Api.
 - `sgpools` provides information of SG Pools outlets and stores information.
-- `POP2020` provides population by age group as at June 2020.  It is downloaded from Department of Statistics (DOS), Singapore.  The data set provides multiple years population data but for the purpose of this exercise, only 2020 data were extracted.  
+- `POP2020` provides population by age group as at June 2020.  It is downloaded from Department of Statistics (DOS), Singapore.  The data set provides multiple years of population data. For the purpose of this exercise, only 2020 data were extracted.  
 
 These three data sets are in csv file format.  They can be found in `DataTables` of Hand-on-Ex04 folder.
 
@@ -46,17 +47,17 @@ Besides the above three data sets, you are required to download the following ge
 
 ### 2.2 Data Preparation
 
->DIY: Using the steps you learned from previous hands on exercise, convert the education and SGPools data sets in DataTables folder into geospatial data layer and store them into an integrated database called `SG`.  The geospatial database must be in **GeoPackage** format.      
+>DIY: Using the steps you had learned from the previous hands-on exercise, convert the education and SGPools data sets in DataTables folder into geospatial data layer and store them into an integrated database called `SG`.  The geospatial database must be in **GeoPackage** format.      
 
->DIY: Using the steps you learned from previous hands-on exercise, convert the geospatial data sets downloaded from Data.gov.sg and LTA Data Mall into the newly created `SG` database.
+>DIY: Using the steps you had learned from the previous hands-on exercise, convert the geospatial data sets downloaded from Data.gov.sg and LTA Data Mall into the newly created `SG` database.
 
 ## 3.0 Getting Started
 
->DIY: Launch QGIS.  Created a new project call `Hands-on_Ex04`.  Provide the project the correct referencing system.
+>DIY: Launch QGIS.  Creat a new project call `Hands-on_Ex04`.  Provide the project with a correct referencing system.
 
->DIY: Using the steps you learn from previous hands-on exercies, import all the geospatial data in `SG` database into the newly created QGIS project. 
+>DIY: Using the steps you had learned from the previous hands-on exercies, import all the geospatial data in `SG` database into the newly created QGIS project. 
 
->DIY: Using the steps you learn from previous hands-on exercies, add OSM map layer into `Hands-on_Ex04` project. 
+>DIY: Using the steps you had learned from the previous hands-on exercies, add OSM map layer into `Hands-on_Ex04` project. 
 
 Your screen should look similar to the figure below.
 
@@ -95,7 +96,7 @@ Your screen should look similar to the screenshot below.
 
 ![](img/image5.jpg){width=60%} 
 
-Figure above shows that `Education` layer has been categorized into five categories. They are, Junior College, Centralised Institute, Mixed Levels, Primary and Secondary.
+Figure above shows that `Education` layer has been categorised into five categories. They are, Junior College, Centralised Institute, Mixed Levels, Primary and Secondary.
 
 Next, you will learn how to symbolise them by using the svg vector symbol set.
 
@@ -133,15 +134,15 @@ Your screen should look similar to the figure below.
 
 ![](img/image9.jpg) 
 
-This map is popularly known as Point symbol map among the GIS and cartography communities.  Prior to GIS era, this kind of map took more than a month to prepare.  With GIS, it only needs less than 15 minutes to prepare.  The advantage of GIS-based poitn symbol map is that the map can be changed easily with very little effort.  GIS-based pointsymbol map is also highly interactive.  You can navigate around the digital map and zooming in to view the distribution in greater details.
+This map is popularly known as Point symbol map among the GIS and cartography communities.  Prior to GIS era, this kind of map took more than a month to prepare.  With GIS, it only needs less than 15 minutes to prepare.  The advantage of GIS-based point symbol map is that the map can be changed easily with very little effort.  GIS-based point symbol map is also highly interactive.  You can navigate around the digital map and zoom in to view the distribution in greater details.
 
->DIY: Use the steps you had learned from previous section, symbolise the 
+>DIY: Use the steps you had learned from the previous section, symbolise the 
 
 >Challenge: 
-Using the steps you learned in previous section, symbolise RoadSectionLine layer according to Expressway and Roads.
+Using the steps you had learned in the previous section, symbolise RoadSectionLine layer according to Expressway and Roads.
 
 >Challenge:
-Using the steps you learned in previous section, symbolise National Map Polygon layer to show the outlines only.
+Using the steps you had learned in the previous section, symbolise National Map Polygon layer to show the outlines only.
 
 Your screen should look similar to the figure below.
 
@@ -204,7 +205,7 @@ Your screen should look similar to the figure below.
 
 Notice that there are many proportional symbols were overlapping.  Now, you will learn how to use the layer transparent feature of QGIS to improve the visualisation.
 
->DIY: Using the step you learned in earlier section, open the **Layer Properties** of `SGPools`.
+>DIY: Using the step you had learned in the earlier section, open the **Layer Properties** of `SGPools`.
 
 + At the **Layer Properties** panel, look for **Layer rendering** sub-panel located at the bottom ot the dialog window.
 + Click on the little triangle in front of **Layer rendering** sub-panel.
@@ -232,7 +233,7 @@ Your screen should look similar to the figure below.
 
 ## 6.0 Choropleth map using GIS
 
-**Choropleth mapping** involves the symbolization of enumeration units, such as countries, provinces, states, counties or census units, using area patterns or graduated colors.  For example, a social scientist may need to use a choropleth map to portray the spatial distribution of aged population of Singapore by Master Plan 2014 Subzone Boundary.
+**Choropleth mapping** involves the symbolisation of enumeration units, such as countries, provinces, states, counties or census units, using area patterns or graduated colors.  For example, a social scientist may need to use a choropleth map to portray the spatial distribution of aged population of Singapore by Master Plan 2014 Subzone Boundary.
 
 The major concerns of choropleth mapping are the method of data classification, areal symbolization, and the overall map design.  General rules for choropleth mapping are as follows:
 
@@ -246,7 +247,7 @@ In this section of the hands-on exercise, you will learn how to use QGIS to prep
 
 ### 6.1 Adding geoadministrative layer
   
->DIY: Using the steps you had learned from previous section, add `Master Plan 2014 Subzone Area Boundary (No Sea)` layer into QGIS.
+>DIY: Using the steps you had learned from the previous section, add `Master Plan 2014 Subzone Area Boundary (No Sea)` layer into QGIS.
 
 Your screen should look similar to the figure below.
 
@@ -301,15 +302,15 @@ The Attribute table dialog window appears.
 
 Now you are ready to perform relational join between the MP14_SubZone GIS layer and the POP2020 attribute layer.  
 
-In order to join the attribute table of a geospatial data and an aspatial attribute table, we need to identify the common key or popularly known as **unique identifier** between these two datasets.    
+In order to join the attribute table of a geospatial data and an aspatial attribute table, we need to identify the common key or popularly known as **unique identifier** between these two data sets.    
 
 >DIY: Using the steps you had learned, open the attribute table of MP14_SubZone and POP2020.
 
 ![](img/image22.jpg)
 
-With reference to the tables above, the *SZ* field of `POP2020` and *SUBZONE_N* field of MP14_SUBZONE can be used as the unique identifier filed.  However, if you examine the data carefully, there is a problem we should be noted, that is strings in SUBZONE_N are all uppercase.  On the other hand, strings in SZ field are made up of upper- and lowercases.
+With reference to the tables above, the *SZ* field of `POP2020` and *SUBZONE_N* field of `MP14_SUBZONE` can be used as the unique identifier filed.  However, if you examine the data carefully, there is a problem we should take note of. That is strings in *SUBZONE_N* are all uppercase.  On the other hand, strings in *SZ* field are made up of upper- and lowercases.
 
-In view of this problem, we will create a new few to change strings in SZ into uppercase.  We will call the output field SUBZONE.
+In view of this problem, we will create a new field to change strings in *SZ* into uppercase.  We will call the output field *SUBZONE*.
 
 + At the **POP2020 Feature Table**, click on **Open field calculator** icon ![](img/image23.jpg){width=5%}
 
@@ -367,7 +368,7 @@ You will notice that the table now contains additional fields from POP2020 attri
 
 ![](img/image29.jpg)
  
-Remember that this join is temporary.  It is not part of the attribute table of `MP14_SubZone` layer, but is just linked dynamically to the `POP2020` attribute layer.  If you want to permanently join the attributes, you must save it as a new layer.
+Remember that this joint is temporary.  It is not part of the attribute table of `MP14_SubZone` layer, but is just linked dynamically to the `POP2020` attribute layer.  If you want to permanently join the attributes, you must save it as a new layer.
 
 ### 6.3	Creating a choropleth map
 
@@ -392,7 +393,7 @@ The Field calculator dialog window appears.
 
 >Gentle reminder: Check the preview to ensure that the result is what you want.
 
-To perfrom the computation, 
+To perform the computation, 
 
 + Click on the **OK** button.
 
@@ -449,10 +450,10 @@ Your screen should look similar to the figure below.
 ![](img/image36.jpg) 
 
 >Challenge:
-Study the distribution reveals by the choropleth map.  Can you identify planning subzones with high concentration of population with age 65 and above?  Are these subzone tend to clusters together or randomly distributed?
+Study the distribution revealed by the choropleth map.  Can you identify planning subzones with high concentration of population with age 65 and above?  Do these subzone tend to clusters together or randomly distributed?
 
 >DIY:
-Use the steps you had learned from previous sections, create a choropleth maps of percentage of population age 65 and above.  
+Using the steps you had learned from the previous sections, create a choropleth maps of percentage of population age 65 and above.  
 
 >Challenge:
 Compare the two choropleth maps prepared, what conclusion can you draw from the maps?
