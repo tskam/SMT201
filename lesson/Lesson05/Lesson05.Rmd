@@ -641,5 +641,5 @@ Jochen Albrecht (2007) **Key Concepts and Techniques in GIS**, Chapter 4-6. SAGE
 
 ```{r echo=FALSE, eval=FALSE}
 library(pagedown)
-pagedown::chrome_print("Lesson04.html")
+pagedown::chrome_print("Lesson05.html")
 ```
