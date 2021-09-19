@@ -1,0 +1,65 @@
+---
+title: "Lesson 7: The Science of Mapthematics and Cartographic Modelling"
+subtitle: ""  
+author: "Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems"
+institute: "School of Computing and Information Systems,<br/>Singapore Management University"
+date: "2019-01-01 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [xaringan-themer.css, "css/text.css"]
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      beforeInit: "js/macros.js"
+---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.retina=3,
+                      cache = FALSE,
+                      echo = TRUE,
+                      message = FALSE, 
+                      warning = FALSE)
+```
+
+# Content
+
+.large[
++ Introduction to Raster-based GIS Analysis
+  + The basic concept of raster GIS data model
+  + Raster database
+  + Characteristics of raster
+  + Raster resolution
+  + The composite weight
++ Map Algebra Methods
+  + Local functions
+  + Focal functions
+  + Neighbourhood functions
+  + Zonal functions
++ Cartographic Modelling
+  + A process of map analysis
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r echo=FALSE, eval=FALSE}
+library(pagedown)
+pagedown::chrome_print("Lesson05.html")
+```
+
+
