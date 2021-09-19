@@ -29,9 +29,9 @@ knitr::opts_chunk$set(echo = FALSE)
 - Hands-on Exercise in [html](../Hands-on_Ex/Hands-on_Ex06/Hands-on_Ex06.html) and [pdf](../Hands-on_Ex/Hands-on_Ex06//Hands-on_Ex06.pdf) format.
 
 
-
 ## References
-###Trade Area Analysis
+
+### Trade Area Analysis
 
 - [Retail Trade Area Analysis: Concepts and New Approaches](http://www.experts.com/content/articles/Donald-Segal-JDM-Trade%20Area%20Analysis.pdf)
 - Cui, Can ; Wang, Jiechen ; Pu, Yingxia ; Ma, Jinsong ; Chen, Gang (2012) ["GIS-based method of delimitating trade area for retail chains"](https://web-a-ebscohost-com.libproxy.smu.edu.sg/ehost/detail/detail?vid=0&sid=d8645ef8-9d8e-4b2f-a397-cfbcd9c25f45%40sessionmgr4008&bdata=JnNpdGU9ZWhvc3QtbGl2ZSZzY29wZT1zaXRl#AN=80736486&db=asn). International *Journal of Geographical Information Science*, Vol.26(10), pp.1863-1879.
