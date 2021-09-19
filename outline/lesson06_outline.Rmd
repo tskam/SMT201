@@ -26,6 +26,10 @@ knitr::opts_chunk$set(echo = FALSE)
     - Urban growth monitoring
     - Urban change detection
 
+- Hands-on Exercise in [html](../Hands-on_Ex/Hands-on_Ex06/Hands-on_Ex06.html) and [pdf](../Hands-on_Ex/Hands-on_Ex06//Hands-on_Ex06.pdf) format.
+
+
+
 ## References
 ###Trade Area Analysis
 
