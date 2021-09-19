@@ -1,7 +1,7 @@
 ---
 title: "Lesson 6: Urban Applications of Vector-based GIS Analysis"
 description: |
-  A new article created using the Distill format.
+  In this lesson, you will gain hands-on experience on using vector-based GIS analysis methods discussed last week to address real world problem.
 date: "`r Sys.Date()`"
 output:
   distill::distill_article:
