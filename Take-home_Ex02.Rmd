@@ -1,0 +1,71 @@
+---
+title: "Take-home Exercise 2: Urban Applications of Vector-based GIS Analysis"
+description: |
+  This handout provides the context, the task, the expectation and the grading criteria of Take-home Exercise 2.  Students must review and understand them before getting started with the take-home exercise. 
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Setting the scene
+
+On September 10, 2021, a new way to calculate school-home distance was annouceed by Ministry of Education (MOE) and published at [New Strait Time (NST)](https://www.straitstimes.com/singapore/parenting-education/new-way-of-calculating-distance-for-p1-registration-means-more). It aims to [enable more children to qualify for Primary 1 places in schools near where they live](https://www.straitstimes.com/singapore/parenting-education/new-p1-registration-rules-for-2022-more-places-to-be-set-aside-under). As a socially conscious GIS analyst, you have decided to conduct a study to reveal the impact of the new school-home distance calculate method.  The study aims to provide policy makers as well as general public analytical-centric information for supporting inclusive and participatory planning process.  
+
+## The Tasks
+
+The specific tasks of the study are as follows:
+
++ assemble GIS data needed to perform the study.  Three main data sets have been identified.  They are: the latest primary school location and Primary 1 capacity, cadastral land lot and building footprint of residential.  Other useful GIS data sets can be added if they are necessary,
++ using appropriate GIS analysis methods to delineate the catchment areas of school base on the old and new ways to calculate school-home catchment areas.  
++ prepare large-scale GIS maps (i.e. 1:5000) for selected schools your choice to show the complexity of school-home catchment areas,
++ derive appropriate statistics (i.e. statistical tables and graphics) to complement the GIS maps analysis, and
++ Critically evaluate the issue revealed by the map and suggest appropriate alternative planning approach for school-home catchment areas delineation. 
+
+## Take-home Exercise Artefact
+
+### GIS data repository
+
+The GIS repository includes but not limited to geospatial data compiled and derived, QGIS project file and data dictionary. It must be in a single zipped file (i.e. .zip).  The geospatial data must be stored in a GeoPackage database format.  The data dictionary can be in either MS Word document or edited into the GIS data.The project artefact must be uploaded onto eLearn.
+
+### Take-home Exercise Report
+
+You are required to edit your take-home exercise report in MS Word format.  The take-home exercise report, beside others, should include all the thematic and choropleth maps prepared and their respective discussion.  
+
+More importantly, the report must provide a **reproducible** step-by-step guide on the following process:
+
++ data compilation, extraction and integration,
++ data cleaning, preparation and wrangling,
++ GIS analysis (including tabular and graphical analysis), and
++ GIS maps design.
+
+>Note: **Reproducible** means that readers are able to perform the same analysis and obtain similar results by using the same data sets and by following the step-by-step guide. 
+
+The title of the report should be in the form of *SMT201_AY2021-22T1_Ex2*.
+
+>Note: This is an individual exercise. You are required to work on the take home exercise and prepare submission individually.
+
+## Grading
+
++ Quality of the GIS data model built (including metadata) (20 marks),
++ Appropriateness of the GIS methods used (20 marks),  
++ Quality of GIS maps prepared (20 marks),
++ Reproducibility of the GIS processes (20 marks), and
++ Ability to provide correct interpretation of the analysis results and to recommend appropriate alternatives (20 marks).
+
+## Submission Date
+
+The take-home exercise artefact must be uploaded on eLearn by the submission deadline stated below. 
+
+Due Date: 6th October 2021, 11:59pm (mid-night). 
+
+
+```{r echo=FALSE, eval=FALSE}
+library(pagedown)
+pagedown::chrome_print("Take-home_Ex02.html")
+```

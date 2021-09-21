@@ -14,7 +14,7 @@ navbar:
       - text: "Take-home Exercise 1"
         href: Take-home_Ex01.html
       - text: "Take-home Exercise 2"
-        href: th_ex2.html
+        href: Take-home_Ex02.html
       - text: "Take-home Exercise 3"
         href: th_ex3.html
     - text: "GIS Project"
