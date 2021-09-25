@@ -181,7 +181,24 @@ Note that the following examples are for references purposes. You are urged to u
 
 ## Q&A
 
-Link to Q&A/Project Discussion 
+Q1: What is the national projection system of Indonesia?
+
+>Prof: The projected coordinate system of Indonesia should be DGN95 / Indonesia TM-3 zone 54.1
+
+Q2: Is my understanding of the geography of East Kalimantan below correct? Provinsi (East Kalimantan) > Samarinda and Balikpapan Regency/City (kota) > Kutai Kartanegara and North Penajam Paser District (kecamatan) > Sub-District (desa). 
+
+>Prof: Please refer to this [link](https://en.wikipedia.org/wiki/Subdivisions_of_Indonesia)
+
+Q3: Are we supposed to analyse the kecamatan and desa within the Samarinda and Balikpapan kota?
+
+>Prof: No, the analysis should be at Kelurahan level both the urban sub-dictrict (i.e kota) and rural villages (i.e. desa)
+
+Q4: Would you prefer if we translate the information in the CSV file to English or leave it in Bahasa? 
+
+>Prof: Ideally, the field name and classes should be in English if possible.
+
+
+ 
 
 
 ```{r echo=FALSE, eval=FALSE}
