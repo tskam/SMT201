@@ -37,7 +37,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ## References
 ### Core Reading
 
-- [Chapter 10 Map Algebra](https://mgimond.github.io/Spatial/map-algebra.html) of Intro to GIS and Spatial Analysis (online version)
+- [Chapter 10 Map Algebra](https://mgimond.github.io/Spatial/chp10_0.html) of Intro to GIS and Spatial Analysis (online version)
 - Berry, Joseph (1987) ["A mathematical structure for analyzing maps"](https://link-springer-com.libproxy.smu.edu.sg/content/pdf/10.1007%2FBF01867159.pdf), Environmental Management, Vol.11(3), pp.317-325.
 - [Cartographic Modeling](http://www.wiley.com/legacy/wileychi/gis/Volume1/BB1v1_ch23.pdf)
 
