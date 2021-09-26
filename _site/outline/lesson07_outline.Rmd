@@ -29,6 +29,11 @@ knitr::opts_chunk$set(echo = FALSE)
 - Cartographic Modelling
     - A process of map analysis
 
+## Lesson Slides and Hands-on Notes 
+
+- Lesson slides in [html](../lesson/Lesson07/Lesson07.html) and [pdf](../lesson/Lesson07/Lesson07.pdf) formats
+
+
 ## References
 ### Core Reading
 
