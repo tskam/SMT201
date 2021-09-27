@@ -86,9 +86,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>SMT201: Take-home Exercise 1: Modelling the Urban World</title>
+  <title>Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis</title>
 
-  <meta property="description" itemprop="description" content="This handout provides the context, the task, the expectation and the grading criteria of Take-home Exercise 1.  Students must review and understand them before getting started with the take-home exercise."/>
+  <meta property="description" itemprop="description" content="In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS."/>
 
 
   <!--  https://schema.org/Article -->
@@ -96,631 +96,28 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta property="article:created" itemprop="dateCreated" content="2021-09-27"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="SMT201: Take-home Exercise 1: Modelling the Urban World"/>
+  <meta property="og:title" content="Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="This handout provides the context, the task, the expectation and the grading criteria of Take-home Exercise 1.  Students must review and understand them before getting started with the take-home exercise."/>
+  <meta property="og:description" content="In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS."/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="SMT201"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="SMT201: Take-home Exercise 1: Modelling the Urban World"/>
-  <meta property="twitter:description" content="This handout provides the context, the task, the expectation and the grading criteria of Take-home Exercise 1.  Students must review and understand them before getting started with the take-home exercise."/>
+  <meta property="twitter:title" content="Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis"/>
+  <meta property="twitter:description" content="In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Take-home Exercise 1: Modelling the Urban World"]},{"type":"character","attributes":{},"value":["This handout provides the context, the task, the expectation and the grading criteria of Take-home Exercise 1.  Students must review and understand them before getting started with the take-home exercise. \n"]},{"type":"character","attributes":{},"value":["2021-09-27"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis"]},{"type":"character","attributes":{},"value":["In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS.\n"]},{"type":"character","attributes":{},"value":["2021-09-27"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["code_folding","toc","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[4]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["Hands-on_Ex07_files/anchor-4.2.2/anchor.min.js","Hands-on_Ex07_files/bowser-1.9.3/bowser.min.js","Hands-on_Ex07_files/distill-2.2.21/template.v2.js","Hands-on_Ex07_files/header-attrs-2.10/header-attrs.js","Hands-on_Ex07_files/jquery-1.11.3/jquery.min.js","Hands-on_Ex07_files/popper-2.6.0/popper.min.js","Hands-on_Ex07_files/tippy-6.2.7/tippy-bundle.umd.min.js","Hands-on_Ex07_files/tippy-6.2.7/tippy-light-border.css","Hands-on_Ex07_files/tippy-6.2.7/tippy.css","Hands-on_Ex07_files/tippy-6.2.7/tippy.umd.min.js","Hands-on_Ex07_files/webcomponents-2.0.0/webcomponents.js","img/image1.jpg","img/image10.jpg","img/image11.jpg","img/image12.jpg","img/image13.jpg","img/image14.jpg","img/image15.jpg","img/image16.jpg","img/image17.jpg","img/image18.jpg","img/image19.jpg","img/image2.jpg","img/image20.jpg","img/image21.jpg","img/image3.jpg","img/image4.jpg","img/image5.jpg","img/image6.jpg","img/image7.jpg","img/image8.jpg","img/image9.jpg"]}
+  </script>
   <!--radix_placeholder_navigation_in_header-->
-  <meta name="distill:offset" content=""/>
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        tolerance: 5,
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
-  </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0F2E3D;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-    min-width: 150px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative; min-height: 500px; }
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  /* adjust viewport for navbar height */
-  /* helps vertically center bootstrap (non-distill) content */
-  .min-vh-100 {
-    min-height: calc(100vh - 100px) !important;
-  }
-
-  </style>
-
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
-  <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
-  <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
-
-  <script type="application/javascript">
-
-  function getMeta(metaName) {
-    var metas = document.getElementsByTagName('meta');
-    for (let i = 0; i < metas.length; i++) {
-      if (metas[i].getAttribute('name') === metaName) {
-        return metas[i].getAttribute('content');
-      }
-    }
-    return '';
-  }
-
-  function offsetURL(url) {
-    var offset = getMeta('distill:offset');
-    return offset ? offset + '/' + url : url;
-  }
-
-  function createFuseIndex() {
-
-    // create fuse index
-    var options = {
-      keys: [
-        { name: 'title', weight: 20 },
-        { name: 'categories', weight: 15 },
-        { name: 'description', weight: 10 },
-        { name: 'contents', weight: 5 },
-      ],
-      ignoreLocation: true,
-      threshold: 0
-    };
-    var fuse = new window.Fuse([], options);
-
-    // fetch the main search.json
-    return fetch(offsetURL('search.json'))
-      .then(function(response) {
-        if (response.status == 200) {
-          return response.json().then(function(json) {
-            // index main articles
-            json.articles.forEach(function(article) {
-              fuse.add(article);
-            });
-            // download collections and index their articles
-            return Promise.all(json.collections.map(function(collection) {
-              return fetch(offsetURL(collection)).then(function(response) {
-                if (response.status === 200) {
-                  return response.json().then(function(articles) {
-                    articles.forEach(function(article) {
-                      fuse.add(article);
-                    });
-                  })
-                } else {
-                  return Promise.reject(
-                    new Error('Unexpected status from search index request: ' +
-                              response.status)
-                  );
-                }
-              });
-            })).then(function() {
-              return fuse;
-            });
-          });
-
-        } else {
-          return Promise.reject(
-            new Error('Unexpected status from search index request: ' +
-                        response.status)
-          );
-        }
-      });
-  }
-
-  window.document.addEventListener("DOMContentLoaded", function (event) {
-
-    // get search element (bail if we don't have one)
-    var searchEl = window.document.getElementById('distill-search');
-    if (!searchEl)
-      return;
-
-    createFuseIndex()
-      .then(function(fuse) {
-
-        // make search box visible
-        searchEl.classList.remove('hidden');
-
-        // initialize autocomplete
-        var options = {
-          autoselect: true,
-          hint: false,
-          minLength: 2,
-        };
-        window.autocomplete(searchEl, options, [{
-          source: function(query, callback) {
-            const searchOptions = {
-              isCaseSensitive: false,
-              shouldSort: true,
-              minMatchCharLength: 2,
-              limit: 10,
-            };
-            var results = fuse.search(query, searchOptions);
-            callback(results
-              .map(function(result) { return result.item; })
-            );
-          },
-          templates: {
-            suggestion: function(suggestion) {
-              var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
-                ? `<img src="${offsetURL(suggestion.preview)}"</img>`
-                : '';
-              var html = `
-                <div class="search-item">
-                  <h3>${suggestion.title}</h3>
-                  <div class="search-item-description">
-                    ${suggestion.description || ''}
-                  </div>
-                  <div class="search-item-preview">
-                    ${img}
-                  </div>
-                </div>
-              `;
-              return html;
-            }
-          }
-        }]).on('autocomplete:selected', function(event, suggestion) {
-          window.location.href = offsetURL(suggestion.path);
-        });
-        // remove inline display style on autocompleter (we want to
-        // manage responsive display via css)
-        $('.algolia-autocomplete').css("display", "");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-
-  });
-
-  </script>
-
-  <style type="text/css">
-
-  .nav-search {
-    font-size: x-small;
-  }
-
-  /* Algolioa Autocomplete */
-
-  .algolia-autocomplete {
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: sub;
-    background-color: white;
-    color: black;
-    padding: 6px;
-    padding-top: 8px;
-    padding-bottom: 0;
-    border-radius: 6px;
-    border: 1px #0F2E3D solid;
-    width: 180px;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-nav .algolia-autocomplete {
-      display: none;
-      visibility: hidden;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete {
-      display: inline-block;
-      visibility: visible;
-    }
-    .distill-site-nav.responsive .algolia-autocomplete .aa-dropdown-menu {
-      margin-left: 0;
-      width: 400px;
-      max-height: 400px;
-    }
-  }
-
-  .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-    width: 90%;
-    outline: none;
-    border: none;
-  }
-
-  .algolia-autocomplete .aa-hint {
-    color: #999;
-  }
-  .algolia-autocomplete .aa-dropdown-menu {
-    width: 550px;
-    max-height: 70vh;
-    overflow-x: visible;
-    overflow-y: scroll;
-    padding: 5px;
-    margin-top: 3px;
-    margin-left: -150px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #999;
-    border-top: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-    cursor: pointer;
-    padding: 5px 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion:last-of-type {
-    border-bottom: none;
-    margin-bottom: 2px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item {
-    overflow: hidden;
-    font-size: 0.8em;
-    line-height: 1.4em;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
-    font-size: 1rem;
-    margin-block-start: 0;
-    margin-block-end: 5px;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-description {
-    display: inline-block;
-    overflow: hidden;
-    height: 2.8em;
-    width: 80%;
-    margin-right: 4%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview {
-    display: inline-block;
-    width: 15%;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img {
-    height: 3em;
-    width: auto;
-    display: none;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item-preview img[src] {
-    display: initial;
-  }
-
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-    background-color: #eee;
-  }
-  .algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
-    font-weight: bold;
-    font-style: normal;
-  }
-
-  </style>
-
-
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -2036,15 +1433,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
-  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
-  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
-  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
-  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="Hands-on_Ex07_files/header-attrs-2.10/header-attrs.js"></script>
+  <script src="Hands-on_Ex07_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="Hands-on_Ex07_files/popper-2.6.0/popper.min.js"></script>
+  <link href="Hands-on_Ex07_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="Hands-on_Ex07_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="Hands-on_Ex07_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="Hands-on_Ex07_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="Hands-on_Ex07_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="Hands-on_Ex07_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="Hands-on_Ex07_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
   <!--/radix_placeholder_site_in_header-->
 
@@ -2056,47 +1454,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Take-home Exercise 1: Modelling the Urban World","description":"This handout provides the context, the task, the expectation and the grading criteria of Take-home Exercise 1.  Students must review and understand them before getting started with the take-home exercise.","authors":[],"publishedDate":"2021-09-27T00:00:00.000+08:00"}
+{"title":"Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis","description":"In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS.","authors":[],"publishedDate":"2021-09-27T00:00:00.000+08:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a href="index.html" class="title">SMT201</a>
-<a href="syllabus.html">Syllabus</a>
-<a href="lesson.html">Lesson Plan</a>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-Take-home Exercise
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="Take-home_Ex01.html">Take-home Exercise 1</a>
-<a href="Take-home_Ex02.html">Take-home Exercise 2</a>
-<a href="th_ex3.html">Take-home Exercise 3</a>
-</div>
-</div>
-<a href="GISproject.html">GIS Project</a>
-</div>
-<div class="nav-right">
-<a href="resources.html">Resources</a>
-<a href="index.html">Home</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Take-home Exercise 1: Modelling the Urban World</h1>
+<h1>Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>This handout provides the context, the task, the expectation and the grading criteria of Take-home Exercise 1. Students must review and understand them before getting started with the take-home exercise.</p></p>
+<p><p>In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS. By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS.</p></p>
 </div>
 
 
@@ -2105,64 +1476,202 @@ Take-home Exercise
 <nav class="l-text toc figcaption" id="TOC">
 <h3>Contents</h3>
 <ul>
-<li><a href="#the-task">The Task</a>
+<li><a href="#introduction">1.0 Introduction</a>
 <ul>
-<li><a href="#mini-case-1">Mini Case 1</a></li>
-<li><a href="#mini-case-2">Mini Case 2</a></li>
-</ul></li>
-<li><a href="#take-home-exercise-artefact">Take-home Exercise Artefact</a>
+<li><a href="#data-preparation">1.1 Data Preparation</a>
 <ul>
-<li><a href="#gis-data-repository">GIS data repository</a></li>
-<li><a href="#take-home-exercise-report">Take-home Exercise Report</a></li>
+<li><a href="#add-the-gis-data-into-qgis-project">1.1.1 Add the GIS data into QGIS Project</a></li>
+<li><a href="#using-attribute-query-to-select-a-subset-from-a-master-layer">1.1.2 Using attribute query to select a subset from a master layer</a></li>
 </ul></li>
-<li><a href="#grading">Grading</a></li>
-<li><a href="#submission-date">Submission Date</a></li>
+</ul></li>
+<li><a href="#raster-data-modelling">2.0 Raster Data Modelling</a>
+<ul>
+<li><a href="#editing-attribute-data">2.1 Editing attribute data</a></li>
+<li><a href="#rasterising-a-vector-gis-data-layer">2.2 Rasterising a vector GIS data layer</a></li>
+</ul></li>
+<li><a href="#accessibility-modelling-using-raster-based-gis-analysis">3.0 Accessibility Modelling using Raster-based GIS Analysis</a>
+<ul>
+<li><a href="#creating-proximity-layer-using-raster-gis-analysis">3.1 Creating proximity layer using raster GIS analysis</a></li>
+</ul></li>
 </ul>
 </nav>
 </div>
-<h2 id="the-task">The Task</h2>
-<h3 id="mini-case-1">Mini Case 1</h3>
-<p>School safety is one of the important function in school management and planning. Different from many other countries worldwide, school safety in Singapore is mainly related to traffic accidents occurred within the vicinity of the school rather than crime occurred in school. Recently, there are increasing sign of traffic accidents incidents reported within the vicinity of schools. As the GIS analyst of the planning department, you are tasked to:</p>
+<h1 id="introduction">1.0 Introduction</h1>
+<p>The true power of a GIS is its analytical capability. GIS analysis functions, however, are generic and are not specifically designed for business intelligence applications. This is particularly true when the analysis involved massive and large data. To meet the analytical requirements and analysis efficiency of market researchers and business analysts, we need to combine appropriate GIS functions and analysis for modelling the business processes.</p>
+<p>This hands-on exercise consists of two major sections. First, you will learn the basic concept of accessibility from geospatial perspective. You will also learn how to use appropriate raster GIS analyse function and mapping techniques to analyse and visualize accessibility maps.</p>
+<h2 id="data-preparation">1.1 Data Preparation</h2>
+<p>Two GIS data are available for the analysis. They are:</p>
 <ul>
-<li>assemble GIS data need to understand the location of public education institutions (i.e. Junior college, secondary school, and primary school) and traffic control zoning of schools,</li>
-<li>prepare a large-scale GIS map (i.e. 1:5000) of your choice showing the location of schools and traffic control zoning of schools in the area, and</li>
-<li>write a report of not more than 100 words commenting on the adequacy of traffic control zoning provision in the study area.</li>
-<li>Critic the issue revealed by the map and suggest appropriate alternative planning approach for school zoning (not more than 200 words).</li>
+<li>Location of primary, secondary, mixed and JC (i.e. Education).</li>
+<li>Outline map of Singapore (i.e. CoastalOutline).</li>
 </ul>
-<h3 id="mini-case-2">Mini Case 2</h3>
-<p>Since its inception in 2008, Airbnb has expanded into more than 34,000 cities across 191 countries. Uncommonly for a sharing economy company, Airbnb transitioned into profitability in 2016, demonstrating proof-of-concept for the validity of sharing economy within the global market (Stone &amp; Zaleski, 2017).</p>
-<p>Interestingly, Singapore is one of the global city that has yet to legalise short-term rentals offered by platforms such as Airbnb (Read more at <a href="https://www.todayonline.com/singapore/short-term-home-sharing-remains-illegal-singapore-airbnb-disappointed">here</a>). However, a visit to <a href="http://insideairbnb.com/about.html">Inside Airbnb</a>, an independent, non-commercial set of tools and data that allows anyone to explore how Airbnb is really being used in cities around the world, it appears that there are data sets for Singapore.</p>
-<p>As the GIS analyst of the planning department, you are tasked to:</p>
-<ul>
-<li>assemble GIS data need to understand the distribution of Airbnb listings at the planning subzone level,</li>
-<li>prepare thematic map(s) showing the distribution of Airbnb at the planning subzone level,</li>
-<li>write a report describing the geospatial patterns reveal by the map(s). Please limit your discussion to a maximum of not more than 100 words per map.<br />
-</li>
-<li>Explain why your cartographic technique makes sense, your choice of classification and visual variable. Please limit your discussion to a maximum of not more than 150 words per map.</li>
-</ul>
-<h2 id="take-home-exercise-artefact">Take-home Exercise Artefact</h2>
-<h3 id="gis-data-repository">GIS data repository</h3>
-<p>The GIS repository includes but not limited to geospatial data compiled and derived, QGIS project file and data dictionary. It must be in a single zipped file (i.e. .zip). The geospatial data must be stored in a GeoPackage database format. The data dictionary can be in either MS Word document or edited into the GIS data.The project artefact must be uploaded onto eLearn.</p>
-<h3 id="take-home-exercise-report">Take-home Exercise Report</h3>
-<p>You are required to edit your take-home exercise report in MS Word format. The take-home exercise report, beside others, should include all the thematic and choropleth maps prepared and their respective discussion. The title of the report should be in the form of: SMT201_AY2021-22T1_Ex1.</p>
+<h3 id="add-the-gis-data-into-qgis-project">1.1.1 Add the GIS data into QGIS Project</h3>
+<p>Before you can start to perform any analysis, you need to start a new QGIS project.</p>
 <blockquote>
-<p>Note: This is an individual exercise. You are required to work on the take home exercise and prepare submission individually.</p>
+<p>DIY: Using the steps you had learned from last lesson, add the Education and CoastalOutline into the newly created QGIS project.</p>
 </blockquote>
-<h2 id="grading">Grading</h2>
-<p>Mini Case 1:</p>
+<h3 id="using-attribute-query-to-select-a-subset-from-a-master-layer">1.1.2 Using attribute query to select a subset from a master layer</h3>
+<p>The Education layer consists of locations of education institutions such as primary schools, secondary school, mixed and JC. We are only interested on education institutions that belong to primary and secondary schools.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned from last lesson, extract and save the primary and secondary schools in two separate GIS vector layers.</p>
+</blockquote>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image1.jpg" /></p>
+<h1 id="raster-data-modelling">2.0 Raster Data Modelling</h1>
+<p>In this exercise, you will learn how to model raster data. The exercise focusses on how to rasterise a vector GIS data layer using QGIS geoprocessing functions.</p>
+<h2 id="editing-attribute-data">2.1 Editing attribute data</h2>
+<p>In this section, you will create a new field in the attribute table of a vector GIS data and update values of the newly created field. You will name the field as POI_CODE. The data type of this data field is integer.</p>
 <ul>
-<li>Quality of GIS map prepared: 15 marks</li>
-<li>Quality of GIS report: 15 marks</li>
+<li>At <strong>Browser</strong> panel, right-click on the <code>Primary Schools</code> layer.</li>
+<li>Select <strong>Open Attribute Table</strong> from the context menu.</li>
 </ul>
-<p>Mini Case 2:</p>
+<p>The Attribute table dialog window of Primary Schools appears.</p>
+<p><img src="img/image2.jpg" /></p>
 <ul>
-<li>Quality of GIS maps prepared: 25 marks</li>
-<li>Quality of GIS report: 25 marks</li>
+<li>From the icon bar of the Attribute table window, click on the <strong>Open field calculator</strong> icon.</li>
 </ul>
-<p>Quality of GIS Data Repository: 20 marks</p>
-<h2 id="submission-date">Submission Date</h2>
-<p>The take-home exercise artefact must be uploaded on eLearn by the submission deadline stated below.</p>
-<p>Due Date: 12th September 2021, 11:59pm (mid-night).</p>
+<p>The Field calculator dialog window appears.</p>
+<ul>
+<li>For <strong>Output file</strong> name, type <em>POI_CODE</em>.</li>
+<li>For <strong>Output filed</strong> type, select <strong>Whole number (integer)</strong> from the drop-down list.</li>
+<li>For <strong>Output field</strong>, change to <em>3</em>.</li>
+<li>At the <strong>Expression</strong> pane, type <em>1</em>.</li>
+</ul>
+<p>The Field calculator dialog window should look similar to the figure below now.</p>
+<p><img src="img/image3.jpg" style="width:45.0%" /></p>
+<p>• Click on the <strong>OK</strong> button.</p>
+<p>Notice that a new field called POI_CODE has been added into the Attribute table of Primary School. Also notice that the POI_CODE values are 1s.</p>
+<p><img src="img/image4.jpg" /></p>
+<p>You will end the editing process now.</p>
+<ul>
+<li>At the icon menu of Attribute table window, click on the <strong>Toggle editing</strong> mode icon.</li>
+</ul>
+<p><img src="img/image5.jpg" /></p>
+<p>The Stop editing dialog window appears.</p>
+<p><img src="img/image6.jpg" style="width:30.0%" /></p>
+<p>• Click on the <strong>Save</strong> button.</p>
+<p>Now, you will close the Attribute table window of Primary Schools layer.</p>
+<ul>
+<li>At the Attribute table of Primary Schools, click on the <strong>Close</strong> button.</li>
+</ul>
+<h2 id="rasterising-a-vector-gis-data-layer">2.2 Rasterising a vector GIS data layer</h2>
+<p>In QGIS, several functions can be used to rasterise a vector GIS layer into a raster GIS layer such as Rasterize function of GDAL and the Shape to Grid function of SAGA. In this section, you will learn how to rasterise the primary school vector GIS layer into a raster GIS layer using the Shapes to grid function of SAGA because we found that it is more effective.</p>
+<ul>
+<li>From the menu bar of QGIS, select <strong>Processing</strong> -&gt; <strong>Toolbox</strong>.</li>
+</ul>
+<p>The Processing Toolbox pane appears at the right hand side of the Map View window</p>
+<p><img src="img/image7.jpg" style="width:45.0%" /></p>
+<ul>
+<li>From the Geoprocessing Toolbox, click on <strong>GDAL</strong> -&gt; <strong>Vector conversion</strong> -&gt; <strong>Rasterize (vector to raster)</strong>.</li>
+</ul>
+<p><img src="img/image8.jpg" style="width:50.0%" /></p>
+<p>The <strong>Rasterize (Vactor to raster)</strong> dialog window appears.</p>
+<ul>
+<li>For <strong>Input layer</strong>, select <code>Primary School</code> from the drop-down list.</li>
+<li>For <strong>Field to use for a burn-in value</strong> [optional], select <code>POI_CODE</code> from the drop-down list.</li>
+<li>For <strong>Output raster size unit</strong>, select <strong>Georeferenced units</strong> from the dropdown list.</li>
+<li>For <strong>Width/Horizontal resolution</strong>, type <em>50</em>.</li>
+<li>For <strong>Height/Vertical resolution</strong>, type <em>50</em>.</li>
+<li>For <strong>Output extent</strong>, select <strong>Calculate from layer</strong> -&gt; <strong>CostalOutline</strong> from the drop-down list.</li>
+</ul>
+<p><img src="img/image9.jpg" style="width:45.0%" /></p>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image10.jpg" style="width:80.0%" /></p>
+<ul>
+<li>Click on the <strong>Run</strong> button.</li>
+</ul>
+<p>After a few seconds, a new raster layer called the Grid will be added onto the Browser panel.</p>
+<p><img src="img/image11.jpg" style="width:35.0%" /></p>
+<ul>
+<li>From <strong>Rasterize</strong> dialog window, click on <strong>Close</strong> button to close the dialog window.</li>
+</ul>
+<p>Let us take a good look at this newly created raster layer. According to the legend, the primary school cells will be coded as 1 and the remaining grid cells will be coded as no data.</p>
+<blockquote>
+<p>DIY: Use the Identify tool of QGIS to validate if the data layer has been coded correctly.</p>
+</blockquote>
+<blockquote>
+<p>Quiz: What is the value of the dark cell in Grid layer: ___________________</p>
+</blockquote>
+<blockquote>
+<p>Quiz: What is the value of the white cell in Grid layer: __________________</p>
+</blockquote>
+<blockquote>
+<p>DIY: Using the step you learned from previous exercise, save the output raster into GeoPackage format. Call the layer <code>PriSch_ras</code>.</p>
+</blockquote>
+<h1 id="accessibility-modelling-using-raster-based-gis-analysis">3.0 Accessibility Modelling using Raster-based GIS Analysis</h1>
+<p>In this section, you will learn the basic concept of accessibility from geospatial perspective. You will also learn how to use appropriate raster GIS analyse function and mapping techniques to analyse and visualize accessibility maps.</p>
+<h2 id="creating-proximity-layer-using-raster-gis-analysis">3.1 Creating proximity layer using raster GIS analysis</h2>
+<p>In this section, you will learn how to perform proximity analysis and derived distance layer using raster GIS analysis function. You will use the raster version of the primary school layer as the target layer in the analysis instead of the vector version of the primary schools layer (Do you know why?)</p>
+<p>You will perform the task using the rasterize function of Geospatial Data Abstraction Library (GDAL), a library for reading and writing raster geospatial data formats, and is released under the permissive X/MIT style free software license by the Open Source Geospatial Foundation. As a library, it presents a single abstract data model to the calling application for all supported formats. It may also be built with a variety of useful command-line utilities for data translation and processing (<a href="http://en.wikipedia.org/wiki/GDAL" class="uri">http://en.wikipedia.org/wiki/GDAL</a>).</p>
+<ul>
+<li>From the <strong>Processing Toolbox</strong> panel, navigate to <strong>GDAL Analysis</strong> -&gt; <strong>Proximity (raster distance)</strong>.</li>
+</ul>
+<p><img src="img/image12.jpg" style="width:50.0%" /></p>
+<ul>
+<li>Double-click on <strong>Proximity (raster distance)</strong>.</li>
+</ul>
+<p>The Proximity (raster distance) dialog window appears.</p>
+<ul>
+<li>For <strong>Input layer</strong>, select Rasterize from the drop-down list.</li>
+<li>For <strong>A list of pixel values in ……</strong>, type <em>1</em>.</li>
+</ul>
+<blockquote>
+<p>Quiz: Explain why value 1 is used?</p>
+</blockquote>
+<ul>
+<li>For <strong>Distance units</strong>, select <strong>Georeferenced coordinates</strong> from the drop-down list.</li>
+<li>For the other three options, keep as default (e.g. -1).</li>
+<li>For <strong>Proximity Map</strong>, select <em>Save to a temporary</em> file from the context menu.</li>
+</ul>
+<p>The <strong>Proximity (raster distance)</strong> dialog window should look similar to the figure below.</p>
+<p><img src="img/image13.jpg" /></p>
+<p>You are ready to run the function.</p>
+<ul>
+<li>Click on the <strong>Run</strong> button.</li>
+</ul>
+<p>After a few seconds a new layer called Proximity Map will be added into the <strong>Browse</strong> panel and display as a raster layer on the <strong>Display</strong> window.</p>
+<p><img src="img/image14.jpg" /></p>
+<p>Before we continue, let us close <strong>Proximity</strong> dialog window.</p>
+<ul>
+<li>From the <strong>Proximity</strong> dialog window, click on <strong>Close</strong> button.</li>
+</ul>
+<p>Let us explore the <strong>Proximity Map</strong> layer.</p>
+<ul>
+<li>Display the Primary School layer.</li>
+</ul>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image15.jpg" /></p>
+<ul>
+<li>Zoom into a <code>Primary School</code> layer.</li>
+</ul>
+<p><img src="img/image16.jpg" /></p>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image17.jpg" /></p>
+<p>In order to visualise the grid values properly, we need to stretch the cell values.</p>
+<ul>
+<li>From the Layer panel, right-click on Stretch Using Current Extent.</li>
+</ul>
+<p><img src="img/image18.jpg" style="width:50.0%" /></p>
+<p>Now, a clear grid layer appears on the Map View window.</p>
+<p><img src="img/image19.jpg" /></p>
+<p>Now, you will examine the value of the grid.</p>
+<ul>
+<li>Make sure that <code>Proximity Map</code> layer is active.</li>
+<li>Hover the mouse over the primary school point.</li>
+<li>Click on the grid.</li>
+</ul>
+<p>The Identify Results dialog window shows that the value of the selected grid is 0.</p>
+<p><img src="img/image20.jpg" style="width:50.0%" /></p>
+<p>Next, you will examine the value of the grid immediately next to the primary school.</p>
+<ul>
+<li>Hover the mouse over the grid next to the primary school point.</li>
+<li>Click on the grid.</li>
+</ul>
+<p>The Identify Results window reveals that the value of the selected grid is 50.</p>
+<p><img src="img/image21.jpg" style="width:45.0%" /></p>
+<blockquote>
+<p>DIY: Using the skills you had learned from previous section, save the Proximity Map into Geopackage format.</p>
+</blockquote>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
