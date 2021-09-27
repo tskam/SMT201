@@ -86,7 +86,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis</title>
+  <title>Hands-on Exercise 7: Beyond Mapping: Raster-based GIS Analysis</title>
 
   <meta property="description" itemprop="description" content="In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS."/>
 
@@ -96,26 +96,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta property="article:created" itemprop="dateCreated" content="2021-09-27"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis"/>
+  <meta property="og:title" content="Hands-on Exercise 7: Beyond Mapping: Raster-based GIS Analysis"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS."/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis"/>
+  <meta property="twitter:title" content="Hands-on Exercise 7: Beyond Mapping: Raster-based GIS Analysis"/>
   <meta property="twitter:description" content="In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis"]},{"type":"character","attributes":{},"value":["In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS.\n"]},{"type":"character","attributes":{},"value":["2021-09-27"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["code_folding","toc","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[4]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Hands-on Exercise 7: Beyond Mapping: Raster-based GIS Analysis"]},{"type":"character","attributes":{},"value":["In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS.\n"]},{"type":"character","attributes":{},"value":["2021-09-27"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["code_folding","toc","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[4]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["Hands-on_Ex07_files/anchor-4.2.2/anchor.min.js","Hands-on_Ex07_files/bowser-1.9.3/bowser.min.js","Hands-on_Ex07_files/distill-2.2.21/template.v2.js","Hands-on_Ex07_files/header-attrs-2.10/header-attrs.js","Hands-on_Ex07_files/jquery-1.11.3/jquery.min.js","Hands-on_Ex07_files/popper-2.6.0/popper.min.js","Hands-on_Ex07_files/tippy-6.2.7/tippy-bundle.umd.min.js","Hands-on_Ex07_files/tippy-6.2.7/tippy-light-border.css","Hands-on_Ex07_files/tippy-6.2.7/tippy.css","Hands-on_Ex07_files/tippy-6.2.7/tippy.umd.min.js","Hands-on_Ex07_files/webcomponents-2.0.0/webcomponents.js","img/image1.jpg","img/image10.jpg","img/image11.jpg","img/image12.jpg","img/image13.jpg","img/image14.jpg","img/image15.jpg","img/image16.jpg","img/image17.jpg","img/image18.jpg","img/image19.jpg","img/image2.jpg","img/image20.jpg","img/image21.jpg","img/image3.jpg","img/image4.jpg","img/image5.jpg","img/image6.jpg","img/image7.jpg","img/image8.jpg","img/image9.jpg"]}
+  {"type":"character","attributes":{},"value":["Hands-on_Ex07.pdf","Hands-on_Ex07_files/anchor-4.2.2/anchor.min.js","Hands-on_Ex07_files/bowser-1.9.3/bowser.min.js","Hands-on_Ex07_files/distill-2.2.21/template.v2.js","Hands-on_Ex07_files/header-attrs-2.10/header-attrs.js","Hands-on_Ex07_files/jquery-1.11.3/jquery.min.js","Hands-on_Ex07_files/popper-2.6.0/popper.min.js","Hands-on_Ex07_files/tippy-6.2.7/tippy-bundle.umd.min.js","Hands-on_Ex07_files/tippy-6.2.7/tippy-light-border.css","Hands-on_Ex07_files/tippy-6.2.7/tippy.css","Hands-on_Ex07_files/tippy-6.2.7/tippy.umd.min.js","Hands-on_Ex07_files/webcomponents-2.0.0/webcomponents.js","img/image1.jpg","img/image10.jpg","img/image11.jpg","img/image12.jpg","img/image13.jpg","img/image14.jpg","img/image15.jpg","img/image16.jpg","img/image17.jpg","img/image18.jpg","img/image19.jpg","img/image2.jpg","img/image20.jpg","img/image21.jpg","img/image3.jpg","img/image4.jpg","img/image5.jpg","img/image6.jpg","img/image7.jpg","img/image8.jpg","img/image9.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1454,7 +1454,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis","description":"In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS.","authors":[],"publishedDate":"2021-09-27T00:00:00.000+08:00"}
+{"title":"Hands-on Exercise 7: Beyond Mapping: Raster-based GIS Analysis","description":"In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS.","authors":[],"publishedDate":"2021-09-27T00:00:00.000+08:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1464,7 +1464,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis</h1>
+<h1>Hands-on Exercise 7: Beyond Mapping: Raster-based GIS Analysis</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p><p>In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS. By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS.</p></p>

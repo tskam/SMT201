@@ -1,5 +1,5 @@
 ---
-title: "Hands-on Exercise 6: Beyond Mapping: Vector-based GIS Analysis"
+title: "Hands-on Exercise 7: Beyond Mapping: Raster-based GIS Analysis"
 description: |
   In this hands-on exercise, you will learn how to perform raster-based GIS analysis by using QGIS.  By the end of this session, you will be able to: (i) create a raster data from a vector GIS layer, (ii ) extract raster layer, (iii) georeference a raster layer and (iv) derive proximity layer(s) by using distance function of QGIS.
 date: "`r Sys.Date()`"
