@@ -177,7 +177,9 @@ The project artefact is due (submitted to LMS Dropbox) by the end of the day on 
 
 Note that the following examples are for references purposes. You are urged to use your own creativity and innovation to design the application.
 
-- [AY2019-2020 Term 1 Project](https://wiki.smu.edu.sg/1920t1smt201/Project_Groups)
++ [AY2019-2020 Term 1 Project](https://wiki.smu.edu.sg/1920t1smt201/Project_Groups)
+  + [G1-Group3 Innogol](https://wiki.smu.edu.sg/1920t1smt201/G1-Group03)
+  + [G2-Group15 Nothing is 台南](https://wiki.smu.edu.sg/1920t1smt201/G2-Group15_About) 
 
 ## Q&A
 
