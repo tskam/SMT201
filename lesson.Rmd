@@ -31,7 +31,7 @@ Week Date    Topic 	                                                            
 
 7    27/09   [Lesson 7: The Science of Mapthematics](outline/lesson07_outline.html)                                                      Take-home Exercise 2 due
 
-8    04/10   Mid-term 	
+8    04/10   Mid-term [Workshop](workshop/workshop.html) 	
 
 9    11/10   [Lesson 8: Urban Applications of Raster-based GIS Analysis](outline/lesson08_outline.html) 	
 
