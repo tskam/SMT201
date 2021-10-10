@@ -1,7 +1,7 @@
 ---
 title: "Lesson 8: Urban Applications of Raster-based GIS Analysis"
 description: |
-  A new article created using the Distill format.
+  In this lesson, you will learn the basic concepts of raster-based GIS modelling methods for land suitability analysis.
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
@@ -12,9 +12,22 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Content
 
-- Introduction to GIS Modelling
-    - Process Modelling and GIS
-- GIS modelling process
++ Descriptive model
++ Prescriptive models
+  + Binary method
+  + Ranking method
+  + Rating method
++ GIS‐Based Multiple‐Criteria Decision Analysis
++ Analytical Hierarchical Process (AHP)
++ Predictive model
+
+## Lesson Slides and Hands-on Notes 
+
+- Lesson slides in [html](../lesson/Lesson08/Lesson08.html) and [pdf](../lesson/Lesson08/Lesson08.pdf) formats.
+
+- Hands-on Exercise 8 in [html](../Hands-on_Ex/Hands-on_Ex08/Hands-on_Ex08.html) and [pdf](../Hands-on_Ex/Hands-on_Ex08/Hands-on_Ex08.pdf) formats. 
+
+
 
 
 ## References
