@@ -28,8 +28,6 @@ knitr::opts_chunk$set(echo = FALSE)
 - Hands-on Exercise 8 in [html](../Hands-on_Ex/Hands-on_Ex08/Hands-on_Ex08.html) and [pdf](../Hands-on_Ex/Hands-on_Ex08/Hands-on_Ex08.pdf) formats. 
 
 
-
-
 ## References
 ### Concepts and Methods
 
@@ -37,8 +35,11 @@ knitr::opts_chunk$set(echo = FALSE)
 - Berry, J. K. (2005) GIS Modeling and Analysis. [Chapter GIS Modeling Frameworks](http://www.innovativegis.com/basis/papers/other/asprschapter/#Berry6_Modeling_Frameworks).
 - Malczewski, Jacek (2004) ["GIS-based land-use suitability analysis: a critical overview"](https://www-sciencedirect-com.libproxy.smu.edu.sg/science/article/pii/S0305900603000801). *Progress in Planning*, Vol.62(1), pp.3-65.
 - Montgomery, Bryn ; Dragićević, Suzana (2016) ["Comparison of GIS‐Based Logic Scoring of Preference and Multicriteria Evaluation Methods: Urban Land Use Suitability"](https://onlinelibrary-wiley-com.libproxy.smu.edu.sg/doi/full/10.1111/gean.12103). *Geographical Analysis*, Vol.48(4), pp.427-447.
+- Siobhan Ryan and Ellis Nimick (2019) [Multi-Criteria Decision Analysis and GIS](https://storymaps.arcgis.com/stories/b60b7399f6944bca86d1be6616c178cf), **ArcGIS StoryMaps**.
 
 ### Applications
+
+- Malihe Masoudi et. al (2021) ["GIS‑Based Multi‑Criteria and Multi‑Objective Evaluation for Sustainable Land‑Use Planning (Case Study: Qaleh Ganj County, Iran) “Landuse Planning Using MCE and Mola”"](https://doi.org/10.1007/s41742-021-00326-0), *International Journal of Environmental Research* (2021) 15:457–474 
 
 - Abdullahi, Saleh ; Pradhan, Biswajeet (2016) ["Sustainable Brownfields Land Use Change Modeling Using GIS-based Weights-of-Evidence Approach"](https://link-springer-com.libproxy.smu.edu.sg/article/10.1007/s12061-015-9139-1) *Applied Spatial Analysis and Policy*, Vol.9(1), pp.21-38.
 - Dong, Mei ; Hu, Hui ; Xu, Riqing ; Gong, Xiaonan (2018) ["A GIS-based quantitative geo-environmental evaluation for land-use development in an urban area: Shunyi New City, Beijing, China"](https://link-springer-com.libproxy.smu.edu.sg/article/10.1007/s10064-017-1069-5). *Bulletin of Engineering Geology and the Environment*, Vol.77(3), pp.1203-1215.
