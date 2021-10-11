@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Hands-on Exercise 8: GIS Modelling for Urban Land Suitability Study</title>
+
+  <meta property="description" itemprop="description" content="In this hands-on exercise, you will learn how to perform urban land suitability analysis by using QGIS raster modelling methods"/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-10-11"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-10-11"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Hands-on Exercise 8: GIS Modelling for Urban Land Suitability Study"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="In this hands-on exercise, you will learn how to perform urban land suitability analysis by using QGIS raster modelling methods"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Hands-on Exercise 8: GIS Modelling for Urban Land Suitability Study"/>
+  <meta property="twitter:description" content="In this hands-on exercise, you will learn how to perform urban land suitability analysis by using QGIS raster modelling methods"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Hands-on Exercise 8: GIS Modelling for Urban Land Suitability Study"]},{"type":"character","attributes":{},"value":["In this hands-on exercise, you will learn how to perform urban land suitability analysis by using QGIS raster modelling methods\n"]},{"type":"character","attributes":{},"value":["2021-10-11"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["code_folding","toc","toc_depth","self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[4]},{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["Hands-on_Ex08_files/anchor-4.2.2/anchor.min.js","Hands-on_Ex08_files/bowser-1.9.3/bowser.min.js","Hands-on_Ex08_files/distill-2.2.21/template.v2.js","Hands-on_Ex08_files/header-attrs-2.10/header-attrs.js","Hands-on_Ex08_files/jquery-1.11.3/jquery.min.js","Hands-on_Ex08_files/popper-2.6.0/popper.min.js","Hands-on_Ex08_files/tippy-6.2.7/tippy-bundle.umd.min.js","Hands-on_Ex08_files/tippy-6.2.7/tippy-light-border.css","Hands-on_Ex08_files/tippy-6.2.7/tippy.css","Hands-on_Ex08_files/tippy-6.2.7/tippy.umd.min.js","Hands-on_Ex08_files/webcomponents-2.0.0/webcomponents.js","img/image1.jpg","img/image10.jpg","img/image11.jpg","img/image12.jpg","img/image13.jpg","img/image14.jpg","img/image15.jpg","img/image16.jpg","img/image17.jpg","img/image18.jpg","img/image19.jpg","img/image2.jpg","img/image20.jpg","img/image21.jpg","img/image22.jpg","img/image23.jpg","img/image24.jpg","img/image25.jpg","img/image26.jpg","img/image27.jpg","img/image28.jpg","img/image29.jpg","img/image3.jpg","img/image30.jpg","img/image31.jpg","img/image32.jpg","img/image33.jpg","img/image34.jpg","img/image35.jpg","img/image36.jpg","img/image37.jpg","img/image38.jpg","img/image39.jpg","img/image4.jpg","img/image40.jpg","img/image41.jpg","img/image42.jpg","img/image43.jpg","img/image44.jpg","img/image45.jpg","img/image46.jpg","img/image5.jpg","img/image6.jpg","img/image7.jpg","img/image8.jpg","img/image9.jpg","img/image9a.jpg"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="Hands-on_Ex08_files/header-attrs-2.10/header-attrs.js"></script>
+  <script src="Hands-on_Ex08_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="Hands-on_Ex08_files/popper-2.6.0/popper.min.js"></script>
+  <link href="Hands-on_Ex08_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="Hands-on_Ex08_files/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="Hands-on_Ex08_files/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="Hands-on_Ex08_files/anchor-4.2.2/anchor.min.js"></script>
+  <script src="Hands-on_Ex08_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="Hands-on_Ex08_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="Hands-on_Ex08_files/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Hands-on Exercise 8: GIS Modelling for Urban Land Suitability Study","description":"In this hands-on exercise, you will learn how to perform urban land suitability analysis by using QGIS raster modelling methods","authors":[],"publishedDate":"2021-10-11T00:00:00.000+08:00"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Hands-on Exercise 8: GIS Modelling for Urban Land Suitability Study</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>In this hands-on exercise, you will learn how to perform urban land suitability analysis by using QGIS raster modelling methods</p></p>
+</div>
+
+
+<div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#introduction">1.0 Introduction</a>
+<ul>
+<li><a href="#the-task">1.1 The Task</a></li>
+<li><a href="#the-data">1.2 The Data</a></li>
+</ul></li>
+<li><a href="#data-preparation">2.0 Data Preparation</a>
+<ul>
+<li><a href="#extracting-study-area">2.1 Extracting study area</a>
+<ul>
+<li><a href="#selecting-features-by-expression">2.1.1 Selecting features by expression</a></li>
+<li><a href="#saving-the-selected-feature-in-geopackage-format">2.1.2 Saving the selected feature in Geopackage format</a></li>
+</ul></li>
+<li><a href="#extracting-vector-data">2.2 Extracting vector data</a>
+<ul>
+<li><a href="#working-with-selection-by-location-function-of-qgis">2.2.1 Working with Selection by Location function of QGIS</a></li>
+<li><a href="#working-with-clip-operation">2.2.2 Working with Clip operation</a></li>
+<li><a href="#saving-the-output-layer-into-geopackage-format">2.2.3 Saving the output layer into GeoPackage format</a></li>
+<li><a href="#extracting-roads-layer">2.2.4 Extracting roads layer</a></li>
+</ul></li>
+<li><a href="#extracting-raster-data">2.3 Extracting raster data</a>
+<ul>
+<li><a href="#importing-raster-gis-data-layer">2.3.1 Importing raster GIS data layer</a></li>
+<li><a href="#working-with-raster-clip-operation">2.3.2 Working with raster clip operation</a></li>
+<li><a href="#saving-the-newly-clipped-raster-layer-into-geopackage-format">2.3.3 Saving the newly clipped raster layer into GeoPackage format</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#computing-factor-data">3.0 Computing Factor Data</a>
+<ul>
+<li><a href="#computing-proximity-to-roads">3.1 Computing proximity to roads</a>
+<ul>
+<li><a href="#creating-attribute-field-for-rasterising">3.1.1 Creating attribute field for rasterising</a></li>
+<li><a href="#rasterising-roads-layer">3.1.2 Rasterising roads layer</a></li>
+<li><a href="#working-with-proximity-function-of-qgis">3.1.3 Working with Proximity function of QGIS</a></li>
+</ul></li>
+<li><a href="#computing-proximity-to-buildings">3.2 Computing proximity to buildings</a></li>
+<li><a href="#computing-slope">3.3 Computing slope</a></li>
+</ul></li>
+<li><a href="#binary-model">4.0 Binary Model</a>
+<ul>
+<li><a href="#deriving-binary-layers">4.1 Deriving binary layers</a>
+<ul>
+<li><a href="#deriving-slop-preference-layer">4.1.1 Deriving slop preference layer</a></li>
+</ul></li>
+<li><a href="#computing-composite-binary-suitability-layer">4.2 Computing composite binary suitability layer</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h1 id="introduction">1.0 Introduction</h1>
+<p>Urban land suitability analysis is the process and procedures used to identify places that meet the selection criteria of the stakeholder(s). By and large, many different geographical factors will be taken into consideration in the process. GIS with its capability of extracting, processing, managing, analyzing and presenting geographically referenced data. GIS allows one to undertake a wide variety of logical and mathematical analysis and then display the results in either a map or tabular form.</p>
+<h2 id="the-task">1.1 The Task</h2>
+<p>In this exercise, you are tasked to identify location suitable for building a national Communicable Disease Quarantine Centre. The selected site must be located at Gombak planning subzone and it must meet the followings decision factors:</p>
+<ul>
+<li>Economic factor: The selected site should avoid steep slope. This is because construction at steep slope tends to involve a lot of cut-and-fill and will lend to relatively higher development cost.</li>
+<li>Accessibility factor: The selected site should be close to existing roads i.e. service roads and tracks. This is to ensure easy transportation of building materials during the construction stage.</li>
+<li>Health risk factor: The selected site should be away from population i.e. housing areas and offices in order to avoid disease spreading to the nearby population.</li>
+</ul>
+<h2 id="the-data">1.2 The Data</h2>
+<p>Three major data sets will be used in this hands-on exercise. They are:</p>
+<ul>
+<li>Master Plan 2014 Subzone Boundary from URA. This data can be downloaded from data.gov.sg.</li>
+<li>Roads and buildings data from OpenStreetMap (OSM) data sets. These data can be downloaded from <a href="mailto:BBBike@Singapore" class="email">BBBike@Singapore</a>.</li>
+<li>ASTER Global Digital Elevation Model (GDEM) dataset jointly prepared by NASA and METI, Japan. This data can be downloaded from NASA’s EarthData Search site.</li>
+</ul>
+<p>The GDEM data set is already provided in the hands-on exercise data folder. Both Master Plan 2014 and the OSM data sets, on the other hand, have to be downloaded from their respective sources provided above.</p>
+<h1 id="data-preparation">2.0 Data Preparation</h1>
+<p>In this section, you will revise the steps used to extract GIS data within the study area. You are encouraged to work out the steps first, then compare the steps used by you and the steps below.</p>
+<h2 id="extracting-study-area">2.1 Extracting study area</h2>
+<p>Master Plan 2014 Subzone Boundary from URA consists of polygon featuring all planning subzone data of Singapore. Since the proposed site must be in Gombak planning subzone, we will extract the polygon feature of Gombak from this GIS data.</p>
+<p>Many approaches can be used to extract Gombak planning subzone from the GIS data of Master Plan 2014 Subzone Boundary. The example below uses Select Features by Expression operation of QGIS to perform the task.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned in the previous hands-on exercise, import Master Plan 2014 Subzone Boundary into QGIS project.</p>
+</blockquote>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image1.jpg" /></p>
+<p>Note: The projection of the project should be in svy21. If it is not, you should change the projection of the project by using the steps you had learned in previous hands-on exercise.</p>
+<h3 id="selecting-features-by-expression">2.1.1 Selecting features by expression</h3>
+<ul>
+<li>From the <strong>Selection</strong> menu bar, click on <strong>Select Features by Expression</strong>.</li>
+</ul>
+<p><img src="img/image2.jpg" style="width:45.0%" /></p>
+<p>The Select by Expression dialog window appears.</p>
+<p><img src="img/image3.jpg" /></p>
+<ul>
+<li>Since we are going the select <code>Gombak</code> planning subzone, click on the <strong>Field and Values</strong> pane to look for the appropriate field.</li>
+<li>Double click on <code>SUBZONE_N</code>.</li>
+</ul>
+<p>The <strong>Select by Expression</strong> dialog window should look similar to the screen below. Notice that the <code>SUNZONE_N</code> field has been entered in the expression panel.</p>
+<p><img src="img/image4.jpg" /></p>
+<ul>
+<li>Click on the equal marker icon at the expression panel.</li>
+</ul>
+<p>The expression panel should look similar to the figure below.</p>
+<p><img src="img/image5.jpg" style="width:45.0%" /></p>
+<ul>
+<li>Click on <strong>All Unique</strong> button, then double-click on <code>GOMBAK</code>.</li>
+</ul>
+<p><img src="img/image6.jpg" style="width:25.0%" /></p>
+<p>The expression panel should look similar to the figure below.</p>
+<p><img src="img/image7.jpg" style="width:45.0%" /></p>
+<ul>
+<li>Click on <strong>Select Features</strong> icon to execute the selection.</li>
+</ul>
+<p>QGIS will indicate the number of feature(s) been selected.</p>
+<ul>
+<li>When it is done, click on the <strong>Close</strong> button.</li>
+</ul>
+<p>The <strong>Selection by Expression</strong> dialog window closes.</p>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image8.jpg" /></p>
+<p>Notice that one polygon feature has been selected.</p>
+<h3 id="saving-the-selected-feature-in-geopackage-format">2.1.2 Saving the selected feature in Geopackage format</h3>
+<p>Next, we are going to save the selected polygon feature in a new GIS data in GeoPackage format.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned in the previous hands-on exercise, save the selected Gombak polygon feature into a new GeoPackage call <code>LSA</code>. Name the GIS layer <code>Gombak</code>.</p>
+</blockquote>
+<p>Your screen should look similar to the screenshot below.</p>
+<p><img src="img/image9.jpg" style="width:75.0%" /></p>
+<blockquote>
+<p>DIY: The original planning subzone layer is no longer needed. Using the steps you had learned in the previous hands-on exercise, remove Master Plan 2014 Subzone Boundary from the QGIS project.</p>
+</blockquote>
+<h2 id="extracting-vector-data">2.2 Extracting vector data</h2>
+<p>In this section, you will learn how to extract the buildings and roads within the study area by using appropriate GIS operations. Before you get started, however, you are required to import the necessary GIS data into the QGIS project.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned in the previous hands-on exercise, import <code>buildings</code> and <code>roads</code> shapefiles of osm into QGIS project.</p>
+</blockquote>
+<p>Your screen should look similar to the screenshot below.</p>
+<p><img src="img/image9a.jpg" /></p>
+<h3 id="working-with-selection-by-location-function-of-qgis">2.2.1 Working with Selection by Location function of QGIS</h3>
+<p>In this sub-section, you will learn how to extract buildings features fall within Gombak study area by using <strong>Selection by Location</strong> function of QGIS.</p>
+<ul>
+<li>From the icon bar, click on <strong>Select by Location</strong> icon.</li>
+</ul>
+<p><img src="img/image10.jpg" style="width:25.0%" /></p>
+<p>The Selection by Location dialog window appears.</p>
+<p><img src="img/image11.jpg" style="width:75.0%" /></p>
+<ul>
+<li>For <strong>Select features from</strong>, select the feature layer you want to select from i.e. <code>buildings</code> from the drop-down list.</li>
+<li>For <strong>By comparing to the feature from</strong>, select the feature layer you want to use as reference i.e. <code>Gombak</code> from the drop-down list.</li>
+<li>For <strong>Where the features (geometric predicate)</strong>, check the box in front of <strong>intersect</strong>.</li>
+<li>For <strong>Modify selection by</strong>, select <strong>creating new selection</strong> from the drop-down list.</li>
+</ul>
+<p>Your screen should look similar to the screenshot below.</p>
+<p><img src="img/image12.jpg" /></p>
+<p>To run the operation,</p>
+<ul>
+<li>Click on <strong>Run</strong> button.</li>
+</ul>
+<p>To close the dialog window,</p>
+<ul>
+<li>Click on <strong>Close</strong> button</li>
+</ul>
+<p>Notice that all buildings features fall within Gombak study area are selected (the lightlighted polygon features) as shown in the figure below.</p>
+<p><img src="img/image13.jpg" /></p>
+<p><strong>Optional</strong></p>
+<p>Before we end this section, you need to save the newly selected buildings layer into GeoPackage format.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned in the previous hands-on exercise, save the extracted buildings layer in GeoPackage format. Call the layer <code>Buildings</code>.</p>
+</blockquote>
+<h3 id="working-with-clip-operation">2.2.2 Working with Clip operation</h3>
+<p>In this sub-section, you will learn how to extract buildings features fall within Gombak study area by using <strong>Clip</strong> operation of QGIS.</p>
+<ul>
+<li>From the icon bar, click on <strong>Deselect Features from the Current Active Layer</strong>. Note: This is only true if the selected layer is <code>buildings</code>.</li>
+</ul>
+<p><img src="img/image14.jpg" style="width:55.0%" /></p>
+<ul>
+<li>From the menu bar, select <strong>Vector</strong> -&gt; <strong>Geoprocessing Tools</strong> -&gt; <strong>Clip</strong>.</li>
+</ul>
+<p>The <strong>Clip</strong> dialog window appears.</p>
+<ul>
+<li>For <strong>Input layer</strong>, select the input layer that you want to clip i.e. <code>Buildings</code>.</li>
+<li>For <strong>Overlay layer</strong>, select the layer that will be used as the reference i.e. <code>Gombak</code>.</li>
+<li>Keep the <strong>Clipped</strong> option as default i.e. <em>Create temporary layer</em>.</li>
+</ul>
+<p>The <strong>Clipped</strong> option is for you to specify how the output should be generated. You can either save the output as a physical data layer or keep the output as temporary layer. It is always a good practice to keep the output as a temporary layer so that we can examine the result. After we have confirmed the result is correct, we can then save it into the database.</p>
+<p>Your screen should look similar to the screenshot below.</p>
+<p><img src="img/image15.jpg" style="width:85.0%" /></p>
+<p>You are ready to run the operation now.</p>
+<ul>
+<li>Click on <strong>Run</strong> button.</li>
+</ul>
+<p>When the geoprocessing is done, the dialog window will look similar to the screenshot below.</p>
+<p><img src="img/image16.jpg" /></p>
+<p>Do note that it is a good practice to read the details that appear on the dialog window. This is particularly true when the operation failed. The dialog window will display the possible causes of the failed operations.</p>
+<ul>
+<li>Click on <strong>Close</strong> button.</li>
+</ul>
+<p>The dialog window closes.</p>
+<p>Notice that a temporary layer called <code>Clipped</code> is added into <strong>Layers</strong> panel and displayed as an active layer.</p>
+<h3 id="saving-the-output-layer-into-geopackage-format">2.2.3 Saving the output layer into GeoPackage format</h3>
+<p>Before we end this section, you need to save the newly extracted buildings layer into GeoPackage format.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned in the previous hands-on exercise, save the extracted buildings layer in GeoPackage format. Call the layer <code>Buildings</code>. Next, remove the original buildings and temporary buildings layers from QGIS project.</p>
+</blockquote>
+<h3 id="extracting-roads-layer">2.2.4 Extracting roads layer</h3>
+<blockquote>
+<p>DIY: Using the steps you had learned in the previous hands-on exercise, extracting the roads features fall within Gombak planning subzone from the original OSM GIS data layers. Compare which operations is more appropriate and explain why it is more appropriate. Remember to save the extracted roads layer into GeoPackage and name it as <code>Roads</code>.</p>
+</blockquote>
+<p>Your screen should look similar to the screenshot below.</p>
+<p><img src="img/image17.jpg" /></p>
+<h2 id="extracting-raster-data">2.3 Extracting raster data</h2>
+<p>In this section, you will learn how to extract the Digital Elevation Model (DEM) data fall within Gombak planning subzone by using appropriate raster-based GIS operations. Before we get started, we will important the ASTER GDEM provided into QGIS project.</p>
+<h3 id="importing-raster-gis-data-layer">2.3.1 Importing raster GIS data layer</h3>
+<ul>
+<li>From <strong>Browser</strong> panel, navigate to raster sub-folder</li>
+<li>Drag and drop <code>ASTER_GDEM_combined.tif</code> into <strong>Layers</strong> panel.</li>
+</ul>
+<p><img src="img/image18.jpg" style="width:35.0%" /></p>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image19.jpg" /></p>
+<h3 id="working-with-raster-clip-operation">2.3.2 Working with raster clip operation</h3>
+<p>QGIS provides two operators to perform raster clipping, namely: <strong>Clip Raster by Extent</strong> and <strong>Clip Raster by Layer</strong>. In this sub-section, <strong>Clip Raster by Extent</strong> function will be used.</p>
+<ul>
+<li>From the menu bar, select <strong>Raster</strong> &lt;- <strong>Extraction</strong> &lt;- <strong>Clip Raster by Extent</strong>.</li>
+</ul>
+<p>The Clip Raster by Extent dialog window appears.</p>
+<ul>
+<li>For <strong>Input layer</strong>, select <em>ASTER_GDEM_combined</em> from the drop-down list.</li>
+<li>For <strong>Clipping extent</strong>, click on the icon at the end of the option then select <strong>Calculate from Layer</strong>.</li>
+<li>Select <code>Gombak</code> from the drop-down list.</li>
+</ul>
+<p><img src="img/image20.jpg" style="width:50.0%" /></p>
+<p>Your screen should look similar to the screenshot below.</p>
+<p><img src="img/image21.jpg" style="width:65.0%" /></p>
+<ul>
+<li>When you are ready, click on Run button.</li>
+<li>When the process completed, read the process log to ensure that there is no error.</li>
+<li>Click on Close button to close the dialog window.</li>
+</ul>
+<p>Notice that a new raster layer called <code>Clipped (extend)</code> is added into <strong>Layers</strong> panel and displayed on the <strong>View</strong> as shown in the screenshot below.</p>
+<p><img src="img/image22.jpg" /></p>
+<h3 id="saving-the-newly-clipped-raster-layer-into-geopackage-format">2.3.3 Saving the newly clipped raster layer into GeoPackage format</h3>
+<blockquote>
+<p>DIY: Using the steps you had learned from previous hands-on, save the clipped layer of DEM into GeoPackage format and call it <code>DEM</code>.</p>
+</blockquote>
+<blockquote>
+<p>DIY: Using the steps you had learned in previous section, remove Clipped (extend) layer from QGIS project.</p>
+</blockquote>
+<h1 id="computing-factor-data">3.0 Computing Factor Data</h1>
+<p>In this section, you will learn how to use raster GIS operation to derive analytical layers from the original geographic layers.</p>
+<h2 id="computing-proximity-to-roads">3.1 Computing proximity to roads</h2>
+<p>In this section, you will learn how to create a proximity to roads layer by using the <em>Proximity (Raster Distance)</em> operation of QGIS. However, before we can perform the computation, we need to rasterise the roads layer. This is because the <strong>Proximity (Raster Distance)</strong> requires the input GIS layer in raster format.</p>
+<h3 id="creating-attribute-field-for-rasterising">3.1.1 Creating attribute field for rasterising</h3>
+<p>Before we can rasterise the roads layer, we need to add a control attribute field in the roads layer.</p>
+<ul>
+<li>At the <strong>Layers</strong> panel, click on <strong>Roads</strong> layer to make it active.</li>
+<li>From the icon bar, click on <strong>Open Attribute Table</strong> icon .</li>
+</ul>
+<p>The attribute table of roads layer appears.</p>
+<ul>
+<li>From the menu bar of roads layer attribute table, click on <strong>Open field calculator</strong> icon.</li>
+</ul>
+<p>The <strong>Field Calculator</strong> dialog window appears.</p>
+<ul>
+<li>Keep <strong>Create a new field</strong> option checks.</li>
+<li>For <strong>Output field</strong> name, type <code>POI_CODE</code>.</li>
+<li>At the <strong>Expression</strong> pane, type <em>1</em>.</li>
+</ul>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image23.jpg" style="width:45.0%" /></p>
+<ul>
+<li>Click on <strong>OK</strong> button to run the function.</li>
+</ul>
+<p>Notice that a new field called <code>POI_CODE</code> has been added into the attribute table of roads GIS layer. Also note that all the records are indicated with <code>POI_CODE</code> values equals to <em>1</em>.</p>
+<p><img src="img/image24.jpg" /></p>
+<p>You are now ready to rasterise the roads layer.</p>
+<blockquote>
+<p>DIY: Before moving to the next section, remember to stop and save the editing.</p>
+</blockquote>
+<h3 id="rasterising-roads-layer">3.1.2 Rasterising roads layer</h3>
+<ul>
+<li>From the menu bar, select <strong>Raster</strong> -&gt; <strong>Conversion</strong> -&gt; <strong>Rasterise (Vector to Raster)</strong>.</li>
+</ul>
+<p>The <strong>Raster (Vector to Raster)</strong> dialog window appears.</p>
+<ul>
+<li>For <strong>Input layer</strong>, select <code>Roads</code> from the drop-down list.</li>
+<li>For <strong>Field to use for a burn-in value</strong>, select <code>POI_CODE</code> from the drop-down list.</li>
+<li>For <strong>Output raster size units</strong>, select <em>Georeferenced units</em>.</li>
+<li>Keep both horizontal and vertical resolutions at 5 (meaning 5m by 5m resolution).</li>
+<li>For <strong>Output extent</strong>, click on <strong>Calculate from Layer</strong>.</li>
+<li>Select <strong>DEM</strong> from the drop-down list.</li>
+</ul>
+<p>When you are ready,</p>
+<ul>
+<li>Click on <strong>Run</strong> button.</li>
+</ul>
+<p>When the operation ended, the dialog window will display the operation log.</p>
+<ul>
+<li>Read the output display to ensure that the process has completed without any error.</li>
+</ul>
+<p>After confirming that there is no error. You can close the dialog window.</p>
+<ul>
+<li>Click on <strong>Close</strong> button.</li>
+</ul>
+<p>Notice that a temporary layer called <code>Rasterized</code> has been added in QGIS project.</p>
+<p><img src="img/image25.jpg" /></p>
+<blockquote>
+<p>DIY: Using the steps you have learned in previous section, save the temporary layer into GeoPackage format. Call the newly exported layer <code>raster_roads</code>. Next, remove the temporary layer from QGIS.</p>
+</blockquote>
+<h3 id="working-with-proximity-function-of-qgis">3.1.3 Working with Proximity function of QGIS</h3>
+<p>Now, the <strong>Proximity</strong> operation of QGIS will be used to compute the proximity to roads layer.</p>
+<ul>
+<li>For the menu bar, select <strong>Raster</strong> -&gt; <strong>Analysis</strong> &lt;- <strong>Proximity (Raster Distance)</strong>.</li>
+</ul>
+<p>The Proximity (Raster Distance) dialog window appears.</p>
+<ul>
+<li>For <strong>Input layer</strong>, select <code>raster_roads</code> from the drop-down list.</li>
+<li>For <strong>Distance units</strong>, select <strong>Georeferenced coordinates</strong> from the drop-down list.</li>
+<li>For <strong>Output data type</strong>, select <em>Float32</em> from the drop-down list.</li>
+</ul>
+<p>Your screen should look similar to the screenshot below.</p>
+<p><img src="img/image26.jpg" style="width:75.0%" /></p>
+<ul>
+<li>Click on <strong>Run</strong> button.</li>
+</ul>
+<p>Your screen should look similar to the figure below.</p>
+<p><img src="img/image27.jpg" /></p>
+<p>A temporary layer called <code>Proximity map</code> is created and added in QGIS project. The legend of Proximity map layer indicates that the furthest distance from the roads is 708 metres.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned, save the newly computed proximity map into GeoPackage format with a resolution of 5m x 5m. Call the layer <code>prox_roads</code>. Next, remove the Proximity map layer from QGIS.</p>
+</blockquote>
+<h2 id="computing-proximity-to-buildings">3.2 Computing proximity to buildings</h2>
+<blockquote>
+<p>DIY: Using the steps you had learned, create the proximity layer to buildings. Save the output into GeoPackage format with 5m x 5m resolution. Called the output layer <code>prox_buildings</code>.</p>
+</blockquote>
+<p>The <code>prox_buildings</code> layer should look similar to the figure below. The grid values indicate distance away from existing building in metres.</p>
+<p><img src="img/image28.jpg" /></p>
+<h2 id="computing-slope">3.3 Computing slope</h2>
+<p>In this section, you will learn how to compute a slope layer from DEM layer by using the <strong>Slope</strong> operation of QGIS.</p>
+<ul>
+<li>From the menu bar, select <strong>Raster</strong> -&gt; <strong>Analysis</strong> -&gt; <strong>Slope</strong>.</li>
+</ul>
+<p>Slope dialog window appears.</p>
+<ul>
+<li>For <strong>Input layer</strong>, select <code>DEM</code> from the drop-down list.</li>
+</ul>
+<p>Keep the rest of the setting as default.</p>
+<ul>
+<li>Click on <strong>Run</strong> button.</li>
+</ul>
+<p>When the computation completed, a temporary layer called <code>Slope</code> will be added in QGIS project.</p>
+<p><img src="img/image29.jpg" /></p>
+<p>The legend of Slope layer shows that the minimum and maximum values of the slope values are 0 and 36.8795 degrees respectively. The grids with darker grey indicate locations with relatively gentle slope. On the other hand, the light grey grids indicate locations with steeper slope.</p>
+<ul>
+<li>Click on <strong>Close</strong> button to close <strong>Slope</strong> function dialog window.</li>
+</ul>
+<blockquote>
+<p>DIY: Using the steps you had learned, save the newly computed <code>Slope</code> temporary layer into GeoPackage format. Called the output layer <code>Slope</code>.</p>
+</blockquote>
+<p><img src="img/image29.jpg" /></p>
+<h1 id="binary-model">4.0 Binary Model</h1>
+<p>A binary land suitability model is the simplest GIS modelling approach analogous to the manual procedures for map analysis popularized in the classic landscape planning book entitled <strong>Design with Nature</strong> by Ian L, Mcharg (1969).</p>
+<h2 id="deriving-binary-layers">4.1 Deriving binary layers</h2>
+<p>Before we generate the land suitability map, we will first derive a preference layer for each factor layer under consideration. These preference layers will be encoded in binary form whereby 1 denotes suitable and 0 denotes not suitable.</p>
+<p>For this land suitability analysis, the followings have been suggested:</p>
+<ul>
+<li>Economic factor: &lt; =15deg slope</li>
+<li>Accessibility factor: &lt;= 200m from roads.</li>
+<li>Health risk factor: &gt;= 250m away from population i.e. housing areas and offices.</li>
+</ul>
+<h3 id="deriving-slop-preference-layer">4.1.1 Deriving slop preference layer</h3>
+<p>To derive the preference layer for slope, the <strong>Reclassify</strong> operation of QGIS will be used. In QGIS there are two sets of <strong>Reclassify</strong> operators. One set is provided natively by QGIS under the Raster analysis family in Processing Toolbox. The second set of Reclassify operators is from SAGA (<a href="http://www.saga-gis.org/en/index.html" class="uri">http://www.saga-gis.org/en/index.html</a>). For the purpose of our analysis, the Reclassify by table function of QGIS will be used.</p>
+<ul>
+<li>From the menu bar, click on <em>Processing</em> -&gt; <em>Toolbox</em>.</li>
+</ul>
+<p>By default, Processing Toolbox will appear on the right-hand side of the QGIS project window as shown in the screenshot below.</p>
+<p><img src="img/image30.jpg" /></p>
+<p>There are more than 600 hundred functions provided by QGIS processing toolbox. The easier way to look for a function is by using the search function. For example, by type the word reclassify in the search, Processing Toolbox lists the reclassify functions available as shown in the screenshot below.</p>
+<p><img src="img/image31.jpg" style="width:35.0%" /></p>
+<ul>
+<li>Double click on <strong>Reclassify by Table</strong> function.</li>
+</ul>
+<p>The <strong>Reclassify by Table</strong> dialog window appears.</p>
+<ul>
+<li>For <strong>Raster layer</strong>, select the target raster layer you want to process i.e. <code>Slope</code> from the drop-down list.</li>
+<li>Click on the button at the end of <strong>Reclassification table</strong>.</li>
+</ul>
+<p>The Fixed table dialog window appears.</p>
+<p><img src="img/image32.jpg" style="width:65.0%" /></p>
+<ul>
+<li>Click on the <em>Add Row</em> button.</li>
+</ul>
+<p>Your screen should look similar to the screenshot below.</p>
+<p><img src="img/image33.jpg" style="width:65.0%" /></p>
+<ul>
+<li>Type in the values as shown in the screenshoot below.</li>
+</ul>
+<p><img src="img/image34.jpg" style="width:65.0%" /></p>
+<p>Basically, the value ranges above recode all cell values into either 0 or 1 by using 15 as the cut-off value.</p>
+<ul>
+<li>Click on <em>OK</em> button to close the dialog window.</li>
+<li>From the <strong>Range boundaries</strong>, select <em>min &lt; value &lt;= max</em> from the drop-down list.</li>
+</ul>
+<p><img src="img/image35.jpg" style="width:25.0%" /></p>
+<blockquote>
+<p><strong>Caution:</strong> Select the appropriate range defination in order the ensure the output values are mutually exclusive and truly reflect the cut-off value(s).</p>
+</blockquote>
+<ul>
+<li>For <strong>Output data type</strong>, select <em>Float32</em> from the drop-down list.</li>
+</ul>
+<p>When you are ready,</p>
+<ul>
+<li>Click on <strong>Run</strong> button.</li>
+</ul>
+<p>When to process completed, the processing log appears.</p>
+<p><img src="img/image36.jpg" /></p>
+<p>It is a best practice to read the report carefully, special attention should be given to the section of <strong>Using classes</strong>.</p>
+<ul>
+<li>Click on <strong>Close</strong> button to close the dialog window.</li>
+</ul>
+<p>A temporary layer called <code>Reclassified raster</code> will be added in QGIS project as shown in the screenshot below.</p>
+<p><img src="img/image37.jpg" /></p>
+<p>According to the legend, the black grids indicate locations with slope value greater than 15 degrees and white grids indicate locations with slope value less than or equal to 15 degrees.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned in previous section, save the temporary output layer into GeoPackage format. Call the data layer as <code>binary_slope</code>.</p>
+</blockquote>
+<blockquote>
+<p>DIY: Repeat the steps above to derive the preference layers for accessibility and health risk factors. Save the temporary output layers into GeoPackage format and name the data layers as <code>binary_roads</code> and <code>binary_buildings</code> respectively.</p>
+</blockquote>
+<p>The <code>binary_road</code> should look similar to the screenshot below.</p>
+<p><img src="img/image38.jpg" /></p>
+<p>The <code>binary_road</code> should look similar to the screenshot below.</p>
+<p><img src="img/image39.jpg" /></p>
+<h2 id="computing-composite-binary-suitability-layer">4.2 Computing composite binary suitability layer</h2>
+<p>Now, it is time for us to put the Humpty Dumpty together. The task will be accomplished performed by map algebra operation of GIS. Map algebra is a set-based algebra for manipulating geographic data, proposed by Dr. Dana Tomlin in the early 1980s. It is a set of primitive operations in a geographic information system (GIS) which allows two or more raster layers (“maps”) of similar dimensions to produce a new raster layer (map) using algebraic operations such as addition, multiplication etc (<a href="https://en.wikipedia.org/wiki/Map_algebra" class="uri">https://en.wikipedia.org/wiki/Map_algebra</a>). In this section, you will perform map algebra computation by using Raster Calculator function of QGIS.</p>
+<ul>
+<li>At the <strong>Search</strong> pane of <strong>Geoprocessing Toolbox</strong> panel, type <em>raster calculator</em>.</li>
+</ul>
+<p>Your screen should look similar to the screenshot below.</p>
+<p><img src="img/image40.jpg" style="width:40.0%" /></p>
+<p>The search result shows that there are three raster calculator functions are available in QGIS. For this task, the <strong>Raster calculator of Raster analysis</strong> will be used.</p>
+<ul>
+<li>Double-click on <strong>Raster calculator</strong> of <strong>Raster analysis</strong>.</li>
+</ul>
+<p>The dialog window of <strong>Raster Calculator</strong> appears.</p>
+<ul>
+<li>At the <strong>Layers</strong> panel of <strong>Raster Calculator</strong> dialog window, double-click on <code>binary_buildings</code> layer.</li>
+</ul>
+<p>Notice that the <strong>Expression</strong> pane of <strong>Raster Calculator</strong> dialog window will be updated as shown below.</p>
+<p><img src="img/image41.jpg" style="width:75.0%" /></p>
+<ul>
+<li>Next, click on the <em>multiplication</em> icon.</li>
+<li>Next, double-click on <code>binary_roads</code> layer.</li>
+<li>Next, click on the <em>multiplication</em> icon.</li>
+<li>Next, double-click on <code>binary_slope</code> layer.</li>
+</ul>
+<p>The final expression should look similar to the screenshot below.</p>
+<p><img src="img/image42.jpg" style="width:65.0%" /></p>
+<blockquote>
+<p>My two cents worth: As a beginner, it is advisible not to type the syntax by hand in order to avoid unnecessary typo error.</p>
+</blockquote>
+<p>Next, you need define the output layer format. <strong>Raster Calculator</strong> provides two ways to define the output layer format.</p>
+<p>Firstly by using the <strong>Reference layers(s) interface</strong>.</p>
+<ul>
+<li>Click on the icon located at the end of the interface.</li>
+</ul>
+<p>The <strong>Multiple selection</strong> dialog window appears.</p>
+<ul>
+<li>Click on the check-box in front of the raster layer(s) you want to use as the reference layer(s) i.e. <code>binary_buildings</code>.</li>
+</ul>
+<p><img src="img/image43.jpg" style="width:70.0%" /></p>
+<ul>
+<li>Click on <strong>OK</strong> button to close the dialog window.</li>
+</ul>
+<p>Alternatively, you can provide the output layer specification using the individual interfaces as shown in the screenshot below.</p>
+<p><img src="img/image44.jpg" style="width:65.0%" /></p>
+<ul>
+<li>For <strong>Output</strong>, keep the default.</li>
+<li>Finally, click on <strong>Run</strong> button to run the operation.</li>
+</ul>
+<p>When the processing completed, refer to the process log to ensure that there is no error.</p>
+<p><img src="img/image45.jpg" /></p>
+<ul>
+<li>Click on <strong>Close</strong> button to close the <strong>Raster Calculator</strong> dialog window.</li>
+</ul>
+<p>Notice that a temporary raster layer called <code>Output</code> is added in QGIS project.</p>
+<p><img src="img/image46.jpg" /></p>
+<p>With reference to the Output raster layer, the white grids indicate location suitable for the proposed land development. The black grids, on the other hand, indicate location not suitable for the proposed land developmnet.</p>
+<blockquote>
+<p>DIY: Using the steps you had learned in previous section, save <code>Output</code> layer in GeoPackage format. Call the data layer <code>binary_model</code>. Then, remove the temporary <code>Output</code> raster layer from QGIS project.</p>
+</blockquote>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
