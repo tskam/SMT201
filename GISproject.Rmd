@@ -52,7 +52,7 @@ Use GIS analysis and multi-criteria evaluation method to identify site suitabili
 
 The GIS should cover all sub-districts and district of Kota Balipapan, Kota Samarinda, and selected kecamatan (districts) and sub-districts of North Penajam Paser and Kutai Kartanegara Regencies.   
 
-+ Kutai Kartanegara : Anggana, Loa Janan, Loa Kulu, Marang Kayu, Muara Jawa, Samboja, Sanga Sanga, Sebulu Tenaggarong, Tenggarong Seberang.
++ Kutai Kartanegara : Anggana, Loa Janan, Loa Kulu, Marang Kayu, Muara Jawa, Samboja, Sanga Sanga, Sebulu Tenaggarong, Tenggarong Seberang and **Muara Badak**.
 + North Penajam Paser (Penajam Paser Utara) Regency: Babulu, Penajam, Sepaku and Waru.
 
 **The Data**
@@ -198,6 +198,39 @@ Q3: Are we supposed to analyse the kecamatan and desa within the Samarinda and B
 Q4: Would you prefer if we translate the information in the CSV file to English or leave it in Bahasa? 
 
 >Prof: Ideally, the field name and classes should be in English if possible.
+
+## Hard Work
+
++ [Group 1](https://newkalimantan.netlify.app/overview.html)
+
++ Group 2
+
++ [Group 3](https://smt-201.netlify.app/)
+
++ Group 4
+
++ Group 5
+
++ [Group 6](https://t6smt201.netlify.app/)
+
++ Group 7
+
++ [Group 8](https://smt201-g1t8.netlify.app/)
+
++ Group 9
+
++ [Group 10](https://smt201-g1t10-gisproject.netlify.app/overview.html)
+
++ [Group 11](https://smt201-g1t11.netlify.app/)
+
++ [Group 12](https://gisteam12.netlify.app/)
+
++ Group 13
+
++ [Group 14](https://smt201gis-t1g14.netlify.app/)
+
+
+
 
 
  
