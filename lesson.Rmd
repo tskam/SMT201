@@ -35,7 +35,7 @@ Week Date    Topic 	                                                            
 
 9    11/10   [Lesson 8: Urban Applications of Raster-based GIS Analysis](outline/lesson08_outline.html) 	
 
-10   18/10   Lesson 9: GIS Modelling for Urban Planning Support 	                                   Take-home Exercise 3 due
+10   18/10   [Lesson 9: GIS Modelling for Urban Planning Support](outline/lesson09_outline.html) 	                  
 
 11   25/10   Lesson 10: GIS and 3D City Models 
 
