@@ -1,0 +1,77 @@
+---
+title: "Take-home Exercise 3: GIS-based Network Accessibility Analysis"
+description: |
+  This handout provides the context, the task, the expectation and the grading criteria of Take-home Exercise 3.  Students must review and understand them before getting started with the take-home exercise. 
+date: "`r Sys.Date()`"
+output:
+  distill::distill_article:
+    toc: false
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Setting the scene
+
+Geographical accessibility is an important issue for the sustainable development of cities.  In this take-home exercise, you are required to apply GIS-based network accessibility analysis approach to assess accessibility to community facilities in Singapore by using publicly available data.  
+
+## The Tasks
+
+The specific tasks of the study are as follow:
+
++ derive a hexagon layer (500m by 500m) from Planning Subzone layer.  The hexagon layer should exclude all the outer island including Pulau Ubin and Pulau Tekong.,
++ compute nearest distance from the centroid of each hexagon to the following social services: 
+  + eldercare (driving),
+  + CHAS clinic (driving), 
+  + primary school (driving).
+  + childcare (walking), 
+  + kindergarten (walking),   
++ using appropriate thematic mapping technique, prepare a series of thematic maps showing accessibility of  the community services above,
++ using appropriate statistical method(s) provided by QGIS, prepare a composite accessibility layer by combining these five layers,
++ plot appropriate statistics graphics to complement the GIS maps analysis, and
++ Critically discuss the geographical patterns revealed by the maps and statistical graphs. 
+
+## Take-home Exercise Artefact
+
+### GIS data repository
+
+The GIS repository includes but not limited to geospatial data compiled and derived, QGIS project file and data dictionary. It must be in a single zipped file (i.e. .zip).  The geospatial data must be stored in a GeoPackage database format.  The data dictionary can be in either MS Word document or edited into the GIS data.The project artefact must be uploaded onto eLearn.
+
+### Take-home Exercise Report
+
+You are required to edit your take-home exercise report in MS Word format.  The take-home exercise report, beside others, should include all the thematic and choropleth maps prepared and their respective discussion.  
+
+More importantly, the report must provide a **reproducible** step-by-step guide on the following process:
+
++ data compilation, extraction and integration,
++ data cleaning, preparation and wrangling,
++ GIS analysis (including tabular and graphical analysis), and
++ GIS maps design.
+
+>Note: **Reproducible** means that readers are able to perform the same analysis and obtain similar results by using the same data sets and by following the step-by-step guide. 
+
+The title of the report should be in the form of *SMT201_AY2021-22T1_Ex3*.
+
+>Note: This is an individual exercise. You are required to work on the take home exercise and prepare submission individually.
+
+## Grading
+
++ Quality of the GIS data model built (including metadata) (20 marks),
++ Appropriateness of the GIS methods used (20 marks),  
++ Quality of GIS maps prepared (20 marks),
++ Reproducibility of the GIS processes (20 marks), and
++ Ability to provide correct interpretation and discussion of the analysis results (20 marks).
+
+## Submission Date
+
+The take-home exercise artefact must be uploaded onto eLearn by the submission deadline stated below. 
+
+Due Date: 7th November 2021 (Sunday), 11:59pm (mid-night). 
+
+
+```{r echo=FALSE, eval=FALSE}
+library(pagedown)
+pagedown::chrome_print("_site/Take-home_Ex03.html")
+```
