@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lesson 10: Urban Network Analysis with GIS</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Kam Tin Seong Assoc. Professor of Information Systems" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/text.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Lesson 10: Urban Network Analysis with GIS
+### Dr. Kam Tin Seong<br/>Assoc. Professor of Information Systems
+### School of Computing and Information Systems,<br/>Singapore Management University
+### 2019-01-01 (updated: 2021-10-24)
+
+---
+
+
+
+
+
+
+
+# Content
+
+.vlarge[
++ Why analyse with network?
++ Network model
++ Real world network system
++ Complexity of urban road network
++ Shortest path analysis algorithm
++ Network analysis methods 
+]
+
+
+---
+## Location question
+
+.large[
++ How to assign the eldercare centres to the closest polyclinic?]
+
+.center[
+![](img/image1.jpg)
+]
+
+---
+## GIS answer
+
+.large[
++ Using buffer analysis
+]
+
+.center[
+![](img/image2.jpg)
+]
+
+---
+## GIS answer
+
+.large[
++ Using desire line analysis (mmqgis plugin is needed).
+]
+
+.center[
+![](img/image3.jpg)
+]
+
+---
+## Limitation of the GIS answers
+
+.large[
++ Failed to consider the actual road network.
+]
+
+.center[
+![](img/image4.jpg)
+]
+
+---
+# A Network Model
+
+.large[
++ A **link** refers to a linear segment defined by two end points.  Also called **edges**.
++ A **node** refers to an end point of a link.
+]
+
+.center[
+![:scale 55%](img/image5.jpg)
+]
+
+---
+## Two types of networks 
+
+.pull-left[
+.large[
++ Geometric 
+  + Directed flow, away from sources and toward sinks
+  + Resources make no travel decisions
+
++ Topologic
+  + Undirected flow
+  + Resources make their own travel decisions
+
+]]
+
+.pull-right[
+![:scale 35%](img/image6.jpg)
+]
+
+---
+## A Transportation Network
+
+.large[
+This network theme represents city streets and highways. Several theme attributes, such as speed limits, the number of lanes a street has, or which streets are one-way or two-way, can affect the flow of goods and services through a network.
+]
+
+.center[
+![](img/image7.jpg)
+]
+
+---
+## An Utility Network
+
+.large[
+Utilities can also be network themes. In this example, the diameter of the waterlines, the system's water pressure, and the location of control valves can affect the flow of the water through the network.]
+
+.center[
+![](img/image8.jpg)
+]
+
+---
+## A River Network
+
+.large[
+River systems can be represented as a network or a series of networks. Some systems may not connect while other systems may connect naturally or may be connected by canals. The location of locks, river width, river depth, and current can affect the analysis.
+]
+
+.center[
+![](img/image9.jpg)
+]
+
+---
+## A simple transport network model 
+
+.large[
+
+]
+
+
+.center[
+![](img/image10.jpg)
+]
+
+---
+## Complexity of Urban Network Topology
+
+.large[Beyond nodes and edges, there are more…..]
+
+.center[
+![:scale 75%](img/image11.jpg)
+]
+
+---
+### Multilane Expressway
+
+.center[
+![:scale 55%](img/image12.jpg)
+]
+
+---
+### Multilane Major Road
+
+.center[
+![](img/image13.jpg)
+]
+
+---
+### Two-way Road
+
+.center[
+![:scale 65%](img/image14.jpg)
+]
+
+---
+### One-way Road
+
+.center[
+![:scale 65%](img/image15.jpg)
+]
+
+---
+### Tunnel
+
+.center[
+![](img/image16.jpg)
+]
+
+---
+### A Tale of Two Roads
+
+.center[
+![](img/image17.jpg)
+]
+
+---
+### Road facilities slow down traffic
+
+.large[Road sign and traffic light inform about restrictions and rules.]
+
+.center[
+![](img/image18.jpg)
+]
+
+---
+### Road facilities slow down traffic
+
+.center[
+![:scale 85%](img/image19.jpg)
+]
+
+---
+### Road conditions are dynamic
+
+.center[
+![:scale 85%](img/image20.jpg)
+]
+
+---
+## Poor man network data source
+
+.large[Bulk extract at [Geofabrik](https://download.geofabrik.de/) free download server.]
+
+.center[
+![](img/image21.jpg)
+]
+
+---
+## Shortest Path Analysis
+
+.center[
+![](img/image22.jpg)
+]
+
+---
+### Dijkstra’s Shortest Path Algorithm
+
+.pull-left[
+.large[
++ The path that will be calculated depends on which other nodes must be visited and in what order.]]
+
+.pull-right[
+![](img/image23.jpg)
+]
+
+---
+### Dijkstra’s Shortest Path Algorithm
+
+.pull-left[
+.large[
++ A network consisting of seven nodes and 10 lines.
+]]
+
+.pull-right[
+![](img/image24.jpg)
+]
+
+---
+### Dijkstra’s Shortest Path Algorithm
+
+.pull-left[
+.large[
++ Nodes adjacent to the origin node are in red.]]
+
+.pull-right[
+![](img/image25.jpg)
+]
+
+---
+### Dijkstra’s Shortest Path Algorithm
+
+.pull-left[
+.large[
++ Because the line between nodes a and b has the lowest cost (8), node b becomes a reached node. ]]
+
+.pull-right[
+![](img/image26.jpg)
+]
+
+---
+### Dijkstra’s Shortest Path Algorithm
+
+.pull-left[
+.large[
++ After calculating a reached node, the algorithm continues to scan adjacent nodes.]]
+
+.pull-right[
+![](img/image27.jpg)
+]
+
+---
+### Dijkstra’s Shortest Path Algorithm
+
+.pull-left[
+.large[
++ The least cost path now travels from node a to node b to node f.]]
+
+.pull-right[
+![](img/image28.jpg)
+]
+
+---
+### Dijkstra’s Shortest Path Algorithm
+
+.pull-left[
+.large[
++ The cost of going from node a to node c to node e is 15, while the cost of going from node a to node d to node e is 16. The algorithm will choose the former, least cost, path.]]
+
+.pull-right[
+![](img/image29.jpg)
+]
+
+---
+### Dijkstra’s Shortest Path Algorithm
+
+.pull-left[
+.large[
++ All nodes have now been reached.]]
+
+.pull-right[
+![](img/image31.jpg)
+]
+
+---
+### Dijkstra’s Shortest Path Algorithm
+
+.pull-left[
+.large[
++ The least cost path from node a to node g.]]
+
+.pull-right[
+![](img/image32.jpg)
+]
+
+---
+## Fastest Path
+
+.pull-left[
+.large[
++ Fastest paths are based on time and you can use any measure of time you choose (seconds, minutes, hours, etc.).]]
+
+.pull-right[
+![](img/image33.jpg)
+]
+
+---
+## Travelling salesman problem
+
+.pull-left[
+.large[
++ A route can visit many stops in a network. The origin can also be the destination, as the warehouse is in this example delivery route.]]
+
+.pull-right[
+![](img/image34.jpg)
+]
+
+---
+## Beyond network model
+
+.large[
++ Accessibility modelling.
+]
+
+.center[
+![](img/image35.jpg)
+]
+
+.small[Source: https://developers.route360.net/index.html 
+]
+
+---
+### Network Drive Time: Accessibility
+
+.pull-left[
+.large[
++ If you know what is near a site, you can make better decisions about how suitable the site is for your business needs.]]
+
+.pull-right[
+![](img/image36.jpg)
+]
+
+---
+### Network Service Areas 
+
+.pull-left[
+![:scale 55%](img/image37a.jpg)
+]
+
+--
+.pull-right[
+![:scale 55%](img/image37b.jpg)
+]
+
+---
+### Facility location – network model
+
+.large[
++ Given a set of clients, finds the facility location that minimises that path length to travel between the facility to each of the clients.]
+
+.center[
+![:scale 85%](img/image38.jpg)
+]
+
+---
+### Facility location – planar model
+
+.large[
++ Given a set of clients, finds the facility location that minimises that path length to travel between the facility to each of the clients.]
+
+.center[
+![:scale 85%](img/image39.jpg)
+]
+
+---
+## QGIS Network Analysis Support
+
+.pull-left[
+.large[
++ Build in]
+
+![](img/image40a.jpg)
+]
+
+.pull-right[
+.large[
++ Plug-in]
+
+![:scale 75%](img/image40b.jpg)
+
+.small[For more detail, visit this [link](https://root676.github.io/)]
+]
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="js/macros.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
