@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["Hands-on_Ex10.pdf","Hands-on_Ex10_files/anchor-4.2.2/anchor.min.js","Hands-on_Ex10_files/bowser-1.9.3/bowser.min.js","Hands-on_Ex10_files/distill-2.2.21/template.v2.js","Hands-on_Ex10_files/header-attrs-2.11/header-attrs.js","Hands-on_Ex10_files/jquery-3.6.0/jquery-3.6.0.js","Hands-on_Ex10_files/jquery-3.6.0/jquery-3.6.0.min.js","Hands-on_Ex10_files/jquery-3.6.0/jquery-3.6.0.min.map","Hands-on_Ex10_files/popper-2.6.0/popper.min.js","Hands-on_Ex10_files/tippy-6.2.7/tippy-bundle.umd.min.js","Hands-on_Ex10_files/tippy-6.2.7/tippy-light-border.css","Hands-on_Ex10_files/tippy-6.2.7/tippy.css","Hands-on_Ex10_files/tippy-6.2.7/tippy.umd.min.js","Hands-on_Ex10_files/webcomponents-2.0.0/webcomponents.js","img/image1.jpg","img/image1.png","img/image10.jpg","img/image11.jpg","img/image12.jpg","img/image13.jpg","img/image14.jpg","img/image15.jpg","img/image16.jpg","img/image17.jpg","img/image18.jpg","img/image19.jpg","img/image2.jpg","img/image2.png","img/image20.jpg","img/image21.jpg","img/image22.jpg","img/image23.jpg","img/image24.jpg","img/image25.jpg","img/image26.jpg","img/image27.jpg","img/image28.jpg","img/image29.jpg","img/image3.jpg","img/image30.jpg","img/image31.jpg","img/image32.jpg","img/image33.jpg","img/image4.jpg","img/image5.jpg","img/image6.jpg","img/image7.jpg","img/image8.jpg","img/image9.jpg"]}
+  {"type":"character","attributes":{},"value":["Hands-on_Ex10.pdf","Hands-on_Ex10_files/anchor-4.2.2/anchor.min.js","Hands-on_Ex10_files/bowser-1.9.3/bowser.min.js","Hands-on_Ex10_files/distill-2.2.21/template.v2.js","Hands-on_Ex10_files/header-attrs-2.11/header-attrs.js","Hands-on_Ex10_files/jquery-3.6.0/jquery-3.6.0.js","Hands-on_Ex10_files/jquery-3.6.0/jquery-3.6.0.min.js","Hands-on_Ex10_files/jquery-3.6.0/jquery-3.6.0.min.map","Hands-on_Ex10_files/popper-2.6.0/popper.min.js","Hands-on_Ex10_files/tippy-6.2.7/tippy-bundle.umd.min.js","Hands-on_Ex10_files/tippy-6.2.7/tippy-light-border.css","Hands-on_Ex10_files/tippy-6.2.7/tippy.css","Hands-on_Ex10_files/tippy-6.2.7/tippy.umd.min.js","Hands-on_Ex10_files/webcomponents-2.0.0/webcomponents.js","img/image1.jpg","img/image1.png","img/image10.jpg","img/image11.jpg","img/image12.jpg","img/image13.jpg","img/image14.jpg","img/image15.jpg","img/image16.jpg","img/image17.jpg","img/image18.jpg","img/image19.jpg","img/image2.jpg","img/image2.png","img/image20.jpg","img/image21.jpg","img/image22.jpg","img/image23.jpg","img/image24.jpg","img/image25.jpg","img/image26.jpg","img/image27.jpg","img/image28.jpg","img/image29.jpg","img/image3.jpg","img/image30.jpg","img/image31.jpg","img/image32.jpg","img/image33.jpg","img/image34.jpg","img/image35.jpg","img/image4.jpg","img/image5.jpg","img/image6.jpg","img/image7.jpg","img/image8.jpg","img/image9.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1516,7 +1516,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#installing-qneat3-plugin.">5.1 Installing QNEAT3 plugin.</a></li>
 <li><a href="#working-with-od-matrix-tool">Working with OD Matrix tool</a></li>
 <li><a href="#extracting-shortest-distance-pairs">5.2 Extracting shortest distance pairs</a></li>
-<li><a href="#mapping-accessibility-values">Mapping Accessibility Values</a></li>
+<li><a href="#mapping-accessibility-values">5.3 Mapping Accessibility Values</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1539,7 +1539,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Three major data sets will be used in this hands-on exercise. They are:</p>
 <ul>
 <li>Master Plan 2014 Subzone Boundary from URA. This data can be downloaded from data.gov.sg.</li>
-<li>Eldercare services from Ministry of Social and Family Development. This data can be downloaded from data.gov.sg. + Roads data from OpenStreetMap (OSM) data sets. OSM data sets can be downloaded from Geofabrik’s free download <a href="https://download.geofabrik.de/">server</a>.</li>
+<li>Eldercare services from Ministry of Social and Family Development. This data can be downloaded from data.gov.sg.</li>
+<li>Roads data from OpenStreetMap (OSM) data sets. OSM data sets can be downloaded from Geofabrik’s free download <a href="https://download.geofabrik.de/">server</a>.</li>
 </ul>
 <p><strong>Note:</strong> I recommend this download site instead of <a href="https://www.bbbike.org/">bbbike</a> because I found out that the quality of the data provided by Geofabrik is better than bbbike.</p>
 <h1 id="data-preparation">2.0 Data Preparation</h1>
@@ -1563,9 +1564,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </blockquote>
 <h3 id="extracting-motor-vehicle-road-netowrk">2.3.2 Extracting motor vehicle road netowrk</h3>
 <blockquote>
-<p>DIY: Using appropriate QGIS function(s) you had learned from previous hands-on Exercise, extract motor vechicle road network (i.e. motorway, motorway_link, primary, primary_link, road, secondary, secondary_link, tertiary, tertiary_link, residential, trunk and trunk_link) from the all_roads layer. Save the GIS layer into GeoPackage format. Name the layer <code>roads</code>.</p>
+<p>DIY: Using appropriate QGIS function(s) you had learned from previous hands-on Exercise, extract motor vechicle road network (i.e. motorway, motorway_link, primary, primary_link, secondary, secondary_link, tertiary, tertiary_link, residential, trunk and trunk_link) from the all_roads layer. Save the GIS layer into GeoPackage format. Name the layer <code>roads</code>.</p>
 </blockquote>
-<p><strong>Be warn:</strong> The original data is in wgs84. For the purpose of network analysis, all network should be in projected coordinates system.</p>
+<p><strong>Be warn:</strong> The original data is in <strong>wgs84</strong>. For the purpose of network analysis, all network should be in projected coordinates system.</p>
 <p><strong>Reminder:</strong> Remove all the source data from QGIS project before continue to the next section.</p>
 <h1 id="analytical-hexagon">3.0 Analytical Hexagon</h1>
 <p>In GIS analysis, regularly shaped grids is used for many reasons such as normalizing geography for mapping or to mitigate the issues of using irregularly shaped polygons created arbitrarily (such as county boundaries or block groups that have been created from a political process). Regularly shaped grids can only be comprised of equilateral triangles, squares, or hexagons, as these three polygon shapes are the only three that can tessellate (repeating the same shape over and over again, edge to edge, to cover an area without gaps or overlaps) to create an evenly spaced grid.</p>
@@ -1588,11 +1589,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </ul>
 <p><img src="img/image2.jpg" style="width:55.0%" /></p>
 <ul>
-<li>For <strong>Horizontal spacing</strong>, type <em>250</em>.</li>
-<li>For <strong>Vertical spacing</strong>, type <em>250</em>.</li>
+<li>For <strong>Horizontal spacing</strong>, type <em>500</em>.</li>
+<li>For <strong>Vertical spacing</strong>, type <em>500</em>.</li>
 </ul>
 <blockquote>
-<p>Question: Do you know why 250 is used?</p>
+<p>Question: Do you know why 500 is used?</p>
 </blockquote>
 <ul>
 <li>For <strong>Grid CRS</strong>, make sure that <em>EPSG 3414</em> is used.</li>
@@ -1859,7 +1860,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><p>For <strong>Additional input datasources</strong>, select on the button at the right end.</p></li>
 <li><p>Click on the checkbox <strong>Output OD Matrix</strong>.</p></li>
 </ul>
-<p><img src="img/image31.jpg" style="width:45.0%" /></p>
+<p><img src="img/image31.jpg" style="width:65.0%" /></p>
 <ul>
 <li><p>Click on <strong>OK</strong> button.</p></li>
 <li><p>At SQL query panel, type the following SQL</p></li>
@@ -1869,14 +1870,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li>For <em>Geometry type</em>, select <code>No Geometry</code> from the drop-down list.</li>
 </ul>
 <p><img src="img/image33.jpg" style="width:45.0%" /></p>
-<p>Notice that a temporary table called <code>SQL Output</code> is added onto <strong>Layers</strong> panel.</p>
+<p>Notice that a temporary table called <code>SQL Output</code> is added onto <strong>Layers</strong> panel. It consists of four fields. The values in <code>shortest_distance</code> field are shortest distance between demand points and its nearest eldercare centre.</p>
+<p><img src="img/image34.jpg" style="width:65.0%" /></p>
 <blockquote>
 <p>DIY: Using the steps you had learned, save the temporary SQL Output table as GeoPackage format. Name the layer <code>acc_eldercare</code>.</p>
 </blockquote>
-<h2 id="mapping-accessibility-values">Mapping Accessibility Values</h2>
+<h2 id="mapping-accessibility-values">5.3 Mapping Accessibility Values</h2>
 <blockquote>
-<p>DIY: Using the steps you had learn, prepare a choropleth map showing the distribution of accessibility to eldercare centres.</p>
+<p>DIY: Using the steps you had learned, prepare a choropleth map showing the distribution of accessibility to eldercare centres.</p>
 </blockquote>
+<p>Your choropleth map should look similar to the screenshot below.</p>
+<p><img src="img/image35.jpg" /></p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>

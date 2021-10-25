@@ -41,7 +41,8 @@ In this hands-on exercise, you are tasked to derive an accessibility to eldercar
 Three major data sets will be used in this hands-on exercise.  They are:
 
 + Master Plan 2014 Subzone Boundary from URA.  This data can be downloaded from data.gov.sg.
-+ Eldercare services from Ministry of Social and Family Development.  This data can be downloaded from data.gov.sg. + Roads data from OpenStreetMap (OSM) data sets.  OSM data sets can be downloaded from Geofabrik's free download [server](https://download.geofabrik.de/). 
++ Eldercare services from Ministry of Social and Family Development.  This data can be downloaded from data.gov.sg. 
++ Roads data from OpenStreetMap (OSM) data sets.  OSM data sets can be downloaded from Geofabrik's free download [server](https://download.geofabrik.de/). 
 
 **Note:** I recommend this download site instead of [bbbike](https://www.bbbike.org/) because I found out that the quality of the data provided by Geofabrik is better than bbbike. 
   
@@ -69,9 +70,9 @@ Three major data sets will be used in this hands-on exercise.  They are:
 
 ### 2.3.2 Extracting motor vehicle road netowrk
 
->DIY: Using appropriate QGIS function(s) you had learned from previous hands-on Exercise, extract motor vechicle road network (i.e. motorway, motorway_link, primary, primary_link, road, secondary, secondary_link, tertiary, tertiary_link, residential, trunk and trunk_link) from the all_roads layer.  Save the GIS layer into GeoPackage format.  Name the layer `roads`.
+>DIY: Using appropriate QGIS function(s) you had learned from previous hands-on Exercise, extract motor vechicle road network (i.e. motorway, motorway_link, primary, primary_link, secondary, secondary_link, tertiary, tertiary_link, residential, trunk and trunk_link) from the all_roads layer.  Save the GIS layer into GeoPackage format.  Name the layer `roads`.
 
-**Be warn:** The original data is in wgs84.  For the purpose of network analysis, all network should be in projected coordinates system.
+**Be warn:** The original data is in **wgs84**.  For the purpose of network analysis, all network should be in projected coordinates system.
 
 **Reminder:** Remove all the source data from QGIS project before continue to the next section.
 
@@ -103,10 +104,10 @@ Now, we are going to create a hexagon layer by using `mpsz` layer as the based. 
 
 ![](img/image2.jpg){width=55%}
 
-+ For **Horizontal spacing**, type *250*.
-+ For **Vertical spacing**, type *250*.
++ For **Horizontal spacing**, type *500*.
++ For **Vertical spacing**, type *500*.
 
->Question: Do you know why 250 is used?
+>Question: Do you know why 500 is used?
 
 + For **Grid CRS**, make sure that *EPSG 3414* is used.
 
@@ -445,7 +446,7 @@ Next, we will use the SQL tool of QGIS to select destination points with the sho
 
 + Click on the checkbox **Output OD Matrix**.
 
-![](img/image31.jpg){width=45%}
+![](img/image31.jpg){width=65%}
 
 + Click on **OK** button.
 
@@ -457,16 +458,21 @@ Next, we will use the SQL tool of QGIS to select destination points with the sho
 
 ![](img/image33.jpg){width=45%}
 
-Notice that a temporary table called `SQL Output` is added onto **Layers** panel.
+Notice that a temporary table called `SQL Output` is added onto **Layers** panel.  It consists of four fields.  The values in `shortest_distance` field are shortest distance between demand points and its nearest eldercare centre.  
+
+![](img/image34.jpg){width=65%}
+
 
 
 >DIY: Using the steps you had learned, save the temporary SQL Output table as GeoPackage format.  Name the layer `acc_eldercare`.
 
-## Mapping Accessibility Values
+## 5.3 Mapping Accessibility Values
 
->DIY: Using the steps you had learn, prepare a choropleth map showing the distribution of accessibility to eldercare centres.
+>DIY: Using the steps you had learned, prepare a choropleth map showing the distribution of accessibility to eldercare centres.
 
+Your choropleth map should look similar to the screenshot below.
 
+![](img/image35.jpg)
 
 
 ```{r echo=FALSE, eval=FALSE}
