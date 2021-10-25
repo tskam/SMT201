@@ -333,6 +333,139 @@ You screen should look similar to the screenshot below.
 
 >DIY: Remove the temparory layer from the Layers panel.
 
+# 5.0  Network Accessibility Analysis with NEAT3 Plugin
+
+In this section, you will learn how to perform network accessibility analysis by using QGIS Network Analysis Toolbox (QNEAT3) plugin.   
+
+## 5.1 Installing QNEAT3 plugin.
+
+Before getting started, you need to install QNEAT3 plugin.
+
++ From the menu bar, select **Plugins** -> **Manage and Install plugins**.
+
+Plugins dialog window appears.
+
++ At the query, type **QNEAT3**.
+
+Notice that QNEAT3 appears on the search output list.
+
++ Click on **QNEAT3**.
+
++ Click on **Install Plugin** button.
+
+When the installation is completed, close the dialog box by
+
++ click on **Close** button.
+
+## Working with OD Matrix tool
+
+Next, we will use the Origin-Destination Matrix (OD Matrix) tool of QNEAT3 plugin to calculate the distances between hexagon centrois (as the demand points) and eldercare centres (as the supply points).
+
++ From the menu bar, click on **Processing** -> **Toolbox**
+
++ At the **Search** pane, type `OD Matrix`.
+
+You screen should look similar to the screenshot below.
+
+![](img/image26.jpg){width=45%}
+
++ Click on **OD Matrix Layers as Table (m:n)**.
+
+**OD Matrix Layers as Table (m:n)** dialog window appears.
+
++ For **Network Layer**, select `roads` from the drop-down list.
+
++ For **From-Point Layer**, select `hex_centroid` from the drop-down list.
+
++ For **Unique Point ID Field**, select `fid` from the drop-down list. 
+
++ For **To-Point Layer**, select `eldercare` fro mthe drop-down list.
+
++ For **Unique Point ID Field**, select `fid` from the drop-down list.
+
++ For **Optimization Criterion**, select `Shortest Path (distance optimization)` from the drop-down list.
+
++ For **Entry Cost calculation method**, select `Ellipsoidal` from the drop-down list.
+
++ For **Direction field**, select `oneway` from the drop-down list.
+
++ For **Value for forward direction**, type `F`.
+
++ For **Value for backward direction**, type `T`.
+
++ For **Value for both direction**, type `B`.
+
++ For Topology tolerance, type *0.5* (i.e. 0.5 m).
+
+The completed dialog widnow should look similar to the screenshot below.
+
+![](img/image27.jpg)
+
+When you are ready to run the process.
+
++ At the **OD Matrix** dialog window, click on **Run** button.
+
+Be patient, the process is computationally intensive.
+
+**Reminder:** Read the log before closing it.
+
+When you are ready to close the dialog window.
+
++ Click on **Close** button.
+
+Notice that a new temporary table called `Output OD Matrix` is added onto Layers panel.  
+
+![](img/image28.jpg){width=35%}
+
++ At the Layers panel, right-click on `Output OD Matrix` and select **Open Attribute Table** from the context menu.
+
+A data table look similar to the screenshot below appears.
+
+![](img/image29.jpg)
+
+>Question: Do you know what are the values of these fields?
+
+>DIY: Using the steps you had learned, save the temporary Output OD Matrix table as GeoPackage format.  Name the layer `OD_eldercare`.
+
+## 5.2 Extracting shortest distance pairs
+
+Next, we will use the SQL tool of QGIS to select destination points with the shortest distance.
+
++ At the **Search** pane of **Processing Toolbox**, type `SQL`.
+
+**SQL** function appears on the list.
+
+![](img/image30.jpg){width=45%}
+
++ Double-click on **Execute SQL** of **Vector general**.
+
+**Execute SQL** dialog window appears.
+
++ For **Additional input datasources**, select on the button at the right end.
+
++ Click on the checkbox **Output OD Matrix**.
+
+![](img/image31.jpg){width=45%}
+
++ Click on **OK** button.
+
++ At SQL query panel, type the following SQL
+
+![](img/image32.jpg){width=55%}
+
++ For *Geometry type*, select `No Geometry` from the drop-down list.
+
+![](img/image33.jpg){width=45%}
+
+Notice that a temporary table called `SQL Output` is added onto **Layers** panel.
+
+
+>DIY: Using the steps you had learned, save the temporary SQL Output table as GeoPackage format.  Name the layer `acc_eldercare`.
+
+## Mapping Accessibility Values
+
+>DIY: Using the steps you had learn, prepare a choropleth map showing the distribution of accessibility to eldercare centres.
+
 
 
 
