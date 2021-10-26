@@ -462,11 +462,49 @@ Notice that a temporary table called `SQL Output` is added onto **Layers** panel
 
 ![](img/image34.jpg){width=65%}
 
-
-
->DIY: Using the steps you had learned, save the temporary SQL Output table as GeoPackage format.  Name the layer `acc_eldercare`.
+>DIY: Using the steps you had learned, save the temporary `SQL Output` table as GeoPackage format.  Name the layer `acc_eldercare`.
 
 ## 5.3 Mapping Accessibility Values
+
+In this section, we are going to use mapping function of QGIS to show the distribution of accessibility to eldercare    
+
+### 5.3.1 Creating a duplicate layer
+
+Before we getting started, let us create a duplicate copy of `hexagon` layer
+
++ At the Layers panel, right-click on `hexagon` layer and select **Duplicate Layer** from the context menu.
+
+A new layer called `hexagon` copy is added onto Layers panel.
+
++ Rename the layer to `Accesibility to eldercare`.
+
+### 5.3.2 Performing relational join.
+
+Before we can prepare the choropleth map, we need to join `acc_eldercare` data table to the newly created `Accesibility to eldercare` by using *fid* of `acc_eldercare` data table and *fid* of `Accessibility to eldercare` attribute table as unique join fields.   
+
++ At the Layer panel, right-click on `Accesibility to eldercare` layer and select **Properties** from the context menu.
+
+The Properties dialog window appears.
+
++ At the option panel, click on **Joins**.
+
++ Click on **+** button to add a join.
+
+The **Add Vector Join** dialog window appears.
+
++ For **Join layer**, select `acc_eldercare` from th drop-down list.
+
++ For **Join field**, select `fid` from the drop-down list.
+
++ For **Target field**, select `fid` from the drop-down lsit.
+
++ Keep the checkbox in front of **Cache join layer in memory** checked.
+
+![](img/image36.jpg){width=45%}
+
++ When you are ready, click on **OK** button.
+
+### 5.3.3 Preparing choropleth map 
 
 >DIY: Using the steps you had learned, prepare a choropleth map showing the distribution of accessibility to eldercare centres.
 
