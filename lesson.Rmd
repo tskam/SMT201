@@ -39,7 +39,7 @@ Week Date    Topic 	                                                            
 
 11   25/10   [Lesson 10: Urban Network Analysis with GIS](outline/lesson10_outline.html) 
 
-12   01/11   Lesson 11: GIS and 3D City Models  	                                                 Take-home Exercise 3 due
+12   01/11   [Lesson 11: Sharing Geographical Information](outline/lesson11_outline.html)  	                                                 Take-home Exercise 3 due
 
 13   08/11   Lesson 12: Epilogue 	
 
