@@ -203,29 +203,29 @@ Q4: Would you prefer if we translate the information in the CSV file to English 
 
 + [Group 1](https://newkalimantan.netlify.app/overview.html)
 
-+ Group 2
++ [Group 2](https://smt201-g1.netlify.app/)
 
 + [Group 3](https://smt-201.netlify.app/)
 
-+ Group 4
++ [Group 4](https://smt201group4project.netlify.app/)
 
-+ Group 5
++ [Group 5](https://smt201gisproject-group5.netlify.app/over.html)
 
 + [Group 6](https://t6smt201.netlify.app/)
 
-+ Group 7
++ [Group 7](https://smt201-g1t7.netlify.app/)
 
 + [Group 8](https://smt201-g1t8.netlify.app/)
 
-+ Group 9
++ [Group 9](https://smt201-team-9.netlify.app/)
 
-+ [Group 10](https://smt201-g1t10-gisproject.netlify.app/overview.html)
++ [Group 10](https://smt201-g1t10-gisproject.netlify.app/)
 
 + [Group 11](https://smt201-g1t11.netlify.app/)
 
 + [Group 12](https://gisteam12.netlify.app/)
 
-+ Group 13
++ [Group 13](https://smt201-project-grp13.netlify.app/)
 
 + [Group 14](https://smt201gis-t1g14.netlify.app/)
 

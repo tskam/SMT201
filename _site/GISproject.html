@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>SMT201: GIS Project</title>
@@ -92,8 +93,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-10-20"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-10-20"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-11-16"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-11-16"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="SMT201: GIS Project"/>
@@ -111,7 +112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["GIS Project"]},{"type":"character","attributes":{},"value":["This page provides the context, the task, the scope of work, the deliverable requirements and the grading criteria of GIS Project. Students must review and understand them before getting started with the project.\n"]},{"type":"character","attributes":{},"value":["2021-10-20"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","date","output"]}},"value":[{"type":"character","attributes":{},"value":["GIS Project"]},{"type":"character","attributes":{},"value":["This page provides the context, the task, the scope of work, the deliverable requirements and the grading criteria of GIS Project. Students must review and understand them before getting started with the project.\n"]},{"type":"character","attributes":{},"value":["2021-11-16"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1865,7 +1866,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2056,7 +2060,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"GIS Project","description":"This page provides the context, the task, the scope of work, the deliverable requirements and the grading criteria of GIS Project. Students must review and understand them before getting started with the project.","authors":[],"publishedDate":"2021-10-20T00:00:00.000+08:00"}
+{"title":"GIS Project","description":"This page provides the context, the task, the scope of work, the deliverable requirements and the grading criteria of GIS Project. Students must review and understand them before getting started with the project.","authors":[],"publishedDate":"2021-11-16T00:00:00.000+08:00"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2290,18 +2294,18 @@ Take-home Exercise
 <h2 id="hard-work">Hard Work</h2>
 <ul>
 <li><p><a href="https://newkalimantan.netlify.app/overview.html">Group 1</a></p></li>
-<li><p>Group 2</p></li>
+<li><p><a href="https://smt201-g1.netlify.app/">Group 2</a></p></li>
 <li><p><a href="https://smt-201.netlify.app/">Group 3</a></p></li>
-<li><p>Group 4</p></li>
-<li><p>Group 5</p></li>
+<li><p><a href="https://smt201group4project.netlify.app/">Group 4</a></p></li>
+<li><p><a href="https://smt201gisproject-group5.netlify.app/over.html">Group 5</a></p></li>
 <li><p><a href="https://t6smt201.netlify.app/">Group 6</a></p></li>
-<li><p>Group 7</p></li>
+<li><p><a href="https://smt201-g1t7.netlify.app/">Group 7</a></p></li>
 <li><p><a href="https://smt201-g1t8.netlify.app/">Group 8</a></p></li>
-<li><p>Group 9</p></li>
-<li><p><a href="https://smt201-g1t10-gisproject.netlify.app/overview.html">Group 10</a></p></li>
+<li><p><a href="https://smt201-team-9.netlify.app/">Group 9</a></p></li>
+<li><p><a href="https://smt201-g1t10-gisproject.netlify.app/">Group 10</a></p></li>
 <li><p><a href="https://smt201-g1t11.netlify.app/">Group 11</a></p></li>
 <li><p><a href="https://gisteam12.netlify.app/">Group 12</a></p></li>
-<li><p>Group 13</p></li>
+<li><p><a href="https://smt201-project-grp13.netlify.app/">Group 13</a></p></li>
 <li><p><a href="https://smt201gis-t1g14.netlify.app/">Group 14</a></p></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body">
