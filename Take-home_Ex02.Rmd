@@ -67,5 +67,5 @@ Due Date: 6th October 2021, 11:59pm (mid-night).
 
 ```{r echo=FALSE, eval=FALSE}
 library(pagedown)
-pagedown::chrome_print("Take-home_Ex02.html")
+pagedown::chrome_print("_site/Take-home_Ex02.html")
 ```
